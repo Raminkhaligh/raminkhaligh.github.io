@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://yourgithubusername.github.io/sitemap.xml
+Sitemap: https://raminkhaligh.github.io/sitemap.xml
