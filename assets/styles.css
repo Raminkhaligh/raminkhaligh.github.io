@@ -15,16 +15,25 @@ html,body{
   color:var(--text);
   font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
 }
-h1,h2,h3{
-  font-family:Fraunces,Georgia,serif;
-  letter-spacing:-0.01em;
-  margin-top:0;
+h1, h2, h3 {
+  font-family: Fraunces, Georgia, serif;
+  letter-spacing: -0.01em;
+  margin-top: 0;
+  line-height: 1.2;
 }
-h2{
-  margin-bottom:0.6em;
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
 }
-h3{
-  margin-bottom:0.4em;
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.6em;
+}
+h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  margin-bottom: 0.4em;
+}
+:where(article, aside, nav, section) h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 .visually-hidden{
   position:absolute;
