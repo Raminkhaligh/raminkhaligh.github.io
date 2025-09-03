@@ -57,8 +57,8 @@
   <link rel="alternate" hreflang="fa" href="https://raminkhaligh.github.io/fa/" />
   <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/" />
 
-  <!-- Preload largest contentful paint image to improve LCP -->
-  <link rel="preload" as="image" href="assets/profile.jpg" imagesrcset="assets/profile.jpg 1x, assets/profile@2x.jpg 2x" imagesizes="(min-width:768px) 200px, 168px" />
+  <!-- Preload profile image -->
+  <link rel="preload" as="image" href="assets/profile.jpg" />
 
   <style>
   /* ===== Dark Minimal + Apple-Style Shadows (No Green) ===================== */
@@ -187,8 +187,6 @@
     border:1px solid var(--line); box-shadow:var(--shadow-3);
   }
 
-  /* Ensure the picture element wraps properly so the profile image appears in mobile view */
-  .hero picture{ display:block; margin:0 auto }
   /* CTA: flex container with centered alignment for mobile and desktop */
   .cta{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:14px; justify-content:center }
 
@@ -329,19 +327,16 @@
   <main id="main">
     <!-- Hero -->
     <section id="top" class="hero container" aria-labelledby="home-title">
-      <!-- Serve responsive formats for the profile image to improve LCP -->
-      <picture>
-        <source type="image/jpg" srcset="assets/profile.jpg 1x, assets/profile@2x.jpg 2x" />
-        <source type="image/webp" srcset="assets/profile.webp 1x, assets/profile@2x.webp 2x" />
-        <img
-          class="profile-photo"
-          src="assets/profile.jpg"
-          alt="Portrait of Ramin Khaligh"
-          width="200" height="200"
-          loading="eager" decoding="async"
-          fetchpriority="high"
-        />
-      </picture>
+      <!-- Profile image -->
+      <img
+        class="profile-photo"
+        src="assets/profile.jpg"
+        alt="Portrait of Ramin Khaligh"
+        width="200" height="200"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
 
       <div class="hero-content">
         <h1 id="home-title" class="heading-hero">I build products people keep using.</h1>
