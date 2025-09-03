@@ -58,7 +58,7 @@
   <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/" />
 
   <!-- Preload largest contentful paint image to improve LCP -->
-  <link rel="preload" as="image" href="assets/profile.jpg" imagesrcset="assets/profile.jpg 1x, assets/profile@2x.jpg 2x" imagesizes="(min-width:768px) 200px, 168px" />
+  <link rel="preload" as="image" href="assets/profile.avif" imagesrcset="assets/profile.avif 1x, assets/profile@2x.avif 2x" imagesizes="(min-width:768px) 200px, 168px" />
 
   <style>
   /* ===== Dark Minimal + Apple-Style Shadows (No Green) ===================== */
@@ -127,7 +127,8 @@
   h2{ font-size:clamp(1.6rem,3.2vw,2.05rem); margin-block-end:.6em }
   h3{ font-size:clamp(1.22rem,2.2vw,1.45rem); margin-block-end:.4em }
   :where(article,aside,nav,section) h1{ font-size:clamp(2.25rem,4.5vw,3.15rem) }
-  p{ color:var(--muted) }
+  /* Paragraph styles: muted color and justified alignment */
+  p{ color:var(--muted); text-align:justify }
 
   .heading-hero{
     background:linear-gradient(135deg,var(--accent) 0%,var(--accent-strong) 100%);
@@ -185,7 +186,11 @@
     width:200px; height:200px; border-radius:24px; object-fit:cover;
     border:1px solid var(--line); box-shadow:var(--shadow-3);
   }
-  .cta{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:14px }
+
+  /* Ensure the picture element wraps properly so the profile image appears in mobile view */
+  .hero picture{ display:block; margin:0 auto }
+  /* CTA: flex container with centered alignment for mobile and desktop */
+  .cta{ display:flex; gap:.6rem; flex-wrap:wrap; margin-top:14px; justify-content:center }
 
   /* Chips */
   .chip{
@@ -218,7 +223,7 @@
       radial-gradient(40rem 12rem at 110% 60%, rgba(166,173,255,.10), transparent 60%);
     opacity:.6;
   }
-  .svc__wrap{ max-width:1200px; margin:0 auto; padding:4.5rem 1.25rem; position:relative }
+  .svc__wrap{ max-width:1200px; margin:0 auto; padding:3rem 1.25rem; position:relative }
   .svc__head{ text-align:center; max-width:720px; margin:0 auto 2rem }
   .svc__eyebrow{
     display:inline-flex; align-items:center; gap:.5rem;
@@ -251,6 +256,24 @@
   }
   .svc .card__link{ display:inline-block; margin:.8rem 0 0; color:#e3e6f5; text-underline-offset:4px }
   .svc .card__link:hover{ text-decoration:underline }
+
+  /* Guarantees section styling: reduce whitespace and refine list appearance */
+  .svc__guarantees{
+    margin:1.5rem 0 0;
+  }
+  .svc__ghead{
+    margin-bottom:.5rem;
+    display:flex; align-items:center; gap:.4rem;
+    color:var(--ink);
+    font-weight:600;
+  }
+  .svc__gtags{
+    margin:0;
+    padding-left:1rem;
+    list-style-type:disc;
+    line-height:1.6;
+    color:var(--muted);
+  }
 
   /* Timeline */
   .experience-item{ position:relative; padding-left:28px; border-left:2px solid var(--accent) }
@@ -308,7 +331,7 @@
     <section id="top" class="hero container" aria-labelledby="home-title">
       <!-- Serve responsive formats for the profile image to improve LCP -->
       <picture>
-        <source type="image/jpg" srcset="assets/profile.jpg 1x, assets/profile@2x.jpg 2x" />
+        <source type="image/avif" srcset="assets/profile.avif 1x, assets/profile@2x.avif 2x" />
         <source type="image/webp" srcset="assets/profile.webp 1x, assets/profile@2x.webp 2x" />
         <img
           class="profile-photo"
@@ -332,6 +355,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- About -->
     <section id="about" class="container" aria-labelledby="about-title">
@@ -456,12 +480,12 @@
         <div class="svc__guarantees" role="region" aria-label="Guarantees">
           <div class="svc__ghead">
             <svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4Zm-3 9 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>What you can count on</span>
+            <span>What you can expect</span>
           </div>
           <ul class="svc__gtags">
-            <li>Scope + timeline in 72h</li>
-            <li>Weekly demos &amp; transparent roadmap</li>
-            <li>You keep all IP &amp; source code</li>
+            <li>Detailed scope and timeline delivered within 72&nbsp;hours</li>
+            <li>Weekly demos with a transparent roadmap</li>
+            <li>You retain full ownership of all intellectual property and source code</li>
           </ul>
         </div>
       </div>
@@ -542,6 +566,27 @@
             <span class="chip">Creativity &amp; Adaptability</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="container" aria-labelledby="cert-title">
+      <h2 id="cert-title">Certifications</h2>
+      <div class="card">
+        <h3>Licenses &amp; Certifications</h3>
+        <ul class="card__list">
+          <li><strong>IELTS</strong>: Band score 7.5</li>
+          <li><strong>Software Product Management</strong> — University of Alberta</li>
+          <li><strong>Brand &amp; Product Management</strong> — IE Business School</li>
+          <li><strong>Agile Analytics</strong> — University of Virginia</li>
+          <li><strong>Project Management</strong> — Project Management Institute</li>
+          <li><strong>Digital Marketing</strong> — LinkedIn Learning</li>
+          <li><strong>Product Management</strong> — Product School</li>
+          <li><strong>Product Management</strong> — LinkedIn Learning</li>
+          <li><strong>Certified Product Analysis</strong> — Product School</li>
+          <li><strong>Google Analytics</strong> — LinkedIn Learning</li>
+          <li><strong>UI/UX</strong> — LinkedIn Learning</li>
+        </ul>
       </div>
     </section>
 
