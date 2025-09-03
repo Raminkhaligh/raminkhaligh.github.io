@@ -4,34 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Ramin Khaligh | رامین خلیق— Product & Marketing Manager</title>
-  <meta name="description" content="Ramin Khaligh | رامین خلیق builds lovely products people keep using. Marketing & Product strategy, data-driven experiences that improve activation, retention, and revenue." />
+  <!-- Updated title and description for improved SEO -->
+  <title>Ramin Khaligh (رامین خلیق) — Product &amp; Marketing Manager | Growth, UX &amp; GTM</title>
+  <meta name="description" content="Product &amp; marketing leader building data‑driven experiences that lift activation, retention &amp; revenue. Strategy, GTM, UX, experiments." />
   <link rel="canonical" href="https://raminkhaligh.github.io/" />
 
-  <!-- Social -->
-  <meta property="og:title" content="Ramin Khaligh | رامین خلیق — Product & Marketing Manager" />
+  <!-- Social metadata -->
+  <meta property="og:title" content="Ramin Khaligh | رامین خلیق — Product &amp; Marketing Manager" />
   <meta property="og:description" content="I build products people actually keep using. Strategy, GTM, and growth." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:site_name" content="Ramin Khaligh" />
+  <meta property="og:locale" content="en_US" />
 
-  <!-- PWA / theme color -->
+  <!-- Theme color -->
   <meta name="theme-color" content="#0b0d10" />
 
-  <!-- Structured Data -->
+  <!-- Structured data: use ProfilePage and Person to better describe this site -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Ramin Khaligh | رامین خلیق",
-    "alternateName":"رامین خلیق",
-    "jobTitle":"Product & Marketing Manager",
-    "email":"mailto:hwraamin@gmail.com",
-    "sameAs":["https://www.linkedin.com/in/ramin-khaligh", "https://www.instagram.com/ramin.khaligh"],
-    "url":"https://raminkhaligh.github.io/"
+    "@type":"ProfilePage",
+    "@id":"https://raminkhaligh.github.io/#profile",
+    "dateModified":"2025-09-03",
+    "mainEntity":{
+      "@type":"Person",
+      "@id":"https://raminkhaligh.github.io/#ramin",
+      "name":"Ramin Khaligh",
+      "alternateName":"رامین خلیق",
+      "jobTitle":"Product & Marketing Manager",
+      "url":"https://raminkhaligh.github.io/",
+      "image":"https://raminkhaligh.github.io/assets/profile.jpg",
+      "email":"mailto:hwraamin@gmail.com",
+      "sameAs":[
+        "https://www.linkedin.com/in/ramin-khaligh",
+        "https://www.instagram.com/ramin.khaligh",
+        "https://github.com/raminkhaligh"
+      ],
+      "knowsAbout":["Product Management","Growth","GTM","UX","Analytics","A/B Testing"]
+    }
   }
   </script>
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" />
+
+  <!-- Hreflang annotations for internationalization -->
+  <link rel="alternate" hreflang="en" href="https://raminkhaligh.github.io/" />
+  <link rel="alternate" hreflang="fa" href="https://raminkhaligh.github.io/fa/" />
+  <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/" />
+
+  <!-- Preload largest contentful paint image to improve LCP -->
+  <link rel="preload" as="image" href="assets/profile.avif" imagesrcset="assets/profile.avif 1x, assets/profile@2x.avif 2x" imagesizes="(min-width:768px) 200px, 168px" />
 
   <style>
   /* ===== Dark Minimal + Apple-Style Shadows (No Green) ===================== */
@@ -259,7 +286,8 @@
   <header class="site-nav" role="navigation" aria-label="Primary">
     <div class="nav-content">
       <a class="brand" href="#top" aria-label="Home">
-        <img src="assets/logo.png" alt="" width="28" height="28" decoding="async" loading="eager" />
+        <!-- Updated alt text on logo for better accessibility -->
+        <img src="assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" loading="eager" />
         <span>Ramin Khaligh</span>
       </a>
 
@@ -278,17 +306,24 @@
   <main id="main">
     <!-- Hero -->
     <section id="top" class="hero container" aria-labelledby="home-title">
-      <img
-        class="profile-photo"
-        src="assets/profile.jpg"
-        alt="Portrait of Ramin Khaligh"
-        width="200" height="200" loading="eager" decoding="async"
-      />
+      <!-- Serve responsive formats for the profile image to improve LCP -->
+      <picture>
+        <source type="image/avif" srcset="assets/profile.avif 1x, assets/profile@2x.avif 2x" />
+        <source type="image/webp" srcset="assets/profile.webp 1x, assets/profile@2x.webp 2x" />
+        <img
+          class="profile-photo"
+          src="assets/profile.jpg"
+          alt="Portrait of Ramin Khaligh"
+          width="200" height="200"
+          loading="eager" decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
 
       <div class="hero-content">
         <h1 id="home-title" class="heading-hero">I build products people keep using.</h1>
         <p>
-          Growth-focused product & marketing leader—shipping clean, data-driven experiences that improve
+          Growth-focused product &amp; marketing leader—shipping clean, data-driven experiences that improve
           activation, retention, and revenue. 8+ years leading cross-functional teams from idea to impact.
         </p>
         <div class="cta">
@@ -302,7 +337,7 @@
     <section id="about" class="container" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <p>
-        I’m Ramin Khaligh (رامین خلیق), a product & marketing manager with 8+ years driving acquisition,
+        I’m Ramin Khaligh (رامین خلیق), a product &amp; marketing manager with 8+ years driving acquisition,
         engagement and retention. I turn data into outcomes, leading hybrid teams across engineering,
         marketing and business to launch high-impact products and campaigns.
       </p>
@@ -331,12 +366,12 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-9 9 7 7 0 0 0 7 7h3a3 3 0 0 0 3-3 2 2 0 0 1 2-2h1a3 3 0 0 0 0-6h-1a2 2 0 0 1-2-2 3 3 0 0 0-3-3Z"/></svg>
             </div>
-            <h3 class="card__title">Product & UX Design</h3>
+            <h3 class="card__title">Product &amp; UX Design</h3>
             <p class="card__punch">Make it obvious, fast, and delightful.</p>
             <ul class="card__list">
               <li>User research, JTBD, and flows</li>
               <li>Wireframes → design system UI</li>
-              <li>Interactive prototypes & tests</li>
+              <li>Interactive prototypes &amp; tests</li>
             </ul>
             <p class="card__outcome"><b>Outcome:</b> Interfaces that convert and retain.</p>
             <a href="#contact" class="svc__link card__link">Book this service →</a>
@@ -361,12 +396,12 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h6m-6 4h6m-6 4h4m6-8v12a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h2l1-1h4l1 1h2a3 3 0 0 1 3 3Z"/></svg>
             </div>
-            <h3 class="card__title">Project & Product Management</h3>
+            <h3 class="card__title">Project &amp; Product Management</h3>
             <p class="card__punch">Clarity, cadence, and momentum.</p>
             <ul class="card__list">
               <li>Roadmaps, OKRs, scoping</li>
-              <li>Agile rituals & stakeholder sync</li>
-              <li>Risk mgmt & delivery ops</li>
+              <li>Agile rituals &amp; stakeholder sync</li>
+              <li>Risk mgmt &amp; delivery ops</li>
             </ul>
             <p class="card__outcome"><b>Outcome:</b> On-time launches with no surprises.</p>
             <a href="#contact" class="svc__link card__link">Book this service →</a>
@@ -376,12 +411,12 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-4 3 3 5-7"/></svg>
             </div>
-            <h3 class="card__title">Growth & Digital Marketing</h3>
+            <h3 class="card__title">Growth &amp; Digital Marketing</h3>
             <p class="card__punch">Acquisition that compounds.</p>
             <ul class="card__list">
               <li>SEO/SEM, paid social, analytics</li>
               <li>Funnels, A/B tests, landing pages</li>
-              <li>Attribution & lifecycle automation</li>
+              <li>Attribution &amp; lifecycle automation</li>
             </ul>
             <p class="card__outcome"><b>Outcome:</b> Lower CAC, higher LTV, real revenue impact.</p>
             <a href="#contact" class="svc__link card__link">Book this service →</a>
@@ -391,12 +426,12 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4c4 0 6 2 6 6l-6 6-4-4 4-8ZM8 20l2-4 4 2-4 2-2 0Z"/></svg>
             </div>
-            <h3 class="card__title">Go-to-Market & Launch</h3>
+            <h3 class="card__title">Go-to-Market &amp; Launch</h3>
             <p class="card__punch">Turn launches into milestones.</p>
             <ul class="card__list">
               <li>Positioning, messaging, narrative</li>
-              <li>Partner & community playbooks</li>
-              <li>Press kit & launch campaigns</li>
+              <li>Partner &amp; community playbooks</li>
+              <li>Press kit &amp; launch campaigns</li>
             </ul>
             <p class="card__outcome"><b>Outcome:</b> Attention that converts into users.</p>
             <a href="#contact" class="svc__link card__link">Book this service →</a>
@@ -406,7 +441,7 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4Zm6 10 1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2Z"/></svg>
             </div>
-            <h3 class="card__title">Advisory & Audits</h3>
+            <h3 class="card__title">Advisory &amp; Audits</h3>
             <p class="card__punch">Quick wins, clear roadmap.</p>
             <ul class="card__list">
               <li>UX, tech, and growth audits</li>
@@ -425,8 +460,8 @@
           </div>
           <ul class="svc__gtags">
             <li>Scope + timeline in 72h</li>
-            <li>Weekly demos & transparent roadmap</li>
-            <li>You keep all IP & source code</li>
+            <li>Weekly demos &amp; transparent roadmap</li>
+            <li>You keep all IP &amp; source code</li>
           </ul>
         </div>
       </div>
@@ -442,7 +477,7 @@
             <li>Led a MarTech squad of 15; aligned growth OKRs and sprints.</li>
             <li>Launched three revenue-generating crypto flows; drove six-figure revenue uplift.</li>
             <li>#1 rankings on 10+ high-value keywords; organic +75%, CTR +30%.</li>
-            <li>Page speed +170% via technical SEO & performance work.</li>
+            <li>Page speed +170% via technical SEO &amp; performance work.</li>
           </ul>
         </div>
         <div class="experience-item" style="margin-top:18px">
@@ -451,23 +486,23 @@
             <li>Managed a 10-person team; strategy, roadmaps, OKRs.</li>
             <li>Portfolio recommendation tool attracted $1.5M+ in investments.</li>
             <li>Trading Tools Wizard increased conversion by 7%.</li>
-            <li>BI dashboards & fraud detection streamlined KYC; −80% support contacts.</li>
+            <li>BI dashboards &amp; fraud detection streamlined KYC; −80% support contacts.</li>
           </ul>
         </div>
         <div class="experience-item" style="margin-top:18px">
           <h3>Technical Product Manager — Clarity Global <span class="date">Oct 2022 – Jun 2023</span></h3>
           <ul>
             <li>Led telecom OSS microservices aligned to TM Forum standards.</li>
-            <li>Velocity +30% by introducing PRDs & refined planning.</li>
+            <li>Velocity +30% by introducing PRDs &amp; refined planning.</li>
             <li>Lean, feedback-driven iteration culture.</li>
           </ul>
         </div>
         <div class="experience-item" style="margin-top:18px">
           <h3>Product Marketing Manager — Huawei <span class="date">Aug 2019 – Nov 2022</span></h3>
           <ul>
-            <li>Optimized retail & support apps; +30% user satisfaction.</li>
-            <li>−15% CAC via positioning & competitive analysis.</li>
-            <li>Partner programs & workshops boosted growth by 60%.</li>
+            <li>Optimized retail &amp; support apps; +30% user satisfaction.</li>
+            <li>−15% CAC via positioning &amp; competitive analysis.</li>
+            <li>Partner programs &amp; workshops boosted growth by 60%.</li>
             <li>GTM increased market share by 3% in 5 months; Bright Star award.</li>
           </ul>
         </div>
@@ -483,7 +518,7 @@
           <div class="chips">
             <span class="chip">Roadmapping</span>
             <span class="chip">Product Strategy</span>
-            <span class="chip">Agile & Scrum</span>
+            <span class="chip">Agile &amp; Scrum</span>
             <span class="chip">A/B Testing</span>
             <span class="chip">Discovery Research</span>
             <span class="chip">GTM Strategy</span>
@@ -502,9 +537,9 @@
           <div class="chips">
             <span class="chip">Strategic Thinking</span>
             <span class="chip">Stakeholder Communication</span>
-            <span class="chip">Leadership & Collaboration</span>
+            <span class="chip">Leadership &amp; Collaboration</span>
             <span class="chip">Data-Driven Problem-Solving</span>
-            <span class="chip">Creativity & Adaptability</span>
+            <span class="chip">Creativity &amp; Adaptability</span>
           </div>
         </div>
       </div>
@@ -516,8 +551,9 @@
       <p>Interested in working together or want to learn more? Let’s chat.</p>
       <div class="cta">
         <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let’s work together">Email me</a>
-        <a class="btn" href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="btn" href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <!-- Added rel="me" to social links for identity signals -->
+        <a class="btn" href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+        <a class="btn" href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="me noopener noreferrer">Instagram</a>
       </div>
     </section>
   </main>
