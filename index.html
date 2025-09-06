@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Updated title and description for improved SEO -->
-  <title>Ramin Khaligh (رامین خلیق) — Product &amp; Marketing Manager | Growth, UX &amp; GTM</title>
+  <title>Ramin Khaligh | رامین خلیق — Product &amp; Marketing Manager | Growth, UI/UX &amp; GTM</title>
   <meta name="description" content="Product &amp; marketing leader building data‑driven experiences that lift activation, retention &amp; revenue. Strategy, GTM, UX, experiments." />
   <link rel="canonical" href="https://raminkhaligh.github.io/" />
 
   <!-- Social metadata -->
   <meta property="og:title" content="Ramin Khaligh | رامین خلیق — Product &amp; Marketing Manager" />
-  <meta property="og:description" content="I build products people actually keep using. Strategy, GTM, and growth." />
+  <meta property="og:description" content="I build products people keep using. Strategy, Product, and growth." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
@@ -22,30 +20,46 @@
   <!-- Theme color -->
   <meta name="theme-color" content="#0b0d10" />
 
-  <!-- Structured data: use ProfilePage and Person to better describe this site -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfilePage",
-    "@id":"https://raminkhaligh.github.io/#profile",
-    "dateModified":"2025-09-03",
-    "mainEntity":{
-      "@type":"Person",
-      "@id":"https://raminkhaligh.github.io/#ramin",
-      "name":"Ramin Khaligh",
-      "alternateName":"رامین خلیق",
-      "jobTitle":"Product & Marketing Manager",
-      "url":"https://raminkhaligh.github.io/",
-      "image":"https://raminkhaligh.github.io/assets/profile.jpg",
-      "email":"mailto:hwraamin@gmail.com",
-      "sameAs":[
-        "https://www.linkedin.com/in/ramin-khaligh",
-        "https://www.instagram.com/ramin.khaligh",
-        "https://github.com/raminkhaligh"
-      ],
-      "knowsAbout":["Product Management","Growth","GTM","UX","Analytics","A/B Testing"]
-    }
+<!-- Structured data: ProfilePage + Person with dynamic dateModified -->
+<script type="application/ld+json" id="structured-data">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://raminkhaligh.github.io/#profile",
+  "dateModified": "",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://raminkhaligh.github.io/#ramin",
+    "name": "Ramin Khaligh",
+    "alternateName": "رامین خلیق",
+    "jobTitle": "Product & Marketing Manager",
+    "url": "https://raminkhaligh.github.io/",
+    "image": "https://raminkhaligh.github.io/assets/profile.jpg",
+    "email": "mailto:hwraamin@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/ramin-khaligh",
+      "https://www.instagram.com/ramin.khaligh",
+      "https://github.com/raminkhaligh"
+    ],
+    "knowsAbout": [
+      "Product Management",
+      "Growth",
+      "Marketing",
+      "UI/UX",
+      "Analytics",
+      "Software Development"
+    ]
   }
+}
+</script>
+
+<script>
+  const script = document.getElementById("structured-data");
+  const data = JSON.parse(script.textContent);
+  data.dateModified = new Date().toISOString(); // inject current datetime
+  script.textContent = JSON.stringify(data);
+</script>
+
   </script>
 
   <!-- Favicons -->
@@ -61,7 +75,7 @@
   <link rel="preload" as="image" href="assets/profile.jpg" />
 
   <style>
-  /* ===== Dark Minimal + Apple-Style Shadows (No Green) ===================== */
+  /* ===== Dark Minimal + Apple-Style Shadows ===================== */
 
   :root{
     /* Colors */
@@ -341,8 +355,8 @@
       <div class="hero-content">
         <h1 id="home-title" class="heading-hero">I build products people keep using.</h1>
         <p>
-          Growth-focused product &amp; marketing leader—shipping clean, data-driven experiences that improve
-          activation, retention, and revenue. 8+ years leading cross-functional teams from idea to impact.
+          Product & marketing leader with 8+ years of experience creating data-driven products that boost activation, retention, and revenue.
+          Skilled at leading cross-functional teams to turn ideas into impactful results.
         </p>
         <div class="cta">
           <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let’s talk">Let’s talk</a>
@@ -356,9 +370,9 @@
     <section id="about" class="container" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <p>
-        I’m Ramin Khaligh (رامین خلیق), a product &amp; marketing manager with 8+ years driving acquisition,
-        engagement and retention. I turn data into outcomes, leading hybrid teams across engineering,
-        marketing and business to launch high-impact products and campaigns.
+       I’m Ramin Khaligh (رامین خلیق), a product & marketing leader who loves creating products that people enjoy using. 
+       I started with a simple curiosity about how technology shapes our lives, and over time I’ve turned that curiosity into building products and campaigns that help businesses grow. 
+       My approach is straightforward: use data to guide decisions, keep things simple, and focus on results that matter.
       </p>
     </section>
 
@@ -407,7 +421,7 @@
               <li>APIs, auth, integrations</li>
               <li>Perf, accessibility, CI/CD</li>
             </ul>
-            <p class="card__outcome"><b>Outcome:</b> Launch fast, scale cleanly, avoid rewrites.</p>
+            <p class="card__outcome"><b>Outcome:</b> Launch fast, scale easily.</p>
             <a href="#contact" class="svc__link card__link">Book this service →</a>
           </article>
 
@@ -437,7 +451,7 @@
               <li>Funnels, A/B tests, landing pages</li>
               <li>Attribution &amp; lifecycle automation</li>
             </ul>
-            <p class="card__outcome"><b>Outcome:</b> Lower CAC, higher LTV, real revenue impact.</p>
+            <p class="card__outcome"><b>Outcome:</b> Lower CAC, higher LTV.</p>
             <a href="#contact" class="svc__link card__link">Book this service →</a>
           </article>
 
@@ -559,6 +573,8 @@
             <span class="chip">Leadership &amp; Collaboration</span>
             <span class="chip">Data-Driven Problem-Solving</span>
             <span class="chip">Creativity &amp; Adaptability</span>
+            <span class="chip">Expert in Hiring &amp Team Building</span>
+            <span class="chip">Flexible &amp Adaptable</span>
           </div>
         </div>
       </div>
