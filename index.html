@@ -9,16 +9,18 @@
   <meta name="robots" content="index,follow" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
-  <!-- Canonical -->
+  <!-- Canonical / hreflang -->
   <link rel="canonical" href="https://raminkhaligh.github.io/" />
-
-  <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://raminkhaligh.github.io/" />
   <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/" />
 
+  <!-- Preconnect for faster asset load -->
+  <link rel="preconnect" href="https://raminkhaligh.github.io" crossorigin>
+  <link rel="preload" as="fetch" href="blog/posts.json" crossorigin="anonymous" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Ramin Khaligh — Product & Marketing Manager | Growth, UX & GTM Consultant" />
-  <meta property="og:description" content="I help startups design, build, and grow products that people love and businesses scale. Product, UX, Growth, and Go-to-Market Strategy." />
+  <meta property="og:description" content="Helping startups build and scale data-driven products users love. Product, UX, Growth, and Go-to-Market Strategy." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
@@ -28,13 +30,11 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ramin Khaligh — Product & Marketing Manager" />
-  <meta name="twitter:description" content="Building data-driven products that drive retention, growth, and revenue. Explore my work in Product, UX, and Growth Strategy." />
+  <meta name="twitter:description" content="Building data-driven products that drive retention, growth, and revenue. Explore work in Product, UX, and Growth Strategy." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
 
-  <!-- Theme color -->
+  <!-- Theme & PWA -->
   <meta name="theme-color" content="#0b0d10" />
-
-  <!-- PWA / Manifest -->
   <link rel="manifest" href="/manifest.json" />
   <meta name="application-name" content="Ramin Khaligh Portfolio" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -42,11 +42,11 @@
   <meta name="apple-mobile-web-app-title" content="Ramin Khaligh" />
 
   <!-- Favicons -->
-  <link rel="icon" href="/assets/favicon.png" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/favicon-180.png" />
 
-  <!-- External CSS -->
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/style.css" />
 
   <!-- Structured Data -->
@@ -71,12 +71,6 @@
         "name": "Ramin Khaligh",
         "alternateName": "رامین خلیق",
         "jobTitle": "Product & Marketing Manager",
-        "worksFor": [
-          { "@type": "Organization", "name": "Wallex" },
-          { "@type": "Organization", "name": "Tabdeal" },
-          { "@type": "Organization", "name": "Clarity Global" },
-          { "@type": "Organization", "name": "Huawei" }
-        ],
         "url": "https://raminkhaligh.github.io/",
         "image": "https://raminkhaligh.github.io/assets/profile.jpg",
         "email": "mailto:hwraamin@gmail.com",
@@ -85,37 +79,8 @@
           "https://www.instagram.com/ramin.khaligh",
           "https://github.com/raminkhaligh"
         ],
-        "knowsAbout": [
-          "Product Management",
-          "Growth Strategy",
-          "Marketing",
-          "UX Design",
-          "Analytics",
-          "Go-To-Market"
-        ],
-        "knowsLanguage": ["English", "Persian"],
-        "alumniOf": [
-          {"@type": "CollegeOrUniversity", "name": "University of Alberta"},
-          {"@type": "CollegeOrUniversity", "name": "IE Business School"}
-        ]
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Product & UX Design",
-        "provider": {"@id": "https://raminkhaligh.github.io/#ramin"},
-        "description": "End-to-end UX design and research to craft intuitive, conversion-focused interfaces."
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Growth & Marketing Strategy",
-        "provider": {"@id": "https://raminkhaligh.github.io/#ramin"},
-        "description": "Data-driven acquisition, retention, and lifecycle marketing for SaaS and fintech brands."
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Go-to-Market & Product Strategy",
-        "provider": {"@id": "https://raminkhaligh.github.io/#ramin"},
-        "description": "Strategic GTM plans combining positioning, partnerships, and multi-channel campaigns."
+        "knowsAbout": ["Product Management","Growth Strategy","Marketing","UX Design","Analytics","Go-To-Market"],
+        "knowsLanguage": ["English", "Persian"]
       }
     ]
   }
@@ -130,29 +95,30 @@
         <img src="assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
         <span>Ramin Khaligh</span>
       </a>
-    <nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-  <a href="blog/" aria-label="Blog">Blog</a>
-  <a class="btn primary" href="assets/ramin-khaligh-resume.pdf" download>Download Résumé</a>
-</nav>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="blog/">Blog</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="assets/ramin-khaligh-resume.pdf" download>Résumé</a>
+      </nav>
     </div>
   </header>
 
   <!-- ===== Main ===== -->
   <main id="main">
+
     <!-- Hero -->
     <section id="top" class="hero container" aria-labelledby="home-title">
-      <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Product Manager Ramin Khaligh" width="200" height="200" decoding="async" fetchpriority="high" />
+      <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Product Manager Ramin Khaligh" width="200" height="200" fetchpriority="high" decoding="async" />
       <div class="hero-content">
-        <h1 id="home-title" class="heading-hero">I build products that people return to — and talk about.</h1>
-        <p>Hi, I’m <strong>Ramin Khaligh</strong> — a Product & Marketing Manager blending UX, data, and storytelling to create experiences that drive retention and growth. I help startups turn insight into impact through strategy, experimentation, and empathy.</p>
+        <h1 id="home-title" class="heading-hero">Building Products That Earn Loyalty.</h1>
+        <p>I’m <strong>Ramin Khaligh</strong> — a Product & Marketing Manager blending UX, data, and growth strategy to build experiences that retain users and scale businesses.</p>
         <div class="cta">
-          <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let's build together">Let’s build something great</a>
-          <a class="btn" href="#services">See what I do</a>
+          <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let's build together">Let’s Collaborate</a>
+          <a class="btn" href="#services">Explore Services</a>
         </div>
       </div>
     </section>
@@ -160,8 +126,8 @@
     <!-- About -->
     <section id="about" class="container" aria-labelledby="about-title">
       <h2 id="about-title">About Me</h2>
-      <p>I’m a curious builder with 8+ years of experience at the intersection of <strong>product, growth, and UX</strong>. I’ve led cross-functional teams across SaaS, fintech, and consumer tech — always asking one question: how can we create value users genuinely care about?</p>
-      <p>My process is simple: start with research, validate through data, refine with feedback. The result? <strong>Products people actually keep using.</strong> <a href="#experience">See my work</a> or <a href="#contact">let’s connect</a>.</p>
+      <p>With 8+ years at the intersection of <strong>product, growth, and UX</strong>, I help SaaS and fintech teams ship results. My approach blends research, analytics, and creativity — crafting products people keep using.</p>
+      <p><a href="#experience">See my journey</a> or <a href="#contact">start a conversation</a>.</p>
     </section>
 
     <!-- Services -->
@@ -169,47 +135,47 @@
       <div class="svc__wrap">
         <div class="svc__head">
           <span class="svc__eyebrow">Services</span>
-          <h2 id="svc-title">From Insight to Impact — Strategy, Design & Growth</h2>
-          <p class="svc__subtitle" style="text-align:center;">I help startups and teams design, launch, and scale products that deliver measurable business results.</p>
+          <h2 id="svc-title">From Insight to Impact</h2>
+          <p class="svc__subtitle">I partner with startups to design, launch, and grow products that drive measurable value.</p>
           <div class="svc__chips">
-            <span class="chip">MVP delivery: 6–8 weeks</span>
-            <span class="chip">Launch success rate: 92%</span>
-            <span class="chip">CPA improvement: −38%</span>
+            <span class="chip">MVP in 6–8 weeks</span>
+            <span class="chip">92% launch success</span>
+            <span class="chip">−38% CPA</span>
           </div>
         </div>
 
         <div class="svc__grid">
           <article class="card">
             <h3 class="card__title">Product & UX Design</h3>
-            <p class="card__punch">Design that earns loyalty, not just clicks.</p>
+            <p class="card__punch">Design that earns loyalty.</p>
             <ul class="card__list">
-              <li>UX research & user flows</li>
-              <li>Wireframes, design systems & prototypes</li>
-              <li>Usability testing & iteration cycles</li>
+              <li>User research & flows</li>
+              <li>Wireframes & design systems</li>
+              <li>Usability testing & iteration</li>
             </ul>
-            <p class="card__outcome"><b>Outcome:</b> Interfaces that convert, retain, and delight.</p>
+            <p class="card__outcome"><b>Outcome:</b> Interfaces that convert and delight.</p>
           </article>
 
           <article class="card">
-            <h3 class="card__title">Product Strategy & Go-to-Market</h3>
+            <h3 class="card__title">Product Strategy & GTM</h3>
             <p class="card__punch">Turning ideas into validated products.</p>
             <ul class="card__list">
-              <li>Market positioning & value prop design</li>
-              <li>Roadmaps, OKRs, agile delivery</li>
-              <li>Launch & adoption frameworks</li>
+              <li>Market positioning</li>
+              <li>Roadmaps & OKRs</li>
+              <li>Launch frameworks</li>
             </ul>
-            <p class="card__outcome"><b>Outcome:</b> Clarity, focus, and confident launches.</p>
+            <p class="card__outcome"><b>Outcome:</b> Clarity, focus, and traction.</p>
           </article>
 
           <article class="card">
-            <h3 class="card__title">Growth & Marketing Strategy</h3>
-            <p class="card__punch">Sustainable growth through data, not guesswork.</p>
+            <h3 class="card__title">Growth & Marketing</h3>
+            <p class="card__punch">Sustainable, data-driven growth.</p>
             <ul class="card__list">
               <li>SEO, paid media & analytics</li>
-              <li>Lifecycle automation & conversion funnels</li>
-              <li>Retention & referral programs</li>
+              <li>Lifecycle automation</li>
+              <li>Retention programs</li>
             </ul>
-            <p class="card__outcome"><b>Outcome:</b> Lower CAC, higher LTV, consistent compounding growth.</p>
+            <p class="card__outcome"><b>Outcome:</b> Lower CAC, higher LTV.</p>
           </article>
         </div>
       </div>
@@ -222,23 +188,22 @@
         <div class="experience-item">
           <h3>Marketing Technology Lead — Wallex <span class="date">2024 – Present</span></h3>
           <ul>
-            <li>Built and led a 15-person MarTech squad driving measurable revenue uplift.</li>
-            <li>Launched three new crypto investment flows increasing retention and lifetime value.</li>
-            <li>Boosted organic growth by +75% through SEO & technical performance optimization.</li>
+            <li>Built a 15-person MarTech squad driving six-figure revenue growth.</li>
+            <li>Launched 3 new crypto flows increasing retention and LTV.</li>
+            <li>Improved organic traffic by +75% via technical SEO & performance.</li>
           </ul>
         </div>
         <div class="experience-item">
           <h3>Senior Product Manager — Tabdeal <span class="date">2023 – 2024</span></h3>
           <ul>
-            <li>Delivered portfolio recommendation engine attracting $1.5M+ user investments.</li>
-            <li>Redesigned trading tools and BI dashboards — improving UX and cutting support by 80%.</li>
+            <li>Delivered portfolio recommendation engine ($1.5M+ user inflow).</li>
+            <li>Reduced support tickets by 80% with UX & fraud detection redesign.</li>
           </ul>
         </div>
         <div class="experience-item">
           <h3>Product Marketing Manager — Huawei <span class="date">2019 – 2022</span></h3>
           <ul>
-            <li>Optimized retail & support apps increasing engagement by 30%.</li>
-            <li>Reduced CAC by 15% via competitive repositioning and GTM adjustments.</li>
+            <li>Boosted app satisfaction +30%, cut CAC −15% via repositioning.</li>
           </ul>
         </div>
       </div>
@@ -247,7 +212,6 @@
     <!-- Skills -->
     <section id="skills" class="container" aria-labelledby="skills-title">
       <h2 id="skills-title">Skills</h2>
-      <p>My toolkit combines strategy, UX empathy, and data fluency to bridge business goals and user needs.</p>
       <div class="skills-grid">
         <div class="card">
           <h3>Core Expertise</h3>
@@ -255,142 +219,92 @@
             <span class="chip">Product Strategy</span>
             <span class="chip">UX Design</span>
             <span class="chip">Growth Marketing</span>
-            <span class="chip">A/B Testing</span>
             <span class="chip">Analytics</span>
-            <span class="chip">Lifecycle Automation</span>
           </div>
         </div>
         <div class="card">
-          <h3>Leadership & Collaboration</h3>
+          <h3>Leadership</h3>
           <div class="chips">
-            <span class="chip">Strategic Thinking</span>
-            <span class="chip">Team Leadership</span>
-            <span class="chip">Stakeholder Communication</span>
-            <span class="chip">Empathy & Adaptability</span>
+            <span class="chip">Team Building</span>
+            <span class="chip">Stakeholder Alignment</span>
+            <span class="chip">Empathy</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Certifications -->
-    <section id="certifications" class="container" aria-labelledby="cert-title">
-      <h2 id="cert-title">Certifications</h2>
-      <div class="card">
-        <ul class="card__list">
-          <li><strong>Software Product Management</strong> — University of Alberta</li>
-          <li><strong>Brand & Product Management</strong> — IE Business School</li>
-          <li><strong>Agile Analytics</strong> — University of Virginia</li>
-          <li><strong>Project Management</strong> — PMI</li>
-          <li><strong>Digital Marketing</strong> — LinkedIn Learning</li>
-          <li><strong>Product Management</strong> — Product School</li>
-          <li><strong>Certified Product Analysis</strong> — Product School</li>
-          <li><strong>Google Analytics</strong> — LinkedIn Learning</li>
-          <li><strong>UI/UX Design</strong> — LinkedIn Learning</li>
-        </ul>
+    <!-- Featured Blog -->
+    <section id="featured-blog" class="container" aria-labelledby="blog-title">
+      <h2 id="blog-title">From the Blog</h2>
+      <p style="color:var(--muted); max-width:720px;">Insights on product, growth, and leadership — from real experience.</p>
+      <div id="blog-grid" class="svc__grid" style="margin-top:2rem;"></div>
+      <div style="text-align:center; margin-top:2.4rem;">
+        <a href="blog/" class="btn primary">View All Articles</a>
       </div>
     </section>
-<!-- ===== Featured Blog Posts =================================== -->
-<section id="featured-blog" class="container" aria-labelledby="blog-title">
-  <h2 id="blog-title">From the Blog</h2>
-  <p style="color:var(--muted); max-width:720px;">
-    Thoughts and insights on product, growth, and leadership — from real experiments and experience.
-  </p>
-
-  <div id="blog-grid" class="svc__grid" style="margin-top:2rem;">
-    <!-- Dynamic blog cards will load here -->
-  </div>
-
-  <div style="text-align:center; margin-top:2.4rem;">
-    <a href="blog/" class="btn primary">View All Articles</a>
-  </div>
-</section>
 
     <!-- Contact -->
     <section id="contact" class="container" aria-labelledby="contact-title">
       <h2 id="contact-title">Let’s Build Together</h2>
-      <p>Whether you're shaping an early MVP, refining product-market fit, or scaling growth — let’s talk. I love collaborating on meaningful, data-driven products.</p>
+      <p>Shaping an MVP, refining product-market fit, or scaling growth? Let’s talk.</p>
       <div class="cta">
-        <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Work with Ramin">Get in touch</a>
-        <a class="btn" href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="me noopener noreferrer">Connect on LinkedIn</a>
-        <a class="btn" href="https://github.com/raminkhaligh" target="_blank" rel="me noopener noreferrer">GitHub</a>
+        <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Work with Ramin">Get in Touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/raminkhaligh" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
-      <p style="margin-top:1rem; text-align:center; color:var(--muted);">Let's turn insights into impact.</p>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <p>© 2025 Ramin Khaligh · All Rights Reserved · <a href="#top">Back to top</a></p>
-    <nav aria-label="Footer navigation">
-      <a href="#about">About</a> |
-      <a href="#services">Services</a> |
-      <a href="#experience">Experience</a> |
-      <a href="#skills">Skills</a> |
-      <a href="#certifications">Certifications</a> |
-      <a href="#contact">Contact</a>
-    </nav>
   </footer>
-<script>
-fetch('blog/posts.json')
-  .then(res => res.json())
-  .then(posts => {
-    const container = document.getElementById('blog-grid');
-    if (!container) return;
 
-    // Normalize relative URLs (to work on homepage)
-    const normalize = (p) => {
-      if (!p) return '#';
-      if (/^https?:\/\//i.test(p)) return p;
-      p = p.replace(/^(\.\/|(\.\.\/)+)/g, ''); // remove ../
-      if (!p.startsWith('/')) p = '/' + p;
-      return p;
-    };
+  <!-- Blog Loader -->
+  <script defer>
+  fetch('blog/posts.json')
+    .then(res => res.json())
+    .then(posts => {
+      const container = document.getElementById('blog-grid');
+      if (!container) return;
+      const normalize = (p) => {
+        if (!p) return '#';
+        if (/^https?:\/\//i.test(p)) return p;
+        p = p.replace(/^(\.\/|(\.\.\/)+)/g, '');
+        if (!p.startsWith('/')) p = '/' + p;
+        return p;
+      };
+      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+      const featured = posts.filter(p => p.featured);
+      const latest = posts.filter(p => !p.featured);
+      const combined = [...featured, ...latest].slice(0, 3);
 
-    // Sort newest first
-    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    // Collect featured first (max 3), then fill with latest if needed
-    const featured = posts.filter(p => p.featured);
-    const latest = posts.filter(p => !p.featured);
-    const combined = [...featured, ...latest].slice(0, 3);
-
-    combined.forEach(post => {
-      const href = normalize(post.url);
-      const img = normalize(post.image);
-
-      const article = document.createElement('article');
-      article.className = 'card';
-      article.style.cssText = `
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
-        overflow:hidden;
-        height:100%;
-      `;
-
-      article.innerHTML = `
-        <div>
-          <a href="${href}" style="text-decoration:none; color:inherit;">
-            <div style="width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px; margin-bottom:1rem;">
-              <img src="${img}" alt="${post.title}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
-            </div>
-            <h3 style="margin-bottom:.4rem;">${post.title}</h3>
-            <p style="color:var(--muted); min-height:3.8em;">${post.summary}</p>
-          </a>
-        </div>
-        <a href="${href}" class="btn" style="margin-top:1rem; align-self:flex-start;">Read More →</a>
-      `;
-      container.appendChild(article);
+      combined.forEach(post => {
+        const href = normalize(post.url);
+        const img = normalize(post.image);
+        const article = document.createElement('article');
+        article.className = 'card';
+        article.innerHTML = `
+          <div style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+            <a href="${href}" style="text-decoration:none;color:inherit;">
+              <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
+                <img src="${img}" alt="${post.title}" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .25s ease;" />
+              </div>
+              <h3>${post.title}</h3>
+              <p style="color:var(--muted);min-height:3.6em;">${post.summary}</p>
+            </a>
+            <a href="${href}" class="btn" style="margin-top:auto;">Read More →</a>
+          </div>`;
+        container.appendChild(article);
+      });
+    })
+    .catch(() => {
+      const msg = document.createElement('p');
+      msg.textContent = 'No articles found.';
+      msg.style.color = 'var(--muted)';
+      msg.style.textAlign = 'center';
+      document.getElementById('blog-grid').appendChild(msg);
     });
-  })
-  .catch(err => {
-    console.error('Blog load error:', err);
-    const fallback = document.createElement('p');
-    fallback.style.color = 'var(--muted)';
-    fallback.style.textAlign = 'center';
-    fallback.textContent = 'No articles available right now.';
-    document.getElementById('blog-grid').appendChild(fallback);
-  });
-</script>
+  </script>
 </body>
 </html>
