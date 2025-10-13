@@ -1,0 +1,23 @@
+[
+  {
+    "title": "How I Increased User Retention by 40%",
+    "summary": "How data-led UX and lifecycle automation boosted engagement and retention in a fintech product.",
+    "image": "../assets/blog-retention-thumb.png",
+    "url": "fintech-retention.html",
+    "date": "2025-09-20"
+  },
+  {
+    "title": "Designing a Sustainable Product Growth Framework",
+    "summary": "A practical structure to align acquisition, activation, and retention metrics for sustainable growth.",
+    "image": "../assets/blog-growth-thumb.png",
+    "url": "product-growth-framework.html",
+    "date": "2025-09-05"
+  },
+  {
+    "title": "UX Experiments That Actually Drive Growth",
+    "summary": "A breakdown of small, fast UX experiments that improved activation by 27% and retention by 18%.",
+    "image": "../assets/blog-ux-thumb.png",
+    "url": "ux-experiments-that-work.html",
+    "date": "2025-08-12"
+  }
+]
