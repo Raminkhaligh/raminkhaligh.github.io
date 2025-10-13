@@ -330,41 +330,55 @@
       <a href="#contact">Contact</a>
     </nav>
   </footer>
-  <script>
+<script>
 fetch('blog/posts.json')
   .then(res => res.json())
   .then(posts => {
     const container = document.getElementById('blog-grid');
     if (!container) return;
 
-    // Sort by date (newest first)
+    // Normalize relative URLs (to work on homepage)
+    const normalize = (p) => {
+      if (!p) return '#';
+      if (/^https?:\/\//i.test(p)) return p;
+      p = p.replace(/^(\.\/|(\.\.\/)+)/g, ''); // remove ../
+      if (!p.startsWith('/')) p = '/' + p;
+      return p;
+    };
+
+    // Sort newest first
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // Take the 3 newest posts or those with a "featured" flag
-    const featured = posts.filter(p => p.featured).slice(0, 3);
-    const toDisplay = featured.length ? featured : posts.slice(0, 3);
+    // Collect featured first (max 3), then fill with latest if needed
+    const featured = posts.filter(p => p.featured);
+    const latest = posts.filter(p => !p.featured);
+    const combined = [...featured, ...latest].slice(0, 3);
 
-    toDisplay.forEach(post => {
+    combined.forEach(post => {
+      const href = normalize(post.url);
+      const img = normalize(post.image);
+
       const article = document.createElement('article');
       article.className = 'card';
       article.style.cssText = `
-        overflow:hidden;
         display:flex;
         flex-direction:column;
         justify-content:space-between;
+        overflow:hidden;
+        height:100%;
       `;
 
       article.innerHTML = `
         <div>
-          <a href="${post.url}" style="text-decoration:none; color:inherit;">
+          <a href="${href}" style="text-decoration:none; color:inherit;">
             <div style="width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px; margin-bottom:1rem;">
-              <img src="${post.image}" alt="${post.title}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+              <img src="${img}" alt="${post.title}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
             </div>
             <h3 style="margin-bottom:.4rem;">${post.title}</h3>
-            <p style="color:var(--muted); min-height:3.5em;">${post.summary}</p>
+            <p style="color:var(--muted); min-height:3.8em;">${post.summary}</p>
           </a>
         </div>
-        <a href="${post.url}" class="btn" style="margin-top:1rem; align-self:flex-start;">Read More →</a>
+        <a href="${href}" class="btn" style="margin-top:1rem; align-self:flex-start;">Read More →</a>
       `;
       container.appendChild(article);
     });
@@ -374,7 +388,7 @@ fetch('blog/posts.json')
     const fallback = document.createElement('p');
     fallback.style.color = 'var(--muted)';
     fallback.style.textAlign = 'center';
-    fallback.textContent = 'No articles found.';
+    fallback.textContent = 'No articles available right now.';
     document.getElementById('blog-grid').appendChild(fallback);
   });
 </script>
