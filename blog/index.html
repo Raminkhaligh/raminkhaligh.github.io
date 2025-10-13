@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog & Case Studies | Ramin Khaligh</title>
-  <meta name="description" content="Articles, case studies, and thoughts from Ramin Khaligh — on product management, growth, UX, and go-to-market strategy." />
+  <meta name="description" content="Articles, case studies, and insights from Ramin Khaligh — on product management, UX, and growth." />
   <link rel="canonical" href="https://raminkhaligh.github.io/blog/" />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Blog & Case Studies | Ramin Khaligh" />
-  <meta property="og:description" content="Read articles and insights on product management, growth, and UX from Ramin Khaligh." />
+  <meta property="og:description" content="Explore insights, frameworks, and product case studies by Ramin Khaligh." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/blog/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-cover.png" />
@@ -18,7 +18,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog & Case Studies | Ramin Khaligh" />
-  <meta name="twitter:description" content="Insights and case studies on product management, growth, and UX design." />
+  <meta name="twitter:description" content="Insights and case studies on product management, UX, and growth." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-cover.png" />
 
   <!-- Styles -->
@@ -31,7 +31,7 @@
     "@type": "Blog",
     "url": "https://raminkhaligh.github.io/blog/",
     "name": "Ramin Khaligh Blog",
-    "description": "Insights, experiments, and stories on product management, UX, and growth.",
+    "description": "Insights and stories on product management, UX, and growth.",
     "publisher": {
       "@type": "Person",
       "name": "Ramin Khaligh",
@@ -42,7 +42,7 @@
 </head>
 
 <body>
-  <!-- Header (same as homepage) -->
+  <!-- Header -->
   <header class="site-nav" role="navigation" aria-label="Primary">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/" aria-label="Home">
@@ -63,40 +63,11 @@
   <main id="main" class="container" style="padding-top:4rem;">
     <header style="text-align:center; max-width:720px; margin:0 auto 2rem;">
       <h1>Articles & Case Studies</h1>
-      <p style="color:var(--muted);">A collection of my latest thoughts, frameworks, and practical stories from product management, UX, and growth work.</p>
+      <p style="color:var(--muted);">Stories, experiments, and practical lessons on building and growing digital products.</p>
     </header>
 
-    <div class="svc__grid" style="margin-top:2rem;">
-      <!-- Blog Post Card 1 -->
-      <article class="card" style="overflow:hidden;">
-        <a href="fintech-retention.html" style="text-decoration:none; color:inherit;">
-          <img src="../assets/blog-retention-thumb.png" alt="Case study cover — improving retention" width="100%" height="auto" loading="lazy" style="border-radius:12px; margin-bottom:1rem;" />
-          <h3 style="margin-bottom:.4rem;">How I Increased User Retention by 40%</h3>
-          <p style="color:var(--muted);">How data-led UX and lifecycle automation boosted engagement and retention in a fintech product.</p>
-        </a>
-        <a href="fintech-retention.html" class="btn" style="margin-top:1rem;">Read Case Study →</a>
-      </article>
-
-      <!-- Blog Post Card 2 -->
-      <article class="card" style="overflow:hidden;">
-        <a href="product-growth-framework.html" style="text-decoration:none; color:inherit;">
-          <img src="../assets/blog-growth-thumb.png" alt="Illustration of growth framework" width="100%" height="auto" loading="lazy" style="border-radius:12px; margin-bottom:1rem;" />
-          <h3 style="margin-bottom:.4rem;">Designing a Sustainable Product Growth Framework</h3>
-          <p style="color:var(--muted);">A practical structure to align acquisition, activation, and retention metrics for sustainable growth.</p>
-        </a>
-        <a href="product-growth-framework.html" class="btn" style="margin-top:1rem;">Read Article →</a>
-      </article>
-
-      <!-- Blog Post Card 3 (Example for future posts) -->
-      <article class="card" style="overflow:hidden;">
-        <a href="ux-experiments-that-work.html" style="text-decoration:none; color:inherit;">
-          <img src="../assets/blog-ux-thumb.png" alt="UX experiment design visuals" width="100%" height="auto" loading="lazy" style="border-radius:12px; margin-bottom:1rem;" />
-          <h3 style="margin-bottom:.4rem;">UX Experiments That Actually Drive Growth</h3>
-          <p style="color:var(--muted);">A breakdown of small, fast UX experiments that improved activation by 27% and retention by 18%.</p>
-        </a>
-        <a href="ux-experiments-that-work.html" class="btn" style="margin-top:1rem;">Read More →</a>
-      </article>
-    </div>
+    <!-- Blog Container -->
+    <div id="blog-grid" class="svc__grid" style="margin-top:2rem;"></div>
 
     <div style="text-align:center; margin-top:2.4rem;">
       <a href="https://raminkhaligh.github.io/" class="btn">← Back to Home</a>
@@ -107,5 +78,35 @@
   <footer class="footer">
     <p>© 2025 Ramin Khaligh · All Rights Reserved · <a href="../#top">Back to top</a></p>
   </footer>
+
+  <!-- Dynamic Blog Loader -->
+  <script>
+  fetch('posts.json')
+    .then(res => res.json())
+    .then(posts => {
+      const container = document.getElementById('blog-grid');
+      posts.sort((a, b) => new Date(b.date) - new Date(a.date)); // newest first
+
+      posts.forEach(post => {
+        const article = document.createElement('article');
+        article.className = 'card';
+        article.style.overflow = 'hidden';
+        article.innerHTML = `
+          <a href="${post.url}" style="text-decoration:none; color:inherit;">
+            <img src="${post.image}" alt="${post.title}" width="100%" height="auto" loading="lazy" style="border-radius:12px; margin-bottom:1rem;" />
+            <h3 style="margin-bottom:.4rem;">${post.title}</h3>
+            <p style="color:var(--muted);">${post.summary}</p>
+          </a>
+          <a href="${post.url}" class="btn" style="margin-top:1rem;">Read More →</a>
+        `;
+        container.appendChild(article);
+      });
+    })
+    .catch(err => {
+      document.getElementById('blog-grid').innerHTML =
+        '<p style="color:var(--muted); text-align:center;">Unable to load posts right now. Please try again later.</p>';
+      console.error('Blog load error:', err);
+    });
+  </script>
 </body>
 </html>
