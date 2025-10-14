@@ -150,36 +150,6 @@ section + section { margin-top: -28px; }
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   margin-top: 1rem;
 }
-.cert-grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.2rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.cert-card {
-  background: var(--elev-1);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-m);
-  padding: 16px 20px;
-  box-shadow: var(--shadow-1);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-.cert-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 14px rgba(138,145,255,.25), var(--shadow-2);
-  border-color: rgba(138,145,255,.35);
-}
-.cert-card h3 {
-  font-size: 1.05rem;
-  color: var(--ink);
-  margin: 0 0 .3rem;
-}
-.cert-card p {
-  color: var(--muted);
-  margin: 0;
-  font-size: .95rem;
-}
 
 /* ===== Responsive ===== */
 @media(max-width:900px){
