@@ -29,6 +29,10 @@
   --font-serif: "Fraunces", ui-serif, Georgia, Cambria,
                 "Times New Roman", serif;
   --gutter: 24px;
+  /* unified padding for all cards and similar containers */
+  --card-padding: 1.2rem;
+  /* unified gap between grid items across sections */
+  --grid-gap: 1.2rem;
 }
 
 /* ===== Reset & Base ===== */
@@ -284,7 +288,7 @@ p {
 /* Responsive grid for services */
 .svc__grid {
   display: grid;
-  gap: 1.2rem;
+  gap: var(--grid-gap);
   margin-top: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
@@ -339,7 +343,7 @@ p {
 #blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+  gap: var(--grid-gap);
   margin-top: 2rem;
 }
 #blog-grid .card {
@@ -362,7 +366,7 @@ p {
 /* ===== Skills ===== */
 .skills-grid {
   display: grid;
-  gap: 1.2rem;
+  gap: var(--grid-gap);
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 1.2rem;
 }
@@ -371,7 +375,7 @@ p {
 .cert-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  gap: var(--grid-gap);
   margin-top: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -424,10 +428,10 @@ p {
 
 /* ===== Sections ===== */
 section {
-  padding: 42px var(--gutter);
+  padding: 36px var(--gutter); /* unified smaller vertical padding */
 }
 section + section {
-  margin-top: -18px;
+  margin-top: 24px; /* consistent spacing between sections */
 }
 
 /* ===== Responsive Breakpoints ===== */
@@ -469,6 +473,12 @@ section + section {
   p {
     margin: 0 0 .5rem; /* reduce margin on medium screens */
   }
+  /* tighten gutters and padding on mid‑sized devices */
+  :root {
+    --gutter: 20px;
+    --card-padding: 1rem;
+    --grid-gap: 1rem;
+  }
 }
 @media (max-width: 600px) {
   section {
@@ -505,4 +515,37 @@ section + section {
   p {
     line-height: 1.55; /* slightly tighter on very small screens */
   }
+  /* further tighten gutters and padding on very small devices */
+  :root {
+    --gutter: 16px;
+    --card-padding: .9rem;
+    --grid-gap: .9rem;
+  }
+}
+
+/* ===== Unified Card Styles ===== */
+/* These rules ensure all cards across services, blog, certificates, and generic card
+   elements share the same padding, border radius, shadow, spacing and fade‑up
+   animation. They appear after other definitions so they override earlier styles
+   via the cascade without requiring higher specificity. */
+.card,
+.svc .card,
+#blog-grid .card,
+.cert-card {
+  margin: .6rem 0;
+  padding: var(--card-padding);
+  border-radius: var(--radius-m);
+  background: var(--elev-1);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-1);
+  animation: fadeUp .7s ease both;
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.card:hover,
+.svc .card:hover,
+#blog-grid .card:hover,
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px rgba(138, 145, 255, .25), var(--shadow-3);
+  border-color: rgba(138, 145, 255, .4);
 }
