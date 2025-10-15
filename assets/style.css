@@ -28,11 +28,11 @@
                Helvetica Neue, Arial;
   --font-serif: "Fraunces", ui-serif, Georgia, Cambria,
                 "Times New Roman", serif;
-  --gutter: 24px;
+  --gutter: 20px; /* reduce outer gutter on desktop */
   /* unified padding for all cards and similar containers */
-  --card-padding: 1.2rem;
+  --card-padding: 1rem; /* tighter inner padding by default */
   /* unified gap between grid items across sections */
-  --grid-gap: 1.2rem;
+  --grid-gap: 1rem; /* reduce grid gaps */
 }
 
 /* ===== Reset & Base ===== */
@@ -74,7 +74,7 @@ h3 {
 p {
   color: var(--muted);
   line-height: 1.6; /* slightly tighter than original */
-  margin: 0 0 .6rem; /* reduce vertical spacing */
+  margin: 0 0 .4rem; /* tighter spacing below paragraphs */
 }
 .container {
   max-width: 1200px;
@@ -94,7 +94,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 12px var(--gutter);
+  padding: 8px var(--gutter); /* reduce nav bar vertical padding */
   background: rgba(15, 18, 24, .55);
   border-bottom: 1px solid var(--line);
   backdrop-filter: saturate(120%) blur(10px);
@@ -126,7 +126,7 @@ p {
   flex-wrap: wrap; /* allow nav items to wrap on small widths */
 }
 .site-nav nav a {
-  padding: 8px 12px;
+  padding: 6px 10px; /* tighter nav item padding */
   border-radius: 12px;
   color: #C9CDD6;
   text-decoration: none;
@@ -146,7 +146,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: .5rem;
-  padding: 10px 16px;
+  padding: 8px 14px; /* tighter button padding */
   border-radius: 14px;
   border: 1px solid var(--line);
   color: var(--ink);
@@ -175,7 +175,7 @@ p {
 
 /* ===== Hero ===== */
 .hero {
-  padding: 80px var(--gutter) 60px;
+  padding: 60px var(--gutter) 40px; /* reduce hero vertical spacing */
   display: grid;
   grid-template-columns: minmax(0, auto) 1fr; /* ensure first column does not overflow */
   gap: 28px;
@@ -195,7 +195,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: .7rem;
-  margin-top: 16px;
+  margin-top: .6rem; /* tighten spacing above call to action */
 }
 
 /* ===== Cards ===== */
@@ -260,7 +260,7 @@ p {
 .svc__wrap {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 3rem 1rem; /* reduce padding inside services section */
   position: relative;
 }
 .svc__head {
@@ -312,7 +312,7 @@ p {
   position: relative;
   padding-left: 24px; /* reduced indentation on mobile */
   border-left: 2px solid var(--accent);
-  margin-bottom: 20px; /* reduced vertical spacing */
+  margin-bottom: 1rem; /* unified vertical spacing below timeline items */
 }
 .experience-item::before {
   content: "";
@@ -380,7 +380,7 @@ p {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-m);
-  padding: 1.5rem 1.2rem;
+  padding: 1rem; /* reduce padding around certificate cards */
   box-shadow: var(--shadow-1);
 }
 .cert-card {
@@ -416,7 +416,7 @@ p {
 /* ===== Footer ===== */
 .footer {
   margin-top: 20px;
-  padding: 28px var(--gutter);
+  padding: 16px var(--gutter); /* reduce footer padding */
   color: var(--muted);
   border-top: 1px solid var(--line);
   background: #0a0c0f;
@@ -428,10 +428,10 @@ p {
 
 /* ===== Sections ===== */
 section {
-  padding: 36px var(--gutter); /* unified smaller vertical padding */
+  padding: 28px var(--gutter); /* further reduced vertical padding */
 }
 section + section {
-  margin-top: 24px; /* consistent spacing between sections */
+  margin-top: 16px; /* smaller spacing between sections */
 }
 
 /* ===== Responsive Breakpoints ===== */
@@ -439,7 +439,7 @@ section + section {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 64px var(--gutter) 48px;
+    padding: 48px var(--gutter) 32px; /* reduce vertical spacing on mid screens */
   }
   .hero .profile-photo {
     margin: 0 auto 16px;
@@ -456,15 +456,15 @@ section + section {
   }
   .svc__grid,
   #blog-grid {
-    gap: 1rem;
+    gap: var(--grid-gap);
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
   .cert-container {
-    gap: .8rem;
-    padding: 1.4rem 1rem;
+    gap: var(--grid-gap);
+    padding: 1rem; /* match certificate container padding */
   }
   .skills-grid {
-    gap: 1rem;
+    gap: var(--grid-gap);
     grid-template-columns: 1fr 1fr; /* two columns on mid‑sized mobile */
   }
   .experience-item {
@@ -475,9 +475,9 @@ section + section {
   }
   /* tighten gutters and padding on mid‑sized devices */
   :root {
-    --gutter: 20px;
-    --card-padding: 1rem;
-    --grid-gap: 1rem;
+    --gutter: 16px;
+    --card-padding: .8rem;
+    --grid-gap: .8rem;
   }
 }
 @media (max-width: 600px) {
@@ -494,7 +494,7 @@ section + section {
   }
   .cert-container {
     grid-template-columns: 1fr;
-    gap: .7rem;
+    gap: var(--grid-gap);
     padding: 1rem;
   }
   .cert-card {
@@ -515,11 +515,14 @@ section + section {
   p {
     line-height: 1.55; /* slightly tighter on very small screens */
   }
+  .hero {
+    padding: 40px var(--gutter) 24px; /* further reduce hero spacing on small screens */
+  }
   /* further tighten gutters and padding on very small devices */
   :root {
-    --gutter: 16px;
-    --card-padding: .9rem;
-    --grid-gap: .9rem;
+    --gutter: 12px;
+    --card-padding: .7rem;
+    --grid-gap: .7rem;
   }
 }
 
