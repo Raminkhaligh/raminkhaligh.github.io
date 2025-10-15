@@ -1,0 +1,32 @@
+name: Generate and Commit Sitemap
+
+on:
+  push:
+    branches: [ main ]
+  # Optionally run weekly to ensure sitemap stays up-to-date
+  schedule:
+    - cron: '0 3 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      # Set up Python environment to run sitemap generator
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+      - name: Generate sitemap
+        run: python sitemap_generator.py
+      - name: Commit and push sitemap
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'sitemap.xml'
+          message: 'chore: update sitemap'
+          default_author: github_actions
