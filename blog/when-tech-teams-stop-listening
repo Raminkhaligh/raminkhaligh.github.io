@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh</title>
+  <meta name="description" content="A real story on how poor accountability and ego in tech teams can destroy collaboration, delay growth, and damage culture — and what to do about it." />
+  <link rel="canonical" href="https://raminkhaligh.github.io/blog/when-tech-teams-stop-listening.html" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="When Tech Teams Stop Listening — Lessons on Accountability & Culture" />
+  <meta property="og:description" content="A real story on how poor accountability and ego in tech teams can destroy collaboration, delay growth, and damage culture — and what to do about it." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png" />
+  <meta property="og:url" content="https://raminkhaligh.github.io/blog/when-tech-teams-stop-listening.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="When Tech Teams Stop Listening — Lessons on Accountability & Culture" />
+  <meta name="twitter:description" content="How ego, lack of accountability, and poor leadership create bottlenecks between tech and marketing — and how to fix it." />
+  <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+
+<body>
+  <header class="site-nav">
+    <div class="nav-content">
+      <a class="brand" href="https://raminkhaligh.github.io/">
+        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" />
+        <span>Ramin Khaligh</span>
+      </a>
+      <nav>
+        <a href="../#about">About</a>
+        <a href="../#services">Services</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#skills">Skills</a>
+        <a href="../#contact">Contact</a>
+        <a href="../blog/" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:4rem;">
+    <article class="card">
+      <header style="margin-bottom:2rem;">
+        <h1 class="heading-hero">When Tech Teams Stop Listening</h1>
+        <p style="color:var(--muted);">A real story about accountability, culture, and the gap between product, tech, and marketing.</p>
+      </header>
+
+      <img src="../assets/when-tech-teams-stop-listening.png" alt="Illustration showing miscommunication between teams" loading="lazy" style="width:100%;border-radius:16px;margin-bottom:2rem;" />
+
+      <h2>The Situation</h2>
+      <p>
+        It started with a simple request — a clear, documented need from marketing that was backed by data and user feedback.
+        We provided everything: detailed specs, multiple discussions, and even mockups to make sure the tech team could deliver
+        smoothly. Yet, deadlines slipped, communication stopped, and weeks later the output didn’t match the brief or quality
+        expected. When we reviewed it, the work was rushed and disconnected from the goal.
+      </p>
+
+      <p>
+        As the Product Marketing Manager, I escalated the issue to leadership. A review meeting was scheduled with the Head of Product,
+        Tech Lead, and Frontend Lead. The intention was to realign and fix our collaboration.
+      </p>
+
+      <h2>Where It Went Wrong</h2>
+      <p>
+        Instead of constructive dialogue, the meeting turned into a blame session. The frontend lead started by complaining that
+        “requirements keep changing” — which was simply not true. Every change had been documented and communicated well in advance.
+        When I responded with facts, the conversation escalated emotionally. Eventually, both the tech and product heads joined
+        the outburst — shouting, deflecting, and showing zero accountability.
+      </p>
+
+      <p>
+        What could’ve been an opportunity for alignment became a demonstration of ego, frustration, and poor leadership. The meeting
+        ended abruptly — without resolution, reflection, or ownership.
+      </p>
+
+      <h2>The Root Cause</h2>
+      <p>
+        The real issue wasn’t the feature or the deadlines — it was <strong>culture</strong>. A lack of shared goals and accountability
+        between teams. The tech team saw marketing as “outsiders” making requests, not as partners solving for users. Product leadership
+        avoided taking responsibility, and the result was a toxic feedback loop: no ownership → no collaboration → no growth.
+      </p>
+
+      <h2>What Should’ve Happened</h2>
+      <ul style="color:var(--muted);">
+        <li><strong>Shared OKRs</strong> — Product, tech, and marketing should all be accountable for one north-star metric.</li>
+        <li><strong>Transparent processes</strong> — Weekly demos, async updates, and clear visibility into progress.</li>
+        <li><strong>Psychological safety</strong> — Teams must be able to question, challenge, and contribute without fear of retaliation.</li>
+        <li><strong>Ownership culture</strong> — Everyone owns the outcome, not just their “part” of the project.</li>
+        <li><strong>Feedback loops</strong> — Replace blame with retrospectives. Problems are systems issues, not people issues.</li>
+      </ul>
+
+      <h2>The Lesson</h2>
+      <p>
+        A company’s culture shows its true face not in success, but in how it handles tension. If your team can’t have hard conversations
+        without ego or defensiveness, no framework or OKR will save you. True progress starts when leaders <em>listen before they react</em>
+        — and when accountability becomes a shared mindset, not a finger to point.
+      </p>
+
+      <blockquote style="border-left:3px solid var(--accent);padding-left:1rem;color:var(--muted);margin:1.5rem 0;">
+        “Culture isn’t built by slides — it’s built in meetings where people disagree, and still choose to collaborate.”
+      </blockquote>
+
+      <p><strong>Lesson in one line:</strong> Transparency isn’t optional — it’s the foundation of trust, delivery, and growth.</p>
+
+      <div class="cta" style="margin-top:2.5rem;">
+        <a href="../blog/" class="btn">← Back to Blog</a>
+        <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Ramin Khaligh · All Rights Reserved</p>
+  </footer>
+</body>
+</html>
