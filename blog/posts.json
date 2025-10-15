@@ -1,24 +1,34 @@
 [
   {
-    "title": "Bridging the Product & Marketing Gap",
-    "summary": "How PMs align product and marketing goals to improve collaboration and reduce CAC without hurting conversion.",
-    "image": "/assets/blog-bridge-gap.png",
-    "url": "/blog/bridging-product-marketing-gap.html",
+    "title": "When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh",
+    "summary": "A real story on how poor accountability and ego in tech teams can destroy collaboration, delay growth, and damage culture — and what to do about it.",
+    "date": "2025-10-15",
+    "url": "blog/when-tech-teams-stop-listening.html",
+    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
+    "featured": false
+  },
+  {
+    "title": "How I Increased User Retention by 40% — Case Study | Ramin Khaligh",
+    "summary": "A detailed breakdown of how I improved user retention by 40% for a fintech product through UX experiments, lifecycle automation, and growth loops.",
     "date": "2025-10-13",
-    "featured": true
+    "url": "blog/fintech-retention.html",
+    "image": "https://raminkhaligh.github.io/assets/case-retention-cover.png",
+    "featured": false
   },
   {
-    "title": "When the CEO is a Dictator",
-    "summary": "How over-centralized approvals kill ownership, delay launches, and what PMs can do to rebuild autonomy.",
-    "image": "/assets/blog-ceo-dictator.png",
-    "url": "/blog/when-the-ceo-is-a-dictator.html",
-    "date": "2025-10-13"
+    "title": "Bridging the Product & Marketing Gap | Ramin Khaligh",
+    "summary": "How product managers can align product and marketing goals to reduce conflicts, improve CAC and conversion, and build stronger collaboration between teams.",
+    "date": "2025-10-13",
+    "url": "blog/bridging-product-marketing-gap.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
+    "featured": false
   },
   {
-    "title": "How I Increased User Retention by 40%",
-    "summary": "Data-led UX and lifecycle automation that moved the retention curve for a fintech product.",
-    "image": "/assets/blog-fintech-retention.png",
-    "url": "/blog/fintech-retention.html",
-    "date": "2025-09-20"
+    "title": "When the CEO is a Dictator | Ramin Khaligh",
+    "summary": "How micromanagement and top-down decision-making from a non-technical CEO can cripple innovation, delay launches, and destroy ownership culture in product and marketing teams.",
+    "date": "2025-10-13",
+    "url": "blog/when-the-ceo-is-a-dictator.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
+    "featured": false
   }
 ]
