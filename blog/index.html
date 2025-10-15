@@ -3,102 +3,129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Blog & Case Studies | Ramin Khaligh - رامین خلیق</title>
-  <meta name="description" content="Articles, case studies, and frameworks from Ramin Khaligh | رامین خلیق — Product & Growth Consultant helping SaaS and fintech startups scale with UX, strategy and data." />
-  <meta name="author" content="Ramin Khaligh" />
-  <meta name="keywords" content="Product Management, UX Design, Growth Marketing, SaaS, Fintech, Ramin Khaligh, رامین خلیق" />
+  <title>Blog & Case Studies | Ramin Khaligh - رامین خلیق</title>
+  <meta name="description" content="Articles, case studies, and insights from Ramin Khaligh | رامین خلیق — on product management, UX, and growth." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://raminkhaligh.github.io/blog/" />
+  <link rel="alternate" hreflang="en" href="https://raminkhaligh.github.io/blog/" />
+  <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/blog/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Product Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
-  <meta property="og:description" content="Explore insights and case studies on product, UX, and growth strategy from Ramin Khaligh." />
+  <!-- Performance & PWA parity with main site -->
+  <link rel="preconnect" href="https://raminkhaligh.github.io" crossorigin>
+  <link rel="preload" as="fetch" href="posts.json" crossorigin="anonymous" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="application-name" content="Ramin Khaligh Portfolio" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ramin Khaligh" />
+
+  <!-- Favicon (kept exactly like main site path) -->
+  <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
+
+  <!-- Social meta tags -->
+  <meta property="og:title" content="Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
+  <meta property="og:description" content="Explore insights, frameworks, and product case studies by Ramin Khaligh." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/blog/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-cover.png" />
   <meta property="og:site_name" content="Ramin Khaligh Portfolio" />
+  <meta property="og:locale" content="en_US" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Product Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
-  <meta name="twitter:description" content="Product, UX & Growth insights by Ramin Khaligh." />
+  <meta name="twitter:title" content="Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
+  <meta name="twitter:description" content="Insights and case studies on product management, UX, and growth." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-cover.png" />
 
-  <!-- Styles -->
+  <!-- Styles (kept) -->
   <link rel="stylesheet" href="../assets/style.css" />
 
-  <!-- Structured Data -->
+  <!-- Structured data: Blog + Breadcrumbs -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Ramin Khaligh Blog",
-    "url": "https://raminkhaligh.github.io/blog/",
-    "author": {
-      "@type": "Person",
-      "name": "Ramin Khaligh",
-      "url": "https://raminkhaligh.github.io/",
-      "sameAs": ["https://www.linkedin.com/in/ramin-khaligh","https://github.com/raminkhaligh"]
-    },
-    "description": "Product & growth insights and case studies from Ramin Khaligh."
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://raminkhaligh.github.io/blog/#blog",
+        "url": "https://raminkhaligh.github.io/blog/",
+        "name": "Ramin Khaligh Blog",
+        "description": "Product, UX, and growth insights and case studies.",
+        "publisher": {
+          "@type": "Person",
+          "name": "Ramin Khaligh",
+          "url": "https://raminkhaligh.github.io/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raminkhaligh.github.io/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://raminkhaligh.github.io/blog/"}
+        ]
+      }
+    ]
   }
   </script>
 </head>
 
-<body>
-  <!-- ===== Navigation ===== -->
-  <header class="site-nav" role="navigation">
+<body id="top">
+  <!-- ===== Navigation (unchanged structure) ===== -->
+  <header class="site-nav" role="navigation" aria-label="Primary">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/" aria-label="Home">
-        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
-        <span>Ramin Khaligh</span>
+        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
+        <span>Ramin Khaligh</span>
       </a>
-      <nav>
+      <nav role="navigation">
         <a href="../#about">About</a>
         <a href="../#services">Services</a>
         <a href="../#experience">Experience</a>
         <a href="../#skills">Skills</a>
         <a href="../#contact">Contact</a>
         <a href="../blog/" aria-current="page">Blog</a>
-        <a class="btn primary" href="../assets/ramin-khaligh-resume.pdf" download>Résumé</a>
+        <a class="btn primary" href="../assets/ramin-khaligh-resume.pdf" download>Download Résumé</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <main id="main" class="container">
+  <!-- ===== Main ===== -->
+  <main id="main" class="container" role="main">
     <section id="blog-header" style="text-align:center; max-width:720px; margin:4rem auto 2.5rem;">
       <h1 class="heading-hero">Articles & Case Studies</h1>
-      <p style="color:var(--muted); font-size:1.05rem;">
-        Real insights from building and scaling SaaS & fintech products — frameworks that blend <strong>strategy</strong>, <strong>UX</strong>, and <strong>growth</strong>.
-      </p>
+      <p style="color:var(--muted);">Thoughts, frameworks, and lessons from real-world product and growth experiences.</p>
     </section>
 
-    <!-- ===== Blog Grid ===== -->
-    <section id="blog-list" aria-labelledby="blog-list-title">
-      <div id="blog-grid" class="svc__grid" style="margin-bottom:4rem;"></div>
+    <section id="blog-list" class="container" aria-labelledby="blog-list-title">
+      <div id="blog-grid" class="svc__grid"></div>
     </section>
 
     <div style="text-align:center; margin:3rem 0;">
-      <a href="https://raminkhaligh.github.io/" class="btn">← Back to Portfolio</a>
+      <a href="https://raminkhaligh.github.io/" class="btn">← Back to Home</a>
     </div>
   </main>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
+  <!-- ===== Footer (kept parity with main site icons and back-to-top) ===== -->
+  <footer class="footer" role="contentinfo">
     <div style="display:flex;justify-content:center;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:.8rem;">
-      <a href="mailto:hwraamin@gmail.com" aria-label="Email" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+      <a href="mailto:hwraamin@gmail.com" target="_blank" rel="noopener" aria-label="Email"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);transition:all .2s;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-label="Email icon">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0L12 13.5 2.25 6.75" />
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener" aria-label="LinkedIn"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);transition:all .2s;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-label="LinkedIn icon">
           <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM2 9h4v12H2zM4 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
         </svg>
       </a>
-      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener" aria-label="Instagram"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);transition:all .2s;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-label="Instagram icon">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
@@ -106,43 +133,72 @@
       </a>
     </div>
     <p style="display:flex;justify-content:center;align-items:center;gap:.6rem;">
-      © 2025 Ramin Khaligh · All Rights Reserved
+      © 2025 Ramin Khaligh · All Rights Reserved
+      <a href="#top" aria-label="Back to top" 
+         style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);
+                transition:all .25s ease;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16" aria-label="Back to top icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </a>
     </p>
   </footer>
 
-  <!-- ===== Blog Loader Script ===== -->
-  <script>
+  <!-- ===== Dynamic Blog Loader (kept, refined with path normalization like homepage) ===== -->
+  <script defer>
     fetch('posts.json')
       .then(res => res.json())
       .then(posts => {
         const container = document.getElementById('blog-grid');
-        posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+        if (!container) return;
 
-        if (!posts.length) {
-          container.innerHTML = '<p style="text-align:center;color:var(--muted);">No posts yet — check back soon or <a href="https://raminkhaligh.github.io/" style="color:var(--accent);">visit portfolio</a>.</p>';
-          return;
-        }
+        // Keep behavior consistent with homepage loader
+        const normalize = (p) => {
+          if (!p) return '#';
+          if (/^https?:\/\//i.test(p)) return p;
+          p = p.replace(/^([.\/]|(\.\.\/)+)/g, '');
+          if (!p.startsWith('/')) p = '/' + p;
+          return p;
+        };
 
-        posts.forEach(post => {
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Featured first (if provided), then latest
+        const featured = posts.filter(p => p.featured);
+        const latest = posts.filter(p => !p.featured);
+        const ordered = [...featured, ...latest];
+
+        // Render all posts on index page
+        ordered.forEach(post => {
+          const href = normalize(post.url);
+          const img = normalize(post.image);
           const article = document.createElement('article');
           article.className = 'card';
-          article.style.transition = 'transform .25s ease, box-shadow .25s ease';
-          article.onmouseover = () => article.style.transform = 'translateY(-4px)';
-          article.onmouseleave = () => article.style.transform = 'translateY(0)';
-
-          const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
-            month: 'short', day: 'numeric', year: 'numeric'
-          });
-
           article.innerHTML = `
-            <a href="${post.url}" style="text-decoration:none; color:inherit;">
-              <div style="width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px; margin-bottom:1rem;">
-                <img src="${post.image}" alt="${post.title} thumbnail" loading="lazy"
-                     style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" />
+            <div style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+              <a href="${href}" style="text-decoration:none;color:inherit;">
+                <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
+                  <img src="${img}" alt="${post.title}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;transition:transform .25s ease;" />
+                </div>
+                <h3>${post.title}</h3>
+                <p style="color:var(--muted);min-height:3.6em;">${post.summary}</p>
+              </a>
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-top:auto;">
+                <a href="${href}" class="btn">Read More →</a>
+                <small style="color:var(--muted);">${new Date(post.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'})}</small>
               </div>
-              <h3>${post.title}</h3>
-              <p style="color:var(--muted); font-size:.95rem; margin-bottom:.8rem;">${post.summary}</p>
-              <small style="color:var(--muted); font-size:.8rem;">📅 ${formattedDate}</small>
-            </a>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;">
-              <a href="${post.url}" class="btn">Read More →</a>
+            </div>`;
+          container.appendChild(article);
+        });
+      })
+      .catch(() => {
+        const msg = document.createElement('p');
+        msg.textContent = 'Unable to load posts right now. Please try again later.';
+        msg.style.color = 'var(--muted)';
+        msg.style.textAlign = 'center';
+        document.getElementById('blog-grid').appendChild(msg);
+      });
+  </script>
+</body>
+</html>
