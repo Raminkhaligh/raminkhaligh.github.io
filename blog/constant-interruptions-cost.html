@@ -7,20 +7,175 @@
   <meta name="description" content="A real story about how constant interruptions and lack of respect for planning can destroy focus, create technical debt, and demotivate teams — and how to fix it." />
   <link rel="canonical" href="https://raminkhaligh.github.io/blog/when-leaders-become-bottleneck.html" />
   <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="When Leaders Become the Bottleneck — The Cost of Constant Interruptions" />
   <meta property="og:description" content="A story on how ignoring planning and disrupting engineers’ focus creates chaos, debt, and frustration." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png" />
   <meta property="og:url" content="https://raminkhaligh.github.io/blog/when-leaders-become-bottleneck.html" />
+  <meta property="og:site_name" content="Ramin Khaligh Portfolio" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="When Leaders Become the Bottleneck — The Cost of Constant Interruptions" />
   <meta name="twitter:description" content="How repeated interruptions and dismissing planning culture can kill team focus and morale." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
+
+  <!-- Main site stylesheet -->
   <link rel="stylesheet" href="../assets/style.css" />
 
+  <!-- Adaptive Theme Enhancements -->
+  <style>
+    /* Inherit main site variables if available, add dark-mode fallback */
+    :root {
+      color-scheme: light dark;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--bg, #0b0d10);
+        --text: var(--text, #f1f3f5);
+        --muted: var(--muted, #a0a4aa);
+        --line: var(--line, rgba(255,255,255,0.1));
+        --accent: var(--accent, #64b5f6);
+        --card-bg: var(--card-bg, rgba(255,255,255,0.03));
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: var(--bg, #ffffff);
+        --text: var(--text, #1b1b1b);
+        --muted: var(--muted, #555);
+        --line: var(--line, rgba(0,0,0,0.1));
+        --accent: var(--accent, #0056b3);
+        --card-bg: var(--card-bg, #f8f9fa);
+      }
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+    }
+
+    main.container {
+      padding-top: 4rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    article.card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.8rem;
+      width: 100%;
+      max-width: 720px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    article.card header {
+      margin-bottom: 1.5rem;
+    }
+
+    article.card h1 {
+      margin-bottom: 0.4rem;
+    }
+
+    article.card p {
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    article.card h2 {
+      margin-top: 1.6rem;
+      color: var(--accent);
+    }
+
+    article.card img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 1.5rem 0;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .cta .btn {
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .cta .btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .cta .btn.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .cta .btn.primary:hover {
+      background: #82c4fa;
+    }
+
+    footer.footer {
+      margin-top: 2.5rem;
+      padding: 2rem 0 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+      background: transparent;
+    }
+
+    footer.footer a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    footer.footer a:hover {
+      color: #82c4fa;
+    }
+
+    @media (min-width: 1000px) {
+      article.card img {
+        max-height: 340px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- ===== Header ===== -->
   <header class="site-nav">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/">
@@ -38,14 +193,15 @@
     </div>
   </header>
 
-  <main class="container" style="padding-top:4rem;">
+  <!-- ===== Main Content ===== -->
+  <main class="container">
     <article class="card">
-      <header style="margin-bottom:2rem;">
+      <header>
         <h1 class="heading-hero">When Leaders Become the Bottleneck</h1>
         <p style="color:var(--muted);">A story about interruptions, planning, and how ignoring process can drain a team’s energy and focus.</p>
       </header>
 
-      <img src="../assets/when-leaders-become-bottleneck.png" alt="Illustration showing manager interrupting team focus" loading="lazy" style="width:100%;border-radius:16px;margin-bottom:2rem;" />
+      <img src="../assets/when-leaders-become-bottleneck.png" alt="Illustration showing manager interrupting team focus" loading="lazy" />
 
       <h2>Situation</h2>
       <p>
@@ -91,7 +247,7 @@
         But most importantly, the team felt respected again.
       </p>
 
-      <blockquote style="border-left:3px solid var(--accent);padding-left:1rem;color:var(--muted);margin:1.5rem 0;">
+      <blockquote>
         “A leader’s job isn’t to move faster than the team — it’s to clear the path so the team can move without interruption.”
       </blockquote>
 
@@ -104,14 +260,40 @@
 
       <p><strong>Lesson in one line:</strong> Protecting focus isn’t optional — it’s the foundation of quality, trust, and long-term speed.</p>
 
-      <div class="cta" style="margin-top:2.5rem;">
+      <div class="cta">
         <a href="../blog/" class="btn">← Back to Blog</a>
         <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
       </div>
     </article>
   </main>
 
-  <footer class="footer">
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div style="display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.8rem;">
+      <a href="mailto:hwraamin@gmail.com" target="_blank" rel="noopener" aria-label="Email"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0L12 13.5 2.25 6.75" />
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener" aria-label="LinkedIn"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM2 9h4v12H2zM4 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener" aria-label="Instagram"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+    </div>
     <p>© 2025 Ramin Khaligh · All Rights Reserved</p>
   </footer>
 </body>
