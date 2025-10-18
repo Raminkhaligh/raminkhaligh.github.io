@@ -28,41 +28,34 @@
   <!-- Main site stylesheet -->
   <link rel="stylesheet" href="../assets/style.css" />
 
-  <!-- Adaptive Theme Enhancements -->
+  <!-- Enhanced readability and dark-mode styling -->
   <style>
-    /* Inherit main site variables if available, add dark-mode fallback */
     :root {
-      color-scheme: light dark;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: var(--bg, #0b0d10);
-        --text: var(--text, #f1f3f5);
-        --muted: var(--muted, #a0a4aa);
-        --line: var(--line, rgba(255,255,255,0.1));
-        --accent: var(--accent, #64b5f6);
-        --card-bg: var(--card-bg, rgba(255,255,255,0.03));
-      }
+      --bg: #0b0d10;
+      --text: #f1f3f5;
+      --muted: #a0a4aa;
+      --line: rgba(255,255,255,0.08);
+      --accent: #64b5f6;
+      --card-bg: rgba(255,255,255,0.03);
     }
 
     @media (prefers-color-scheme: light) {
       :root {
-        --bg: var(--bg, #ffffff);
-        --text: var(--text, #1b1b1b);
-        --muted: var(--muted, #555);
-        --line: var(--line, rgba(0,0,0,0.1));
-        --accent: var(--accent, #0056b3);
-        --card-bg: var(--card-bg, #f8f9fa);
+        --bg: #ffffff;
+        --text: #1b1b1b;
+        --muted: #555;
+        --line: rgba(0,0,0,0.1);
+        --accent: #0056b3;
+        --card-bg: #f8f9fa;
       }
     }
 
     body {
       background: var(--bg);
       color: var(--text);
-      transition: background 0.3s ease, color 0.3s ease;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.65;
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     main.container {
@@ -72,13 +65,14 @@
     }
 
     article.card {
+      max-width: 720px;
+      width: 100%;
       background: var(--card-bg);
       border: 1px solid var(--line);
       border-radius: 16px;
-      padding: 1.8rem;
-      width: 100%;
-      max-width: 720px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      padding: 1.5rem 1.8rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease, border-color 0.3s ease;
     }
 
     article.card header {
@@ -89,9 +83,12 @@
       margin-bottom: 0.4rem;
     }
 
-    article.card p {
-      color: var(--text);
-      line-height: 1.7;
+    article.card img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 1.5rem;
     }
 
     article.card h2 {
@@ -99,37 +96,34 @@
       color: var(--accent);
     }
 
-    article.card img {
-      width: 100%;
-      max-height: 380px;
-      object-fit: cover;
-      border-radius: 14px;
-      margin-bottom: 1.5rem;
+    article.card p {
+      color: var(--text);
+      line-height: 1.7;
     }
 
     blockquote {
       border-left: 3px solid var(--accent);
       padding-left: 1rem;
       color: var(--muted);
-      font-style: italic;
       margin: 1.5rem 0;
+      font-style: italic;
     }
 
     .cta {
       margin-top: 2rem;
       display: flex;
-      flex-wrap: wrap;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .cta .btn {
-      border: 1px solid var(--accent);
       background: transparent;
+      border: 1px solid var(--accent);
       color: var(--accent);
-      padding: 0.5rem 1rem;
       font-size: 0.9rem;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
-      transition: all 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .cta .btn:hover {
@@ -153,7 +147,6 @@
       color: var(--muted);
       border-top: 1px solid var(--line);
       font-size: 0.9rem;
-      background: transparent;
     }
 
     footer.footer a {
@@ -168,14 +161,14 @@
 
     @media (min-width: 1000px) {
       article.card img {
-        max-height: 340px;
+        max-height: 360px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- ===== Header ===== -->
+  <!-- ===== Header (same as site) ===== -->
   <header class="site-nav">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/">
