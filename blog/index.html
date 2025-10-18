@@ -10,7 +10,7 @@
   <link rel="alternate" hreflang="en" href="https://raminkhaligh.github.io/blog/" />
   <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/blog/" />
 
-  <!-- Performance & PWA parity with main site -->
+  <!-- Performance & PWA parity -->
   <link rel="preconnect" href="https://raminkhaligh.github.io" crossorigin>
   <link rel="preload" as="fetch" href="posts.json" crossorigin="anonymous" />
   <meta name="theme-color" content="#0b0d10" />
@@ -20,10 +20,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Ramin Khaligh" />
 
-  <!-- Favicon (kept exactly like main site path) -->
+  <!-- Favicon -->
   <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
 
-  <!-- Social meta tags -->
+  <!-- Social meta -->
   <meta property="og:title" content="Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
   <meta property="og:description" content="Explore insights, frameworks, and product case studies by Ramin Khaligh." />
   <meta property="og:type" content="website" />
@@ -37,10 +37,31 @@
   <meta name="twitter:description" content="Insights and case studies on product management, UX, and growth." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-cover.png" />
 
-  <!-- Styles (kept) -->
+  <!-- Styles -->
   <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* === Layout Compact Adjustments === */
+    body { scroll-behavior: smooth; }
+    main.container { padding: 2rem 1rem; }
+    section#blog-header { margin: 1rem auto; padding: 0 0.5rem; }
+    .heading-hero { margin-bottom: .5rem; }
+    #blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .card {
+      padding: 1rem 1rem 1.2rem;
+      border-radius: 14px;
+    }
+    .btn { padding: .35rem .8rem; font-size: .9rem; }
+    footer.footer { padding: 1.5rem 0 .8rem; }
+    footer.footer div { gap: .8rem; margin-bottom: .6rem !important; }
+    footer.footer p { font-size: .9rem; margin: 0; }
+  </style>
 
-  <!-- Structured data: Blog + Breadcrumbs -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,33 +81,33 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raminkhaligh.github.io/"},
-          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://raminkhaligh.github.io/blog/"}
+          {"@type": "ListItem","position":1,"name":"Home","item":"https://raminkhaligh.github.io/"},
+          {"@type": "ListItem","position":2,"name":"Blog","item":"https://raminkhaligh.github.io/blog/"}
         ]
       }
     ]
   }
   </script>
+
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KVRSRD3Q');</script>
-<!-- End Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KVRSRD3Q');
+  </script>
 </head>
 
 <body id="top">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVRSRD3Q"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <!-- ===== Navigation (unchanged structure) ===== -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVRSRD3Q"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
   <header class="site-nav" role="navigation" aria-label="Primary">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/" aria-label="Home">
-        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
-        <span>Ramin Khaligh</span>
+        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
+        <span>Ramin Khaligh</span>
       </a>
       <nav role="navigation">
         <a href="../#about">About</a>
@@ -100,71 +121,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </header>
 
-  <!-- ===== Main ===== -->
   <main id="main" class="container" role="main">
-    <section id="blog-header" style="text-align:center; max-width:720px; margin:2rem auto 2rem;">
+    <section id="blog-header" style="text-align:center;max-width:680px;margin:1rem auto;">
       <h1 class="heading-hero">Articles & Case Studies</h1>
-      <p style="color:var(--muted);">Thoughts, frameworks, and lessons from real-world product and growth experiences.</p>
+      <p style="color:var(--muted);font-size:.95rem;">Thoughts, frameworks, and lessons from real-world product and growth experiences.</p>
     </section>
 
     <section id="blog-list" class="container" aria-labelledby="blog-list-title">
       <div id="blog-grid" class="svc__grid"></div>
     </section>
 
-    <div style="text-align:center; margin:1.5rem 0;">
+    <div style="text-align:center;margin:1rem 0;">
       <a href="https://raminkhaligh.github.io/" class="btn">← Back to Home</a>
     </div>
   </main>
 
-  <!-- ===== Footer (kept parity with main site icons and back-to-top) ===== -->
   <footer class="footer" role="contentinfo">
-    <div style="display:flex;justify-content:center;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:.8rem;">
+    <div style="display:flex;justify-content:center;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:.6rem;">
       <a href="mailto:hwraamin@gmail.com" target="_blank" rel="noopener" aria-label="Email"
-         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);transition:all .2s;">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-label="Email icon">
+         style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="16" height="16">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0L12 13.5 2.25 6.75" />
         </svg>
       </a>
       <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener" aria-label="LinkedIn"
-         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);transition:all .2s;">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-label="LinkedIn icon">
+         style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="16" height="16">
           <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM2 9h4v12H2zM4 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
         </svg>
       </a>
       <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener" aria-label="Instagram"
-         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);transition:all .2s;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-label="Instagram icon">
+         style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
         </svg>
       </a>
     </div>
-    <p style="display:flex;justify-content:center;align-items:center;gap:.6rem;">
-      © 2025 Ramin Khaligh · All Rights Reserved
-      <a href="#top" aria-label="Back to top" 
-         style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);
-                transition:all .25s ease;">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16" aria-label="Back to top icon">
+    <p style="display:flex;justify-content:center;align-items:center;gap:.4rem;">
+      © 2025 Ramin Khaligh · All Rights Reserved
+      <a href="#top" aria-label="Back to top"
+         style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:6px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="14" height="14">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
       </a>
     </p>
   </footer>
 
-  <!-- ===== Dynamic Blog Loader (kept, refined with path normalization like homepage) ===== -->
   <script defer>
     fetch('posts.json')
       .then(res => res.json())
       .then(posts => {
         const container = document.getElementById('blog-grid');
         if (!container) return;
-
-        // Keep behavior consistent with homepage loader
         const normalize = (p) => {
           if (!p) return '#';
           if (/^https?:\/\//i.test(p)) return p;
@@ -172,32 +187,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           if (!p.startsWith('/')) p = '/' + p;
           return p;
         };
-
         posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        // Featured first (if provided), then latest
         const featured = posts.filter(p => p.featured);
         const latest = posts.filter(p => !p.featured);
-        const ordered = [...featured, ...latest];
-
-        // Render all posts on index page
-        ordered.forEach(post => {
+        [...featured, ...latest].forEach(post => {
           const href = normalize(post.url);
           const img = normalize(post.image);
           const article = document.createElement('article');
           article.className = 'card';
           article.innerHTML = `
-            <div style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+            <div style="display:flex;flex-direction:column;height:100%;">
               <a href="${href}" style="text-decoration:none;color:inherit;">
-                <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
-                  <img src="${img}" alt="${post.title}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;transition:transform .25s ease;" />
+                <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:.6rem;">
+                  <img src="${img}" alt="${post.title}" loading="lazy" decoding="async"
+                       style="width:100%;height:100%;object-fit:cover;transition:transform .2s ease;" />
                 </div>
-                <h3>${post.title}</h3>
-                <p style="color:var(--muted);min-height:3.6em;">${post.summary}</p>
+                <h3 style="margin-bottom:.3rem;">${post.title}</h3>
+                <p style="color:var(--muted);min-height:3em;font-size:.9rem;">${post.summary}</p>
               </a>
-              <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-top:auto;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;">
                 <a href="${href}" class="btn">Read More →</a>
-                <small style="color:var(--muted);">${new Date(post.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'})}</small>
+                <small style="color:var(--muted);font-size:.8rem;">${new Date(post.date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</small>
               </div>
             </div>`;
           container.appendChild(article);
