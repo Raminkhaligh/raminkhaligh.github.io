@@ -18,21 +18,21 @@
     "featured": false
   },
   {
-    "title": "How I Increased User Retention by 40% — Case Study | Ramin Khaligh",
-    "summary": "A detailed breakdown of how I improved user retention by 40% for a fintech product through UX experiments, lifecycle automation, and growth loops.",
-    "date": "2025-10-13",
-    "lastmod": "2025-10-13",
-    "url": "blog/fintech-retention.html",
-    "image": "https://raminkhaligh.github.io/assets/case-retention-cover.png",
-    "featured": false
-  },
-  {
     "title": "Bridging the Product & Marketing Gap | Ramin Khaligh",
     "summary": "How product managers can align product and marketing goals to reduce conflicts, improve CAC and conversion, and build stronger collaboration between teams.",
     "date": "2025-10-13",
     "lastmod": "2025-10-13",
     "url": "blog/bridging-product-marketing-gap.html",
     "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
+    "featured": false
+  },
+  {
+    "title": "How I Increased User Retention by 40% — Case Study | Ramin Khaligh",
+    "summary": "A detailed breakdown of how I improved user retention by 40% for a fintech product through UX experiments, lifecycle automation, and growth loops.",
+    "date": "2025-10-13",
+    "lastmod": "2025-10-13",
+    "url": "blog/fintech-retention.html",
+    "image": "https://raminkhaligh.github.io/assets/case-retention-cover.png",
     "featured": false
   }
 ]
