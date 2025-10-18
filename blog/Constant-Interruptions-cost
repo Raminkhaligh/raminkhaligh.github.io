@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When Leaders Become the Bottleneck — The Cost of Constant Interruptions | Ramin Khaligh</title>
+  <meta name="description" content="A real story about how constant interruptions and lack of respect for planning can destroy focus, create technical debt, and demotivate teams — and how to fix it." />
+  <link rel="canonical" href="https://raminkhaligh.github.io/blog/when-leaders-become-bottleneck.html" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="When Leaders Become the Bottleneck — The Cost of Constant Interruptions" />
+  <meta property="og:description" content="A story on how ignoring planning and disrupting engineers’ focus creates chaos, debt, and frustration." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png" />
+  <meta property="og:url" content="https://raminkhaligh.github.io/blog/when-leaders-become-bottleneck.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="When Leaders Become the Bottleneck — The Cost of Constant Interruptions" />
+  <meta name="twitter:description" content="How repeated interruptions and dismissing planning culture can kill team focus and morale." />
+  <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png" />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+
+<body>
+  <header class="site-nav">
+    <div class="nav-content">
+      <a class="brand" href="https://raminkhaligh.github.io/">
+        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" />
+        <span>Ramin Khaligh</span>
+      </a>
+      <nav>
+        <a href="../#about">About</a>
+        <a href="../#services">Services</a>
+        <a href="../#experience">Experience</a>
+        <a href="../#skills">Skills</a>
+        <a href="../#contact">Contact</a>
+        <a href="../blog/" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:4rem;">
+    <article class="card">
+      <header style="margin-bottom:2rem;">
+        <h1 class="heading-hero">When Leaders Become the Bottleneck</h1>
+        <p style="color:var(--muted);">A story about interruptions, planning, and how ignoring process can drain a team’s energy and focus.</p>
+      </header>
+
+      <img src="../assets/when-leaders-become-bottleneck.png" alt="Illustration showing manager interrupting team focus" loading="lazy" style="width:100%;border-radius:16px;margin-bottom:2rem;" />
+
+      <h2>Situation</h2>
+      <p>
+        We were in the middle of an important sprint — one of those make-or-break cycles where the entire tech team was deep in flow.
+        Every task was mapped, dependencies were clear, and everyone knew their part. Then it started happening:  
+        my manager would suddenly appear, message, or call — not once, but repeatedly.
+      </p>
+
+      <p>
+        “Haji, what happened to that feature?”  
+        “This task should take two minutes.”  
+        “Just push this one thing quickly.”  
+      </p>
+
+      <p>
+        Each time, the context-switching broke momentum. Each “quick fix” turned into half a day of rework, testing, or debugging.
+        And each interruption delayed the actual roadmap work — the same one we were being held accountable for.
+      </p>
+
+      <h2>Task</h2>
+      <p>
+        As the Product Marketing Manager, my role was to keep alignment — ensure the roadmap stayed on track while managing expectations upward.
+        I needed to protect the team’s focus, communicate priorities clearly, and make sure leadership understood the cost of every “quick request.”
+      </p>
+
+      <h2>Action</h2>
+      <p>
+        I started documenting every unplanned task that came from leadership. For each request, I logged when it arrived, who made it, and what it impacted.
+        Within two weeks, the list was long — over 12 unplanned requests, each one disrupting multiple people.
+      </p>
+
+      <p>
+        Then, instead of confronting emotionally, I presented data:  
+        how many sprint items were delayed, how much tech debt was created, and how the team’s cycle time had doubled.  
+        I also proposed a simple solution — a “Focus Zone”: a protected block during the day when no one interrupts engineers unless it’s critical.
+      </p>
+
+      <h2>Result</h2>
+      <p>
+        Once the data was visible, the conversation shifted. The same manager who once said, “It’s a two-minute job,” realized the real cost:
+        context-switching, burnout, and accumulated tech debt.  
+        Within a month, we had better boundaries, fewer interruptions, and higher-quality output.  
+        But most importantly, the team felt respected again.
+      </p>
+
+      <blockquote style="border-left:3px solid var(--accent);padding-left:1rem;color:var(--muted);margin:1.5rem 0;">
+        “A leader’s job isn’t to move faster than the team — it’s to clear the path so the team can move without interruption.”
+      </blockquote>
+
+      <h2>The Lesson</h2>
+      <p>
+        Great leadership isn’t about constant motion — it’s about discipline.  
+        Respect for planning and process is respect for people.  
+        When leaders interrupt flow, they don’t accelerate progress — they sabotage it.
+      </p>
+
+      <p><strong>Lesson in one line:</strong> Protecting focus isn’t optional — it’s the foundation of quality, trust, and long-term speed.</p>
+
+      <div class="cta" style="margin-top:2.5rem;">
+        <a href="../blog/" class="btn">← Back to Blog</a>
+        <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Ramin Khaligh · All Rights Reserved</p>
+  </footer>
+</body>
+</html>
