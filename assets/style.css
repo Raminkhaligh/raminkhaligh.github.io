@@ -30,9 +30,9 @@
                 "Times New Roman", serif;
   --gutter: 20px; /* reduce outer gutter on desktop */
   /* unified padding for all cards and similar containers */
-  --card-padding: 1rem; /* tighter inner padding by default */
+  --card-padding: 0.5rem; /* tighter inner padding by default */
   /* unified gap between grid items across sections */
-  --grid-gap: 1rem; /* reduce grid gaps */
+  --grid-gap: 0.5rem; /* reduce grid gaps */
 }
 
 /* ===== Reset & Base ===== */
