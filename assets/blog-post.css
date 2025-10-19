@@ -259,43 +259,51 @@ html {
   background: var(--accent);
   color: #fff;
 }
-/* ===== Author Bio ===== */
-.author-bio {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--line);
-  border-radius: 12px;
+/* =====================================================
+   BLOG POST EXTENSIONS — Compatible with main style.css
+   ===================================================== */
+
+/* ===== General article layout ===== */
+article.card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.02);
   box-shadow: var(--shadow-1);
 }
 
-.author-bio img {
-  border-radius: 50%;
-  flex-shrink: 0;
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
+article.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 2rem;
 }
 
-.author-bio h3 {
-  margin: 0 0 0.2rem;
-  color: var(--accent);
-}
-
-.author-bio p {
-  margin: 0 0 0.5rem;
-  font-size: 0.9rem;
+/* ===== Breadcrumb ===== */
+.breadcrumb {
+  max-width: 760px;
+  margin: 1.2rem auto 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
-  line-height: 1.6;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
 }
 
-.author-bio .btn.small {
-  padding: 0.3rem 0.8rem;
-  font-size: 0.8rem;
-  border-radius: 6px;
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Reading time ===== */
+#reading-time {
+  color: var(--accent);
 }
 
 /* ===== Related Topics ===== */
@@ -340,7 +348,7 @@ html {
 
 /* ===== Share Section ===== */
 .share-post {
-  margin-top: 1.8rem;
+  margin-top: 2rem;
   font-size: 0.9rem;
 }
 
@@ -378,19 +386,98 @@ html {
   transform: scale(1.05);
 }
 
-.share-icons img {
+.share-icons svg {
   width: 18px;
   height: 18px;
-  filter: brightness(0) invert(1);
+  stroke: var(--accent);
+  transition: stroke 0.2s ease;
 }
 
-/* ===== Reading Time & Meta Info ===== */
-#reading-time {
+.share-icons a:hover svg,
+.share-icons button:hover svg {
+  stroke: #fff;
+}
+
+/* ===== Author Bio ===== */
+.author-bio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow-1);
+}
+
+.author-bio img {
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+
+.author-bio h3 {
+  margin: 0 0 0.2rem;
   color: var(--accent);
 }
 
-/* ===== Responsive Tweaks ===== */
+.author-bio p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.author-bio .btn.small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+/* ===== CTA Section ===== */
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .cta {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+/* ===== Typography adjustments ===== */
+article.card h2 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+article.card p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+article.card blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--muted);
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+/* ===== Responsive adjustments ===== */
 @media (max-width: 768px) {
+  article.card {
+    padding: 1.5rem;
+  }
+
   .author-bio {
     flex-direction: column;
     align-items: center;
@@ -402,11 +489,8 @@ html {
     height: 64px;
   }
 
+  .related-topics ul,
   .share-icons {
-    justify-content: center;
-  }
-
-  .related-topics ul {
     justify-content: center;
   }
 }
