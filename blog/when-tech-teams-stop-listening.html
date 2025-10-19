@@ -4,22 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh</title>
-  <meta name="description" content="A real story on how poor accountability and ego in tech teams can destroy collaboration, delay growth, and damage culture — and what to do about it." />
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="A real story on how ego, poor accountability, and weak culture can erode collaboration between product, tech, and marketing — and how leaders can rebuild trust and ownership." />
+  <meta name="keywords" content="Leadership, Accountability, Tech Culture, Product Management, Collaboration, Engineering Teams, Ramin Khaligh Blog" />
+  <meta name="language" content="en" />
+  <meta name="author" content="Ramin Khaligh" />
   <link rel="canonical" href="https://raminkhaligh.github.io/blog/when-tech-teams-stop-listening.html" />
   <meta name="robots" content="index,follow" />
+
+  <!-- ✅ Open Graph -->
   <meta property="og:title" content="When Tech Teams Stop Listening — Lessons on Accountability & Culture" />
-  <meta property="og:description" content="A real story on how poor accountability and ego in tech teams can destroy collaboration, delay growth, and damage culture — and what to do about it." />
+  <meta property="og:description" content="A true story about how ego and poor accountability can fracture collaboration between tech and marketing — and what leaders can do differently." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://raminkhaligh.github.io/blog/when-tech-teams-stop-listening.html" />
+  <meta property="article:published_time" content="2025-10-19T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2025-10-19T00:00:00+00:00" />
+  <meta property="article:author" content="https://raminkhaligh.github.io/" />
+  <meta property="article:section" content="Leadership & Culture" />
+  <meta property="og:site_name" content="Ramin Khaligh Blog" />
+
+  <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="When Tech Teams Stop Listening — Lessons on Accountability & Culture" />
-  <meta name="twitter:description" content="How ego, lack of accountability, and poor leadership create bottlenecks between tech and marketing — and how to fix it." />
+  <meta name="twitter:description" content="How ego, poor accountability, and lack of shared ownership destroy team culture — and how to rebuild it." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png" />
+
+  <!-- ✅ Favicon & preload -->
+  <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
+  <link rel="preload" href="../assets/logo.png" as="image" type="image/png" />
+
+  <!-- ✅ Styles -->
   <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/blog-post.css" />
+
+  <!-- ✅ Author Profile & Share Enhancements -->
+  <style>
+    .share-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem;
+      border-radius: 6px;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+    .share-btn:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-1px);
+    }
+    .author-profile {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: var(--shadow-1);
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      transition: border 0.3s ease;
+    }
+    .author-profile:hover { border-color: var(--accent); }
+    .author-info p { margin: 0; line-height: 1.4; }
+    .author-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .author-info a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .author-profile { flex-direction: column; align-items: flex-start; padding: 1.2rem; }
+    }
+  </style>
+
+  <!-- ✅ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "When Tech Teams Stop Listening — Lessons on Accountability & Culture",
+    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
+    "author": {
+      "@type": "Person",
+      "name": "Ramin Khaligh",
+      "url": "https://raminkhaligh.github.io/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Ramin Khaligh"
+    },
+    "datePublished": "2025-10-19",
+    "dateModified": "2025-10-19",
+    "description": "A real story on how ego and lack of accountability in tech teams can destroy collaboration and culture — and what leaders can do to fix it.",
+    "url": "https://raminkhaligh.github.io/blog/when-tech-teams-stop-listening.html",
+    "articleSection": "Leadership & Culture",
+    "timeRequired": "PT6M"
+  }
+  </script>
 </head>
 
-<body>
+<body id="top">
+  <!-- ===== Header ===== -->
   <header class="site-nav">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/">
@@ -33,83 +120,187 @@
         <a href="../#skills">Skills</a>
         <a href="../#contact">Contact</a>
         <a href="../blog/" aria-current="page">Blog</a>
+        <a class="btn primary" href="../assets/ramin-khaligh-resume.pdf" download>Résumé</a>
       </nav>
     </div>
   </header>
 
-  <main class="container" style="padding-top:4rem;">
-    <article class="card">
-      <header style="margin-bottom:2rem;">
-        <h1 class="heading-hero">When Tech Teams Stop Listening</h1>
-        <p style="color:var(--muted);">A real story about accountability, culture, and the gap between product, tech, and marketing.</p>
-      </header>
+  <!-- ===== Breadcrumb ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://raminkhaligh.github.io/">Home</a>
+    <span>›</span>
+    <a href="https://raminkhaligh.github.io/blog/">Blog</a>
+    <span>›</span>
+    <span>When Tech Teams Stop Listening</span>
+  </nav>
 
-      <img src="../assets/when-tech-teams-stop-listening.png" alt="Illustration showing miscommunication between teams" loading="lazy" style="width:100%;border-radius:16px;margin-bottom:2rem;" />
+  <!-- ===== Main Content ===== -->
+  <main class="container two-column">
+    <div class="content-wrapper">
+      <article class="card">
+        <header style="margin-bottom:2rem;">
+          <h1 class="heading-hero">When Tech Teams Stop Listening</h1>
+          <p style="color:var(--muted); margin-bottom:0.2rem;">A real story about accountability, ego, and what happens when collaboration breaks down.</p>
+          <p style="color:var(--muted); font-size:0.85rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+            Published on <time datetime="2025-10-19">October 19, 2025</time> · 
+            <span id="read-time"></span>
+            <button id="share-btn" class="share-btn" title="Share this article" aria-label="Share">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4m0 0L8 6m4-4v16" />
+              </svg>
+            </button>
+          </p>
+        </header>
 
-      <h2>The Situation</h2>
-      <p>
-        It started with a simple request — a clear, documented need from marketing that was backed by data and user feedback.
-        We provided everything: detailed specs, multiple discussions, and even mockups to make sure the tech team could deliver
-        smoothly. Yet, deadlines slipped, communication stopped, and weeks later the output didn’t match the brief or quality
-        expected. When we reviewed it, the work was rushed and disconnected from the goal.
-      </p>
+        <img src="../assets/when-tech-teams-stop-listening.png" alt="Illustration showing miscommunication between teams" loading="lazy" decoding="async" />
 
-      <p>
-        As the Product Marketing Manager, I escalated the issue to leadership. A review meeting was scheduled with the Head of Product,
-        Tech Lead, and Frontend Lead. The intention was to realign and fix our collaboration.
-      </p>
+        <h2 id="situation">The Situation</h2>
+        <p>
+          It started with a simple, well-documented request — a clear need from marketing backed by data and user feedback.
+          The specs were ready, discussions held, mockups shared. Yet deadlines slipped, communication froze, and when the output
+          finally arrived, it was rushed, incomplete, and disconnected from the goal.
+        </p>
+        <p>
+          As the Product Marketing Manager, I escalated the issue. A review meeting was called with the Head of Product,
+          Tech Lead, and Frontend Lead — the goal was alignment. Instead, it exposed something deeper.
+        </p>
 
-      <h2>Where It Went Wrong</h2>
-      <p>
-        Instead of constructive dialogue, the meeting turned into a blame session. The frontend lead started by complaining that
-        “requirements keep changing” — which was simply not true. Every change had been documented and communicated well in advance.
-        When I responded with facts, the conversation escalated emotionally. Eventually, both the tech and product heads joined
-        the outburst — shouting, deflecting, and showing zero accountability.
-      </p>
+        <h2 id="failure">Where It Went Wrong</h2>
+        <p>
+          The meeting devolved quickly. The frontend lead claimed “requirements kept changing” — despite clear documentation to the contrary.
+          When I calmly presented the facts, emotions took over. Voices rose. Accountability vanished.
+          Leadership joined in — defensive, dismissive, unwilling to reflect. 
+        </p>
+        <p>
+          What should have been a chance to rebuild trust became an ego battle. 
+          No resolution. No reflection. Just noise — the sound of a culture cracking.
+        </p>
 
-      <p>
-        What could’ve been an opportunity for alignment became a demonstration of ego, frustration, and poor leadership. The meeting
-        ended abruptly — without resolution, reflection, or ownership.
-      </p>
+        <h2 id="root-cause">The Root Cause</h2>
+        <p>
+          The real problem wasn’t deadlines — it was <strong>culture</strong>. There were no shared goals, no accountability, and no psychological safety.
+          The tech team saw marketing as outsiders; product leadership avoided responsibility.
+          The outcome was predictable: <em>no ownership, no progress, no collaboration</em>.
+        </p>
 
-      <h2>The Root Cause</h2>
-      <p>
-        The real issue wasn’t the feature or the deadlines — it was <strong>culture</strong>. A lack of shared goals and accountability
-        between teams. The tech team saw marketing as “outsiders” making requests, not as partners solving for users. Product leadership
-        avoided taking responsibility, and the result was a toxic feedback loop: no ownership → no collaboration → no growth.
-      </p>
+        <h2 id="what-should-happen">What Should’ve Happened</h2>
+        <ul>
+          <li><strong>Shared OKRs:</strong> Tech, product, and marketing accountable to one north-star metric.</li>
+          <li><strong>Transparent processes:</strong> Weekly demos, async updates, and open progress visibility.</li>
+          <li><strong>Psychological safety:</strong> A culture where disagreement doesn’t equal disrespect.</li>
+          <li><strong>Ownership mindset:</strong> Everyone owns the outcome — not just their function.</li>
+          <li><strong>Feedback loops:</strong> Replace blame with retros; fix systems, not people.</li>
+        </ul>
 
-      <h2>What Should’ve Happened</h2>
-      <ul style="color:var(--muted);">
-        <li><strong>Shared OKRs</strong> — Product, tech, and marketing should all be accountable for one north-star metric.</li>
-        <li><strong>Transparent processes</strong> — Weekly demos, async updates, and clear visibility into progress.</li>
-        <li><strong>Psychological safety</strong> — Teams must be able to question, challenge, and contribute without fear of retaliation.</li>
-        <li><strong>Ownership culture</strong> — Everyone owns the outcome, not just their “part” of the project.</li>
-        <li><strong>Feedback loops</strong> — Replace blame with retrospectives. Problems are systems issues, not people issues.</li>
-      </ul>
+        <h2 id="lesson">The Lesson</h2>
+        <p>
+          Culture reveals itself in conflict. It’s easy to collaborate when things are smooth — real leadership shows up when tensions rise.
+          If your team can’t handle feedback without defensiveness, frameworks and OKRs won’t save you.
+        </p>
 
-      <h2>The Lesson</h2>
-      <p>
-        A company’s culture shows its true face not in success, but in how it handles tension. If your team can’t have hard conversations
-        without ego or defensiveness, no framework or OKR will save you. True progress starts when leaders <em>listen before they react</em>
-        — and when accountability becomes a shared mindset, not a finger to point.
-      </p>
+        <blockquote>
+          “Culture isn’t built in success — it’s built in disagreement, when people choose to listen instead of react.”
+        </blockquote>
 
-      <blockquote style="border-left:3px solid var(--accent);padding-left:1rem;color:var(--muted);margin:1.5rem 0;">
-        “Culture isn’t built by slides — it’s built in meetings where people disagree, and still choose to collaborate.”
-      </blockquote>
+        <p><strong>Lesson in one line:</strong> Transparency and accountability aren’t just management buzzwords — they’re the foundation of growth, trust, and delivery.</p>
 
-      <p><strong>Lesson in one line:</strong> Transparency isn’t optional — it’s the foundation of trust, delivery, and growth.</p>
+        <!-- ===== Author Profile ===== -->
+        <section class="author-profile">
+          <div class="author-info">
+            <p>Written by <a href="https://raminkhaligh.github.io/">Ramin Khaligh | رامین خلیق</a></p>
+            <p style="font-size:0.9rem; color:var(--muted);">Marketing & Product Leader exploring the intersection of technology, growth, and leadership.</p>
+          </div>
+        </section>
 
-      <div class="cta" style="margin-top:2.5rem;">
-        <a href="../blog/" class="btn">← Back to Blog</a>
-        <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
-      </div>
-    </article>
+        <div class="cta">
+          <a href="../blog/" class="btn">← Back to Blog</a>
+          <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ===== Table of Contents Sidebar ===== -->
+    <aside class="sidebar">
+      <nav id="table-of-contents" aria-label="Table of contents">
+        <strong>On this page</strong>
+        <ul></ul>
+      </nav>
+    </aside>
   </main>
 
-  <footer class="footer">
-    <p>© 2025 Ramin Khaligh · All Rights Reserved</p>
+  <!-- ===== Footer ===== -->
+ <footer class="footer" role="contentinfo">
+    <div style="display:flex;justify-content:center;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:.8rem;">
+      <a href="mailto:hwraamin@gmail.com" target="_blank" rel="noopener" aria-label="Email"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0L12 13.5 2.25 6.75" />
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener" aria-label="LinkedIn"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM2 9h4v12H2zM4 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener" aria-label="Instagram"
+         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+    </div>
+    <p style="display:flex;justify-content:center;align-items:center;gap:.6rem;">
+      © 2025 Ramin Khaligh · All Rights Reserved
+      <a href="#top" aria-label="Back to top" 
+         style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;
+                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);
+                transition:all .25s ease;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </a>
+    </p>
   </footer>
+
+  <!-- ✅ Blog JS -->
+  <script src="../assets/blog-post.js" defer></script>
+
+  <!-- ✅ Read time & Share logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const article = document.querySelector("article");
+      const words = article.innerText.trim().split(/\s+/).length;
+      const minutes = Math.ceil(words / 200);
+      const readTimeSpan = document.getElementById("read-time");
+      if (readTimeSpan) readTimeSpan.textContent = minutes + " min read";
+
+      const shareBtn = document.getElementById("share-btn");
+      if (shareBtn) {
+        shareBtn.addEventListener("click", function () {
+          const shareData = {
+            title: document.title,
+            text: "When Tech Teams Stop Listening — Lessons on Accountability & Culture",
+            url: window.location.href
+          };
+          if (navigator.share) {
+            navigator.share(shareData).catch(err => console.warn("Share cancelled or failed", err));
+          } else {
+            navigator.clipboard.writeText(shareData.url).then(() => {
+              shareBtn.innerHTML = '<span style="font-size:0.8rem;color:var(--accent);">Copied!</span>';
+              setTimeout(() => {
+                shareBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4m0 0L8 6m4-4v16" /></svg>';
+              }, 2000);
+            });
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
