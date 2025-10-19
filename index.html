@@ -19,6 +19,7 @@
   <!-- Performance: preconnect and preload assets -->
   <link rel="preconnect" href="https://raminkhaligh.github.io" crossorigin>
   <link rel="preload" as="fetch" href="blog/posts.json" crossorigin="anonymous" />
+  <!-- Preload hero image for improved performance -->
   <link rel="preload" as="image" href="assets/profile.jpg" imagesrcset="assets/profile.jpg" fetchpriority="high" />
 
   <!-- Social meta tags -->
@@ -111,7 +112,11 @@
   </script>
 
   <!-- Security policy: restrict resources to self and trusted domains -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://raminkhaligh.github.io; font-src 'self' data:;" />
+  <!-- Updated CSP to allow remote assets from raminkhaligh.github.io for styling and images -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://raminkhaligh.github.io; img-src 'self' https: data:; script-src 'self' https://www.googletagmanager.com https://raminkhaligh.github.io; style-src 'self' 'unsafe-inline' https://raminkhaligh.github.io; connect-src 'self' https://raminkhaligh.github.io; font-src 'self' data:;" />
+
+  <!-- Base URL to ensure relative links resolve to the remote site when opened locally -->
+  <base href="https://raminkhaligh.github.io/" />
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -153,9 +158,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .theme-toggle:hover {
       transform: scale(1.1);
     }
+    /* Reveal elements are visible by default to avoid empty page if JS fails */
     .reveal {
-      opacity: 0;
-      transform: translateY(20px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity .6s ease, transform .6s ease;
     }
     .reveal.visible {
