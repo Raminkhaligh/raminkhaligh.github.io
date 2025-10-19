@@ -259,3 +259,154 @@ html {
   background: var(--accent);
   color: #fff;
 }
+/* ===== Author Bio ===== */
+.author-bio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow-1);
+}
+
+.author-bio img {
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+
+.author-bio h3 {
+  margin: 0 0 0.2rem;
+  color: var(--accent);
+}
+
+.author-bio p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.author-bio .btn.small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+/* ===== Related Topics ===== */
+.related-topics {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.related-topics strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+}
+
+.related-topics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.related-topics li {
+  margin: 0;
+}
+
+.related-topics a {
+  color: var(--accent);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.related-topics a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ===== Share Section ===== */
+.share-post {
+  margin-top: 1.8rem;
+  font-size: 0.9rem;
+}
+
+.share-post strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.share-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.share-icons a,
+.share-icons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.share-icons a:hover,
+.share-icons button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.share-icons img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+/* ===== Reading Time & Meta Info ===== */
+#reading-time {
+  color: var(--accent);
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 768px) {
+  .author-bio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .author-bio img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .share-icons {
+    justify-content: center;
+  }
+
+  .related-topics ul {
+    justify-content: center;
+  }
+}
