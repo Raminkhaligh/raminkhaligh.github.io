@@ -33,16 +33,13 @@
   <meta name="twitter:description" content="How repeated interruptions and dismissing planning culture can kill team focus and morale — and how to fix it." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png" />
 
-  <!-- ✅ Link relations -->
-  <link rel="prev" href="https://raminkhaligh.github.io/blog/when-tech-teams-stop-listening.html" />
-  <link rel="next" href="https://raminkhaligh.github.io/blog/" />
-
   <!-- ✅ Favicon & preload -->
   <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
   <link rel="preload" href="../assets/logo.png" as="image" type="image/png" />
 
-  <!-- ✅ Main stylesheet -->
+  <!-- ✅ Styles -->
   <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/blog-post.css" />
 
   <!-- ✅ Structured Data -->
   <script type="application/ld+json">
@@ -84,85 +81,10 @@
     ]
   }
   </script>
-
-  <!-- ✅ Layout & readability adjustments -->
-  <style>
-    main.container {
-      padding-top: 4rem;
-      display: flex;
-      justify-content: center;
-    }
-    article.card {
-      width: 100%;
-      max-width: 680px;
-      margin: 0 auto 3rem;
-      padding: 1.5rem 1.8rem;
-    }
-    article.card img {
-      width: 100%;
-      max-height: 360px;
-      object-fit: cover;
-      border-radius: 14px;
-      margin-bottom: 1.5rem;
-    }
-    .breadcrumb {
-      max-width: 680px;
-      margin: 1rem auto;
-      padding: 0 1rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    .breadcrumb a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .breadcrumb a:hover {
-      text-decoration: underline;
-    }
-    .breadcrumb span {
-      margin: 0 0.4rem;
-      color: var(--muted);
-    }
-    .cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2.5rem;
-    }
-    .cta .btn {
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-    }
-    .related-posts {
-      margin-top: 3rem;
-      border-top: 1px solid var(--line);
-      padding-top: 1.5rem;
-    }
-    .related-posts h3 {
-      margin-bottom: 0.5rem;
-    }
-    .related-posts ul {
-      list-style: none;
-      padding-left: 0;
-      line-height: 1.8;
-    }
-    .related-posts a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .related-posts a:hover {
-      text-decoration: underline;
-    }
-    @media (min-width: 1000px) {
-      article.card, .breadcrumb { max-width: 640px; }
-      article.card img { max-height: 320px; }
-    }
-  </style>
 </head>
 
 <body id="top">
-  <!-- ===== Header (same as site) ===== -->
+  <!-- ===== Header ===== -->
   <header class="site-nav">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/">
@@ -190,88 +112,89 @@
     <span>When Leaders Become the Bottleneck</span>
   </nav>
 
-  <!-- ===== Main Content ===== -->
-  <main class="container">
-    <article class="card">
-      <header style="margin-bottom:2rem;">
-        <h1 class="heading-hero">When Leaders Become the Bottleneck</h1>
-        <p style="color:var(--muted); margin-bottom:0.2rem;">A story about interruptions, planning, and how ignoring process can drain a team’s energy and focus.</p>
-        <p style="color:var(--muted); font-size:0.85rem;">Published on <time datetime="2025-02-10">Feb 10, 2025</time> · Updated on <time datetime="2025-03-01">Mar 1, 2025</time></p>
-      </header>
+  <!-- ===== Main Content (two-column layout with TOC) ===== -->
+  <main class="container two-column">
+    <div class="content-wrapper">
+      <article class="card">
+        <header style="margin-bottom:2rem;">
+          <h1 class="heading-hero">When Leaders Become the Bottleneck</h1>
+          <p style="color:var(--muted); margin-bottom:0.2rem;">A story about interruptions, planning, and how ignoring process can drain a team’s energy and focus.</p>
+          <p style="color:var(--muted); font-size:0.85rem;">Published on <time datetime="2025-02-10">Feb 10, 2025</time> · Updated on <time datetime="2025-03-01">Mar 1, 2025</time></p>
+        </header>
 
-      <img src="../assets/when-leaders-become-bottleneck.png" alt="Illustration showing manager interrupting team focus" loading="lazy" decoding="async" />
+        <img src="../assets/when-leaders-become-bottleneck.png" alt="Illustration showing manager interrupting team focus" loading="lazy" decoding="async" />
 
-      <h2 id="situation">Situation</h2>
-      <p>
-        We were in the middle of an important sprint — one of those make-or-break cycles where the entire tech team was deep in flow.
-        Every task was mapped, dependencies were clear, and everyone knew their part. Then it started happening:
-        my manager would suddenly appear, message, or call — not once, but repeatedly.
-      </p>
+        <h2 id="situation">Situation</h2>
+        <p>
+          We were in the middle of an important sprint — one of those make-or-break cycles where the entire tech team was deep in flow.
+          Every task was mapped, dependencies were clear, and everyone knew their part. Then it started happening:
+          my manager would suddenly appear, message, or call — not once, but repeatedly.
+        </p>
 
-      <p>
-        “Haji, what happened to that feature?”  
-        “This task should take two minutes.”  
-        “Just push this one thing quickly.”  
-      </p>
+        <p>
+          “Haji, what happened to that feature?”  
+          “This task should take two minutes.”  
+          “Just push this one thing quickly.”  
+        </p>
 
-      <p>
-        Each time, the context-switching broke momentum. Each “quick fix” turned into half a day of rework, testing, or debugging.
-        And each interruption delayed the actual roadmap work — the same one we were being held accountable for.
-      </p>
+        <p>
+          Each time, the context-switching broke momentum. Each “quick fix” turned into half a day of rework, testing, or debugging.
+          And each interruption delayed the actual roadmap work — the same one we were being held accountable for.
+        </p>
 
-      <h2 id="task">Task</h2>
-      <p>
-        As the Product Marketing Manager, my role was to keep alignment — ensure the roadmap stayed on track while managing expectations upward.
-        I needed to protect the team’s focus, communicate priorities clearly, and make sure leadership understood the cost of every “quick request.”
-      </p>
+        <h2 id="task">Task</h2>
+        <p>
+          As the Product Marketing Manager, my role was to keep alignment — ensure the roadmap stayed on track while managing expectations upward.
+          I needed to protect the team’s focus, communicate priorities clearly, and make sure leadership understood the cost of every “quick request.”
+        </p>
 
-      <h2 id="action">Action</h2>
-      <p>
-        I started documenting every unplanned task that came from leadership. For each request, I logged when it arrived, who made it, and what it impacted.
-        Within two weeks, the list was long — over 12 unplanned requests, each one disrupting multiple people.
-      </p>
+        <h2 id="action">Action</h2>
+        <p>
+          I started documenting every unplanned task that came from leadership. For each request, I logged when it arrived, who made it, and what it impacted.
+          Within two weeks, the list was long — over 12 unplanned requests, each one disrupting multiple people.
+        </p>
 
-      <p>
-        Then, instead of confronting emotionally, I presented data:
-        how many sprint items were delayed, how much tech debt was created, and how the team’s cycle time had doubled.
-        I also proposed a simple solution — a “Focus Zone”: a protected block during the day when no one interrupts engineers unless it’s critical.
-      </p>
+        <p>
+          Then, instead of confronting emotionally, I presented data:
+          how many sprint items were delayed, how much tech debt was created, and how the team’s cycle time had doubled.
+          I also proposed a simple solution — a “Focus Zone”: a protected block during the day when no one interrupts engineers unless it’s critical.
+        </p>
 
-      <h2 id="result">Result</h2>
-      <p>
-        Once the data was visible, the conversation shifted. The same manager who once said, “It’s a two-minute job,” realized the real cost:
-        context-switching, burnout, and accumulated tech debt.
-        Within a month, we had better boundaries, fewer interruptions, and higher-quality output.
-        But most importantly, the team felt respected again.
-      </p>
+        <h2 id="result">Result</h2>
+        <p>
+          Once the data was visible, the conversation shifted. The same manager who once said, “It’s a two-minute job,” realized the real cost:
+          context-switching, burnout, and accumulated tech debt.
+          Within a month, we had better boundaries, fewer interruptions, and higher-quality output.
+          But most importantly, the team felt respected again.
+        </p>
 
-      <blockquote style="border-left:3px solid var(--accent);padding-left:1rem;color:var(--muted);margin:1.5rem 0;">
-        “A leader’s job isn’t to move faster than the team — it’s to clear the path so the team can move without interruption.”
-      </blockquote>
+        <blockquote>
+          “A leader’s job isn’t to move faster than the team — it’s to clear the path so the team can move without interruption.”
+        </blockquote>
 
-      <h2 id="lesson">The Lesson</h2>
-      <p>
-        Great leadership isn’t about constant motion — it’s about discipline.
-        Respect for planning and process is respect for people.
-        When leaders interrupt flow, they don’t accelerate progress — they sabotage it.
-      </p>
+        <h2 id="lesson">The Lesson</h2>
+        <p>
+          Great leadership isn’t about constant motion — it’s about discipline.
+          Respect for planning and process is respect for people.
+          When leaders interrupt flow, they don’t accelerate progress — they sabotage it.
+        </p>
 
-      <p><strong>Lesson in one line:</strong> Protecting focus isn’t optional — it’s the foundation of quality, trust, and long-term speed.</p>
+        <p><strong>Lesson in one line:</strong> Protecting focus isn’t optional — it’s the foundation of quality, trust, and long-term speed.</p>
 
-      <div class="cta">
-        <a href="../blog/" class="btn">← Back to Blog</a>
-        <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
-      </div>
+        <div class="cta">
+          <a href="../blog/" class="btn">← Back to Blog</a>
+          <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
+        </div>
+      </article>
+    </div>
 
-      <!-- ✅ Related posts -->
-      <section class="related-posts">
-        <h3>Related Articles</h3>
-        <ul>
-          <li><a href="when-tech-teams-stop-listening.html">When Tech Teams Stop Listening — Lessons on Accountability & Culture</a></li>
-          <li><a href="https://raminkhaligh.github.io/blog/">See all articles →</a></li>
-        </ul>
-      </section>
-    </article>
+    <!-- ===== Table of Contents Sidebar ===== -->
+    <aside class="sidebar">
+      <nav id="table-of-contents" aria-label="Table of contents">
+        <strong>On this page</strong>
+        <ul></ul>
+      </nav>
+    </aside>
   </main>
 
   <!-- ===== Footer ===== -->
@@ -303,7 +226,7 @@
     </div>
     <p style="display:flex;justify-content:center;align-items:center;gap:.6rem;">
       © 2025 Ramin Khaligh · All Rights Reserved
-      <a href="#top" aria-label="Back to top"
+      <a href="#top" aria-label="Back to top" 
          style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;
                 background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);
                 transition:all .25s ease;">
@@ -313,5 +236,8 @@
       </a>
     </p>
   </footer>
+
+  <!-- ✅ Blog JS -->
+  <script src="../assets/blog-post.js" defer></script>
 </body>
 </html>
