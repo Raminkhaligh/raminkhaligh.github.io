@@ -1,57 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bridging the Product & Marketing Gap | Ramin Khaligh</title>
-  <meta name="description" content="How product managers can align product and marketing goals to reduce conflicts, improve CAC and conversion, and build stronger collaboration between teams." />
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams." />
+  <meta name="keywords" content="Product Management, Marketing Alignment, Cross-functional Collaboration, Growth Strategy, Leadership, Ramin Khaligh Blog" />
+  <meta name="language" content="en" />
+  <meta name="author" content="Ramin Khaligh" />
   <link rel="canonical" href="https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html" />
   <meta name="robots" content="index,follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Bridging the Product & Marketing Gap | Ramin Khaligh" />
-  <meta property="og:description" content="How product managers can align product and marketing goals to reduce conflicts and improve growth performance." />
+  <!-- ✅ Open Graph -->
+  <meta property="og:title" content="Bridging the Product & Marketing Gap — How PMs Can Unite Growth and Conversion" />
+  <meta property="og:description" content="A practical guide for product managers on bridging product and marketing goals to build alignment, reduce conflict, and accelerate growth." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-bridge-gap.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html" />
+  <meta property="article:published_time" content="2025-10-13T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2025-10-19T00:00:00+00:00" />
+  <meta property="article:author" content="https://raminkhaligh.github.io/" />
+  <meta property="article:section" content="Product & Growth" />
+  <meta property="og:site_name" content="Ramin Khaligh Blog" />
 
-  <!-- Twitter -->
+  <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bridging the Product & Marketing Gap" />
-  <meta name="twitter:description" content="How product managers can align goals between product and marketing to foster collaboration and better planning." />
+  <meta name="twitter:title" content="Bridging the Product & Marketing Gap — How PMs Can Unite Growth and Conversion" />
+  <meta name="twitter:description" content="How product managers can align product and marketing goals to reduce friction and build true collaboration." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-bridge-gap.png" />
 
-  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- ✅ Favicon & preload -->
+  <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
+  <link rel="preload" href="../assets/logo.png" as="image" type="image/png" />
 
-  <!-- Structured Data -->
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/blog-post.css" />
+
+  <!-- ✅ Author card & button styles -->
+  <style>
+    .share-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem;
+      border-radius: 6px;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+    .share-btn:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-1px);
+    }
+    .author-profile {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: var(--shadow-1);
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      transition: border 0.3s ease;
+    }
+    .author-profile:hover {
+      border-color: var(--accent);
+    }
+    .author-avatar {
+      flex-shrink: 0;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+    }
+    .author-info p { margin: 0; line-height: 1.4; }
+    .author-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .author-info a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .author-profile { flex-direction: column; align-items: flex-start; padding: 1.2rem; }
+      .author-avatar { width: 56px; height: 56px; }
+    }
+  </style>
+
+  <!-- ✅ Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Bridging the Product & Marketing Gap",
-    "description": "A deep look into how product managers can align product and marketing goals, reduce friction, and create shared success metrics.",
-    "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
-    "author": {
-      "@type": "Person",
-      "name": "Ramin Khaligh",
-      "url": "https://raminkhaligh.github.io/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ramin Khaligh Portfolio",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://raminkhaligh.github.io/assets/logo.png"
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Bridging the Product & Marketing Gap",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
+          "width": 1200,
+          "height": 630
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Ramin Khaligh",
+          "url": "https://raminkhaligh.github.io/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Ramin Khaligh"
+        },
+        "datePublished": "2025-10-13",
+        "dateModified": "2025-10-19",
+        "description": "A deep look into how product managers can align product and marketing goals, reduce friction, and create shared success metrics.",
+        "url": "https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html",
+        "articleSection": "Product & Growth",
+        "timeRequired": "PT6M"
       }
-    },
-    "datePublished": "2025-10-13",
-    "dateModified": "2025-10-13",
-    "mainEntityOfPage": "https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html"
+    ]
   }
   </script>
 </head>
 
-<body>
+<body id="top">
+  <!-- ===== Header ===== -->
   <header class="site-nav">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/">
@@ -64,69 +140,138 @@
         <a href="../#experience">Experience</a>
         <a href="../#skills">Skills</a>
         <a href="../#contact">Contact</a>
+        <a href="../blog/" aria-current="page">Blog</a>
+        <a class="btn primary" href="../assets/ramin-khaligh-resume.pdf" download>Résumé</a>
       </nav>
     </div>
   </header>
 
-  <main class="container" id="main" style="max-width:800px; padding-top:4rem;">
-    <article class="card" style="padding:2rem;">
-      <header>
-        <h1>Bridging the Product & Marketing Gap</h1>
-        <p style="color:var(--muted); margin-bottom:1rem;">
-          <time datetime="2025-10-13">October 13, 2025</time> · 6 min read · by <a href="https://raminkhaligh.github.io/">Ramin Khaligh</a>
-        </p>
-        <img src="../assets/blog-bridge-gap.png" alt="Illustration showing collaboration between Product and Marketing teams" width="100%" loading="lazy" style="border-radius:16px; margin-bottom:1.5rem;" />
-      </header>
+  <!-- ===== Breadcrumb ===== -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="https://raminkhaligh.github.io/">Home</a>
+    <span>›</span>
+    <a href="https://raminkhaligh.github.io/blog/">Blog</a>
+    <span>›</span>
+    <span>Bridging the Product & Marketing Gap</span>
+  </nav>
 
-      <section>
-        <h2>Why Product & Marketing Drift Apart</h2>
-        <p>In fast-moving organizations, product and marketing often diverge in goals — not due to lack of effort, but due to misaligned metrics. Marketing pushes to reduce CAC by leaning into cheaper, sometimes less effective channels, while product teams obsess over activation and conversion rates that tank when lower-quality leads arrive.</p>
-        <p>This gap creates tension. Marketing claims the product isn’t converting well. Product blames lead quality. Leadership gets frustrated. Meanwhile, the user journey suffers.</p>
-      </section>
+  <!-- ===== Main Content ===== -->
+  <main class="container two-column">
+    <div class="content-wrapper">
+      <article class="card">
+        <header style="margin-bottom:2rem;">
+          <h1 class="heading-hero">Bridging the Product & Marketing Gap</h1>
+          <p style="color:var(--muted); margin-bottom:0.2rem;">How product managers can turn friction into alignment and build shared growth momentum.</p>
+          <p style="color:var(--muted); font-size:0.85rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+            Published on <time datetime="2025-10-13">October 13, 2025</time> · 
+            <span id="read-time"></span>
+            <button id="share-btn" class="share-btn" title="Share this article" aria-label="Share">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4m0 0L8 6m4-4v16" />
+              </svg>
+            </button>
+          </p>
+        </header>
 
-      <section>
-        <h2>The Product Manager’s Role as Translator</h2>
-        <p>In moments like this, a great product manager steps in — not as a referee, but as a <strong>translator</strong>. The PM’s job is to ensure both sides understand what the other is optimizing for, and how success connects to shared business outcomes.</p>
+        <img src="../assets/blog-bridge-gap.png" alt="Illustration showing collaboration between Product and Marketing teams" loading="lazy" decoding="async" />
+
+        <h2 id="misalignment">Why Product & Marketing Drift Apart</h2>
+        <p>In fast-moving organizations, product and marketing often drift apart — not from incompetence, but from misaligned incentives. Marketing chases lower CAC and volume. Product optimizes for conversion and retention. The result? A funnel full of leads that don’t activate, and finger-pointing between teams.</p>
+        <p>When this happens, growth slows — not because either team is failing, but because they’re running different races on the same track.</p>
+
+        <h2 id="translator">The Product Manager as Translator</h2>
+        <p>Enter the product manager — the bridge between growth and experience. The PM’s unique position allows them to translate strategy into shared understanding. Instead of mediating conflict, they align incentives.</p>
         <ul>
-          <li><strong>Build shared metrics:</strong> Instead of marketing measuring CAC and product measuring CR, align both teams on <em>“Cost per Activated User”</em>.</li>
-          <li><strong>Run joint experiments:</strong> PMs can help structure growth tests where both funnel quality and cost efficiency are evaluated together.</li>
-          <li><strong>Use data storytelling:</strong> Translate performance data into insights each team can act on, not just dashboards to defend.</li>
+          <li><strong>Shared metrics:</strong> Replace vanity KPIs with a common goal like <em>“Cost per Activated User”</em>.</li>
+          <li><strong>Joint experiments:</strong> Design experiments where marketing efficiency and in-product activation are measured together.</li>
+          <li><strong>Data storytelling:</strong> Turn analytics into shared narratives — insights that connect cause and effect across teams.</li>
         </ul>
-      </section>
 
-      <section>
-        <h2>Facilitating Collaboration Instead of Blame</h2>
-        <p>Conflict between product and marketing is often a symptom of siloed incentives. When each team operates on independent OKRs, tradeoffs become battles. The PM can bridge this by introducing <strong>shared planning rituals</strong> and <strong>cross-functional retros</strong>.</p>
+        <h2 id="collaboration">Facilitating Collaboration, Not Blame</h2>
+        <p>Misalignment isn’t solved by meetings — it’s solved by structure. PMs can create frameworks that make collaboration habitual, not situational:</p>
         <ul>
-          <li><strong>Shared quarterly planning:</strong> Co-create initiatives that tie top-of-funnel acquisition directly to in-product outcomes.</li>
-          <li><strong>Transparent postmortems:</strong> When a campaign underperforms, invite both sides to deconstruct what happened — without blame.</li>
-          <li><strong>Define boundaries clearly:</strong> Product shouldn’t dictate ad strategy, but should inform messaging and expectations.</li>
+          <li><strong>Shared quarterly planning:</strong> Co-create goals that link acquisition inputs to retention outputs.</li>
+          <li><strong>Cross-functional retros:</strong> Debrief together after launches — treating performance as a shared outcome.</li>
+          <li><strong>Define boundaries clearly:</strong> Marketing owns channels; product owns experiences. But both own the user journey.</li>
         </ul>
-      </section>
 
-      <section>
-        <h2>Creating a Culture of “One Funnel” Thinking</h2>
-        <p>Ultimately, alignment between product and marketing isn’t about meetings — it’s about culture. When both teams think of growth as one continuous funnel, not two disconnected goals, everything changes.</p>
-        <blockquote>“Marketing brings users to the door; product keeps them inside. Success depends on how well the two agree on what the door looks like.”</blockquote>
-        <p>As a PM, you’re the bridge — helping both sides plan, measure, and celebrate together. That’s how real cross-functional velocity is built.</p>
-      </section>
+        <h2 id="culture">Creating a Culture of One Funnel</h2>
+        <p>True growth happens when product and marketing see themselves as two halves of one funnel. That culture requires humility, data transparency, and a PM who constantly reinforces the connection between acquisition and activation.</p>
 
-      <footer style="margin-top:2rem; border-top:1px solid var(--line); padding-top:1rem;">
-        <p style="color:var(--muted);">Filed under: <a href="#">Product Management</a>, <a href="#">Growth</a>, <a href="#">Collaboration</a></p>
-        <p>Share this article:  
-          <a href="https://twitter.com/intent/tweet?text=Bridging%20the%20Product%20and%20Marketing%20Gap%20by%20Ramin%20Khaligh&url=https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html" target="_blank">Twitter</a> · 
-          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html" target="_blank">LinkedIn</a>
-        </p>
-      </footer>
-    </article>
+        <blockquote>“Marketing brings users to the door; product keeps them inside. Real success happens when both teams agree on what the door looks like.”</blockquote>
 
-    <div style="text-align:center; margin-top:2rem;">
-      <a href="index.html" class="btn">← Back to Blog</a>
+        <p><strong>Lesson in one line:</strong> Alignment isn’t a process — it’s a mindset. Great PMs make teams see the same customer, not just the same dashboard.</p>
+
+        <!-- ===== Author Profile ===== -->
+        <section class="author-profile">
+          <div class="author-info">
+            <p>Written by <a href="https://raminkhaligh.github.io/">Ramin Khaligh | رامین خلیق</a></p>
+            <p style="font-size:0.9rem; color:var(--muted);">Marketing & Product Leader exploring the intersection of technology, growth, and leadership.</p>
+          </div>
+        </section>
+
+        <div class="cta">
+          <a href="../blog/" class="btn">← Back to Blog</a>
+          <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
+        </div>
+      </article>
     </div>
+
+    <!-- ===== Table of Contents Sidebar ===== -->
+    <aside class="sidebar">
+      <nav id="table-of-contents" aria-label="Table of contents">
+        <strong>On this page</strong>
+        <ul></ul>
+      </nav>
+    </aside>
   </main>
 
-  <footer class="footer">
-    <p>© 2025 Ramin Khaligh · All Rights Reserved · <a href="../#top">Back to top</a></p>
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div style="display:flex;justify-content:center;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:.8rem;">
+      <a href="mailto:hwraamin@gmail.com" aria-label="Email">📧</a>
+      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener" aria-label="LinkedIn">🔗</a>
+      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+    </div>
+    <p style="display:flex;justify-content:center;align-items:center;gap:.6rem;">
+      © 2025 Ramin Khaligh · All Rights Reserved
+      <a href="#top" aria-label="Back to top">⬆</a>
+    </p>
   </footer>
+
+  <!-- ✅ Blog JS -->
+  <script src="../assets/blog-post.js" defer></script>
+
+  <!-- ✅ Read time & Share logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const article = document.querySelector("article");
+      const words = article.innerText.trim().split(/\s+/).length;
+      const minutes = Math.ceil(words / 200);
+      const readTimeSpan = document.getElementById("read-time");
+      if (readTimeSpan) readTimeSpan.textContent = minutes + " min read";
+
+      const shareBtn = document.getElementById("share-btn");
+      if (shareBtn) {
+        shareBtn.addEventListener("click", function () {
+          const shareData = {
+            title: document.title,
+            text: "Bridging the Product & Marketing Gap by Ramin Khaligh",
+            url: window.location.href
+          };
+          if (navigator.share) {
+            navigator.share(shareData).catch(err => console.warn("Share cancelled or failed", err));
+          } else {
+            navigator.clipboard.writeText(shareData.url).then(() => {
+              shareBtn.innerHTML = '<span style="font-size:0.8rem;color:var(--accent);">Copied!</span>';
+              setTimeout(() => {
+                shareBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4m0 0L8 6m4-4v16" /></svg>';
+              }, 2000);
+            });
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
