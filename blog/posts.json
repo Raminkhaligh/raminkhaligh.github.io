@@ -1,14 +1,5 @@
 [
   {
-    "title": "Bridging the Product & Marketing Gap | Ramin Khaligh",
-    "summary": "How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
-    "url": "blog/bridging-product-marketing-gap.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
-    "featured": false
-  },
-  {
     "title": "How I Increased User Retention by 40% — Fintech Case Study | Ramin Khaligh",
     "summary": "A detailed case study on how Ramin Khaligh improved user retention by 40% for a fintech product through UX optimization, lifecycle automation, and data-led growth.",
     "date": "2025-10-19",
@@ -18,12 +9,12 @@
     "featured": false
   },
   {
-    "title": "When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh",
-    "summary": "A real story on how ego, poor accountability, and weak culture can erode collaboration between product, tech, and marketing — and how leaders can rebuild trust and ownership.",
+    "title": "Bridging the Product & Marketing Gap | Ramin Khaligh",
+    "summary": "How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams.",
     "date": "2025-10-19",
     "lastmod": "2025-10-19",
-    "url": "blog/when-tech-teams-stop-listening.html",
-    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
+    "url": "blog/bridging-product-marketing-gap.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
     "featured": false
   },
   {
@@ -33,6 +24,15 @@
     "lastmod": "2025-10-19",
     "url": "blog/constant-interruptions-cost.html",
     "image": "https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png",
+    "featured": false
+  },
+  {
+    "title": "When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh",
+    "summary": "A real story on how ego, poor accountability, and weak culture can erode collaboration between product, tech, and marketing — and how leaders can rebuild trust and ownership.",
+    "date": "2025-10-19",
+    "lastmod": "2025-10-19",
+    "url": "blog/when-tech-teams-stop-listening.html",
+    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
     "featured": false
   },
   {
