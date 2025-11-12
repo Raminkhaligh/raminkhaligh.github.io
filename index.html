@@ -1,45 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Language" content="en-US" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product & Marketing Consultant – Ramin Khaligh | رامین خلیق </title>
-  <meta name="description" content="Ramin Khaligh helps startups design data-driven products that boost retention, revenue, and user experience. Explore product strategy, UX/UI design, and growth marketing services | رامین خلیق." />
-  <meta name="author" content="Ramin Khaligh| رامین خلیق" />
+  <title>Product & Marketing Consultant – Ramin Khaligh</title>
+  <meta name="description" content="Ramin Khaligh helps startups build data-driven, scalable products that increase retention, growth, and revenue. Product strategy, UX, and growth marketing with clear business outcomes." />
+  <meta name="author" content="Ramin Khaligh" />
   <meta name="publisher" content="Ramin Khaligh Consulting" />
-  <meta name="keywords" content="Ramin Khaligh, رامین خلیق, Product Consultant, Growth Consultant, UX/UI Design, SaaS, Fintech, Product Marketing, Go-To-Market Strategy, Growth Marketing, Digital Marketing, Google Ads, App Development" />
+  <meta name="keywords" content="Ramin Khaligh, Product Consultant, Growth Consultant, UX Design, SaaS, Fintech, Product Marketing, Go-To-Market, Digital Marketing, Retention, Reduce CAC" />
   <meta name="robots" content="index, follow" />
   <meta name="color-scheme" content="light dark" />
+
   <!-- Canonical & Language -->
   <link rel="canonical" href="https://raminkhaligh.github.io/" />
   <link rel="alternate" hreflang="en" href="https://raminkhaligh.github.io/" />
   <link rel="alternate" hreflang="fa" href="https://raminkhaligh.github.io/fa/" />
-  <link rel="alternate" hreflang="fa-IR" href="https://raminkhaligh.github.io/fa-ltr/" />
   <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/" />
+
   <!-- Performance -->
   <link rel="preconnect" href="https://raminkhaligh.github.io" crossorigin>
-  <link rel="preload" as="fetch" href="blog/posts.json" crossorigin="anonymous" />
+  <link rel="preload" as="style" href="/assets/style.css" />
+  <link rel="preload" as="image" href="/assets/profile.jpg" imagesrcset="/assets/profile.jpg 1x" imagesizes="200px" />
+  <link rel="preload" as="fetch" href="/blog/posts.json" crossorigin="anonymous" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Product & Growth Consultant – Ramin Khaligh | رامین خلیق" />
-  <meta property="og:description" content="Helping startups build data-driven products that drive retention, growth, and revenue. Explore product strategy, UX, and growth marketing." />
+  <meta property="og:title" content="Product & Growth Consultant – Ramin Khaligh" />
+  <meta property="og:description" content="Build data-driven products with sustainable retention and revenue. Product strategy, UX, and growth marketing with agile execution." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
-  <meta property="og:image:alt" content="Ramin Khaligh – Product & Growth Consultant Portfolio Cover" />
+  <meta property="og:image:alt" content="Ramin Khaligh portfolio cover" />
   <meta property="og:site_name" content="Ramin Khaligh Portfolio" />
   <meta property="og:locale" content="en_US" />
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Product & Growth Consultant – Ramin Khaligh | رامین خلیق" />
-  <meta name="twitter:description" content="Building data-driven products. Explore Ramin Khaligh’s product, UX, and growth strategy work." />
+  <meta name="twitter:title" content="Product & Growth Consultant – Ramin Khaligh" />
+  <meta name="twitter:description" content="Partnering with SaaS and fintech teams to design, launch, and grow products. Measurable outcomes, transparent reporting." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
   <meta name="twitter:creator" content="@ramin_khaligh" />
+
   <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#0b0d10" />
   <meta name="msapplication-TileColor" content="#0b0d10" />
+
   <!-- PWA -->
   <meta name="theme-color" content="#0b0d10" />
   <link rel="manifest" href="/manifest.json" />
@@ -48,11 +57,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Ramin Khaligh" />
 
-  <!-- Early theme apply (prevents flash) -->
+  <!-- Early theme apply (no-flash) -->
   <script>
   (function() {
     try {
-      var saved = localStorage.getItem('theme'); // 'light' | 'dark' | 'auto' | null
+      var saved = localStorage.getItem('theme');
       var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', theme);
@@ -63,7 +72,8 @@
   })();
   </script>
 
-  <link rel="stylesheet" href="assets/style.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/style.css" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2XPCTE273"></script>
@@ -73,7 +83,8 @@
     gtag('js', new Date());
     gtag('config', 'G-X2XPCTE273');
   </script>
-  <!-- Structured Data -->
+
+  <!-- Structured Data (Core) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -114,8 +125,7 @@
         "knowsAbout": ["Product Management","Growth Strategy","Marketing","UX Design","Analytics","Go-To-Market"],
         "knowsLanguage": ["English","Persian"],
         "areaServed": ["Middle East","United Arab Emirates"],
-        "description": "Ramin Khaligh helps SaaS and fintech startups design data-driven products that increase retention and revenue.",
-        "nationality": {"@type": "Country","name": "United Arab Emirates"}
+        "description": "I help SaaS and fintech teams build data-driven products that increase retention and revenue."
       },
       {
         "@type": "Organization",
@@ -133,17 +143,6 @@
         }
       },
       {
-        "@type": "ProfessionalService",
-        "name": "Ramin Khaligh Consulting",
-        "url": "https://raminkhaligh.github.io/",
-        "image": "https://raminkhaligh.github.io/assets/profile.jpg",
-        "areaServed": {"@type": "Country","name": "United Arab Emirates"},
-        "serviceType": ["Product Strategy","UX Design","Growth Marketing","Go-To-Market Strategy"],
-        "provider": {"@id": "https://raminkhaligh.github.io/#ramin"},
-        "priceRange": "$$",
-        "email": "mailto:hwraamin@gmail.com"
-      },
-      {
         "@type": "BreadcrumbList",
         "itemListElement": [
           {"@type": "ListItem","position": 1,"name": "Home","item": "https://raminkhaligh.github.io/"},
@@ -153,118 +152,59 @@
           {"@type": "ListItem","position": 5,"name": "Testimonials","item": "https://raminkhaligh.github.io/#testimonials"},
           {"@type": "ListItem","position": 6,"name": "Skills","item": "https://raminkhaligh.github.io/#skills"},
           {"@type": "ListItem","position": 7,"name": "Blog","item": "https://raminkhaligh.github.io/blog/"},
-          {"@type": "ListItem","position": 8,"name": "Contact","item": "https://raminkhaligh.github.io/#contact"},
-          {"@type": "ListItem","position": 9,"name": "Résumé","item": "https://raminkhaligh.github.io/assets/ramin-khaligh-resume.pdf"}
+          {"@type": "ListItem","position": 8,"name": "FAQ","item": "https://raminkhaligh.github.io/#faq"},
+          {"@type": "ListItem","position": 9,"name": "Contact","item": "https://raminkhaligh.github.io/#contact"}
         ]
       },
       {
-      "@type": "Blog",
-      "@id": "https://raminkhaligh.github.io/blog/#blog",
-      "name": "Ramin Khaligh Blog",
-      "url": "https://raminkhaligh.github.io/blog/",
-      "description": "Insights on product management, UX design, growth marketing and SaaS strategy by Ramin Khaligh.",
-      "publisher": {
-        "@id": "https://raminkhaligh.github.io/#organization"
-      },
-      "inLanguage": "en",
-      "author": {
-        "@id": "https://raminkhaligh.github.io/#ramin"
+        "@type": "Blog",
+        "@id": "https://raminkhaligh.github.io/blog/#blog",
+        "name": "Ramin Khaligh Blog",
+        "url": "https://raminkhaligh.github.io/blog/",
+        "description": "Insights on product management, UX, growth marketing, and SaaS strategy.",
+        "publisher": {"@id": "https://raminkhaligh.github.io/#organization"},
+        "inLanguage": "en",
+        "author": {"@id": "https://raminkhaligh.github.io/#ramin"}
       }
-    }
     ]
   }
   </script>
+
+  <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://raminkhaligh.github.io/#faqpage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How fast can you ship an MVP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Approximately 3 weeks for a lean MVP: user flows, wireframes, core UI, analytics events, and a launch checklist. Discovery is 3–5 days, followed by two 1-week sprints and a 2–3 day hardening window."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does a typical engagement look like?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Two models: fixed-scope sprint for MVP/PMF or monthly retainer for roadmap and growth ops. Work is organized in 2-week increments with OKRs and a weekly business review."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What deliverables can I expect?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Discovery notes, JTBD/user flows, wireframes or high-fidelity UI, backlog/roadmap, instrumentation plan, launch playbook, and a post-launch KPI readout."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you measure success?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "North-star and guardrail metrics. Typical set: activation rate, time-to-value, D30/D90 retention, CAC/LTV, and payback period. Leading indicators are defined on day 1."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you handle growth as well as product?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes—SEO and paid media strategy, lifecycle automation, experimentation design, and analytics. Recent outcomes include +75% organic sessions and –38% CAC."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Tooling and handoff?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Design in Figma; tracking plans via GA4/Search console/BI/Google ads; delivery through Notion/Jira. Handoff includes dev-ready specs and a groomed backlog."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Timezone, languages, and availability?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Based in UAE (GMT+4). English and Persian. Typical start within 1–2 weeks; urgent kickoffs available with aligned scope and stakeholder access."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Pricing and NDAs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Transparent, project-based pricing for MVP/PMF and monthly retainers for ongoing work. Standard MNDA available; sensitive assets are handled privately."
-        }
-      }
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "@id":"https://raminkhaligh.github.io/#faqpage",
+    "mainEntity":[
+      {"@type":"Question","name":"How fast can you ship an MVP?","acceptedAnswer":{"@type":"Answer","text":"Roughly three weeks: a short discovery window, two one-week sprints to design and build, and a hardening period to QA and prep launch."}},
+      {"@type":"Question","name":"What does a typical engagement look like?","acceptedAnswer":{"@type":"Answer","text":"Two models—fixed scope for MVP/PMF, or a monthly retainer for roadmap and growth ops. We work in two-week increments with a weekly business review."}},
+      {"@type":"Question","name":"What deliverables can I expect?","acceptedAnswer":{"@type":"Answer","text":"Discovery notes, JTBD and user flows, wireframes or final UI, backlog/roadmap, instrumentation plan, a launch playbook, and a post-launch KPI readout."}},
+      {"@type":"Question","name":"How do you measure success?","acceptedAnswer":{"@type":"Answer","text":"A clear north-star metric with guardrails—activation, time-to-value, D30/D90 retention, CAC/LTV, and payback. Leading indicators are defined on day one."}},
+      {"@type":"Question","name":"Do you handle growth as well as product?","acceptedAnswer":{"@type":"Answer","text":"Yes—SEO and paid media strategy, lifecycle automation, experimentation design, and analytics. Typical outcomes include +75% organic sessions and –38% CAC."}},
+      {"@type":"Question","name":"Tooling and handoff?","acceptedAnswer":{"@type":"Answer","text":"Design in Figma; analytics in GA4/Search Console/BI/Ads; delivery via Notion/Jira. Handoff includes dev-ready specs and a groomed backlog."}},
+      {"@type":"Question","name":"Timezone, languages, and availability?","acceptedAnswer":{"@type":"Answer","text":"Based in UAE (UTC+4). English and Persian. Typical start within 1–2 weeks; urgent kickoffs possible with aligned scope and stakeholder access."}},
+      {"@type":"Question","name":"Pricing and NDAs?","acceptedAnswer":{"@type":"Answer","text":"Transparent, project-based pricing for MVP/PMF and monthly retainers for ongoing work. Standard MNDA available; sensitive assets handled privately."}}
     ]
   }
   </script>
 
-  <!-- Theme behavior (toggle/auto listener) -->
-  <script src="assets/theme.js" defer></script>
+  <!-- Theme runtime -->
+  <script src="/assets/theme.js" defer></script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
+  <!-- GTM (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVRSRD3Q"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Skip link for accessibility -->
+  <!-- Skip link -->
   <a href="#main" class="skip-link" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
-  <!-- Navigation -->
+  <!-- Header / Nav -->
   <header class="site-nav" role="navigation" aria-label="Primary">
     <div class="nav-content">
       <a class="brand" href="#top" aria-label="Home">
-        <img src="assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
+        <img src="/assets/logo.png" alt="Personal logo" width="28" height="28" decoding="async" />
         <span>Ramin Khaligh</span>
       </a>
       <nav role="navigation">
@@ -273,34 +213,50 @@
         <a href="#experience">Experience</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#skills">Skills</a>
-        <a href="blog/">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a class="btn primary" href="assets/ramin-khaligh-resume.pdf" download>Résumé</a>
+        <a class="btn primary" href="/assets/ramin-khaligh-resume.pdf" download aria-label="Download résumé">Résumé</a>
 
-        <!-- Theme Toggle (added) -->
-        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Switch theme">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
           <span class="theme-toggle__icon" aria-hidden="true">🌓</span>
           <span class="theme-toggle__label">Auto</span>
         </button>
 
-        <!-- Link to Farsi LTR page (added) -->
-        <a class="btn" href="/fa-ltr/" style="margin-left:.4rem;">FA (LTR)</a>
+        <!-- Language -->
+        <a class="btn" href="/fa/" style="margin-inline-start:.4rem;" aria-label="Persian version">فارسی</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main content -->
+  <!-- Main -->
   <main id="main" role="main">
     <!-- Hero -->
     <section id="top" class="hero container" aria-labelledby="home-title">
-      <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Ramin Khaligh – Product &amp; Growth Consultant" width="200" height="200" fetchpriority="high" decoding="async" />
+      <img class="profile-photo" src="/assets/profile.jpg" alt="Portrait of Ramin Khaligh – Product & Growth Consultant" width="200" height="200" fetchpriority="high" decoding="async" />
       <div class="hero-content">
-        <h1 id="home-title" class="heading-hero">Building Products That Earn Loyalty.</h1>
-        <p>I’m <strong>Ramin Khaligh</strong> (رامین خلیق) a Product &amp; Growth Consultant. I partner with SaaS and fintech startups to design products, growth strategies and go-to-market plans that increase retention, boost revenue and reduce customer acquisition costs.</p>
+        <h1 id="home-title" class="heading-hero">Build Products That Earn Loyalty.</h1>
+        <p>
+          I’m <strong>Ramin Khaligh</strong>, a Product & Growth Consultant. I partner with SaaS and fintech teams to design
+          product strategy, user experience, and go-to-market plans that <b>increase retention</b>, <b>reduce CAC</b>, and
+          <b>grow revenue</b>.
+        </p>
+        <!-- value bullets -->
+        <ul class="hero-bullets" style="margin:.6rem 0 0 0;color:var(--muted);padding:0 1rem;">
+          <li>Define success metrics on day one and wire them into the roadmap.</li>
+          <li>Blend behavior analytics with lean experiments to accelerate time-to-value.</li>
+          <li>Ship documented, dev-ready deliverables so teams execute without friction.</li>
+        </ul>
         <div class="cta">
-          <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let's%20build%20together" data-gtm="cta_click" data-cta="hero_primary">Let’s Collaborate</a>
+          <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let%27s%20work%20together" data-gtm="cta_click" data-cta="hero_primary">Let’s Collaborate</a>
           <a class="btn" href="#services" data-gtm="cta_click" data-cta="hero_secondary">Explore Services</a>
+        </div>
+        <!-- trust chips -->
+        <div class="svc__chips" style="justify-content:flex-start;margin-top:.8rem;">
+          <span class="chip">Clear timelines</span>
+          <span class="chip">Weekly reporting</span>
+          <span class="chip">Business impact first</span>
         </div>
       </div>
     </section>
@@ -308,9 +264,25 @@
     <!-- About -->
     <section id="about" class="container" aria-labelledby="about-title">
       <h2 id="about-title">About Me</h2>
-      <p>Ramin Khaligh (رامین خلیق) with 8+ years at the intersection of <strong>product, growth and UX</strong>, consults SaaS and fintech teams and beyond ship results. My approach blends research, analytics and creativity — crafting products people keep using.</p>
-      <p>I’m passionate about bridging the gap between product and marketing teams and translating user insights into actionable strategies. My multicultural perspective (fluent in English and Persian) allows me to collaborate across diverse teams.</p>
-      <p>Over the years I’ve delivered measurable impact: at Wallex I built a 15-person MarTech squad that drove six-figure revenue growth and lifted organic traffic by <strong>+75%</strong>; at Tabdeal I launched a portfolio recommendation engine that attracted <strong>$1.5M+</strong> in user inflow. These achievements fuel my belief that thoughtful product and growth work can materially move the needle for startups.</p>
+      <p>
+        I’ve spent <b>8+ years</b> at the intersection of product, growth, and UX. My work blends user research,
+        analytics, and thoughtful design—so we build things people <b>actually use and return to</b>.
+      </p>
+      <p>
+        I bridge product and marketing, translating insights into operating plans and aligning stakeholders around
+        a single, measurable goal. Being fluent in English and Persian helps me collaborate across diverse teams.
+      </p>
+      <p>
+        A few results: at Wallex I built a 15-person MarTech squad that drove six-figure revenue growth and lifted
+        organic traffic by <strong>+75%</strong>. At Tabdeal I launched a portfolio recommendation engine that attracted
+        over <strong>$1.5M</strong> in user inflow.
+      </p>
+      <!-- mini metrics list -->
+      <ul style="margin:.6rem 0 0 0;color:var(--muted);padding:0 1rem;">
+        <li>Shorter decision cycles via concise, visual reporting.</li>
+        <li>Higher page-level conversion through message and IA improvements.</li>
+        <li>Stronger goal alignment with clear KPI guardrails.</li>
+      </ul>
     </section>
 
     <!-- Services -->
@@ -319,44 +291,58 @@
         <div class="svc__head">
           <h2 id="svc-title">Services</h2>
           <span class="svc__eyebrow">From Insight to Impact</span>
-          <p class="svc__subtitle">I partner with startups to design, launch and grow products that drive measurable value.</p>
+          <p class="svc__subtitle">Design, launch, and grow products with measurable outcomes.</p>
           <div class="svc__chips">
             <span class="chip">MVP in 3 weeks</span>
-            <span class="chip">Market-fit product</span>
-            <span class="chip">−38% CPA</span>
+            <span class="chip">Real market fit</span>
+            <span class="chip">–38% CAC</span>
           </div>
         </div>
+
         <div class="svc__grid">
           <article class="card">
-            <h3 class="card__title">Product &amp; UX Design</h3>
-            <p class="card__punch">Design that earns loyalty.</p>
+            <h3 class="card__title">Product & UX Design</h3>
+            <p class="card__punch">Design that earns trust and loyalty.</p>
             <ul class="card__list">
-              <li>User research &amp; flows</li>
-              <li>Wireframes &amp; design systems</li>
-              <li>Usability testing &amp; iteration</li>
+              <li>User research & flows</li>
+              <li>Wireframes & design systems</li>
+              <li>Usability testing & iteration</li>
             </ul>
-            <p class="card__outcome"><b>Outcome:</b> boost conversion and revenue.</p>
+            <p class="card__outcome"><b>Outcome:</b> higher conversion and revenue.</p>
           </article>
+
           <article class="card">
-            <h3 class="card__title">Product Strategy &amp; GTM</h3>
-            <p class="card__punch">Turning ideas into validated products.</p>
+            <h3 class="card__title">Product Strategy & GTM</h3>
+            <p class="card__punch">Turn ideas into validated products.</p>
             <ul class="card__list">
-              <li>Market positioning</li>
-              <li>Roadmaps &amp; OKRs</li>
+              <li>Positioning & messaging</li>
+              <li>Roadmaps & OKRs</li>
               <li>Launch frameworks</li>
             </ul>
-            <p class="card__outcome"><b>Outcome:</b> clarity, focus and traction.</p>
+            <p class="card__outcome"><b>Outcome:</b> clarity, focus, and traction.</p>
           </article>
+
           <article class="card">
-            <h3 class="card__title">Growth &amp; Marketing</h3>
+            <h3 class="card__title">Growth & Marketing</h3>
             <p class="card__punch">Sustainable, data-driven growth.</p>
             <ul class="card__list">
-              <li>SEO, paid media &amp; analytics</li>
+              <li>SEO, paid media & analytics</li>
               <li>Lifecycle automation</li>
               <li>Retention programs</li>
             </ul>
             <p class="card__outcome"><b>Outcome:</b> lower CAC, higher LTV.</p>
           </article>
+        </div>
+
+        <!-- process strip -->
+        <div class="card" style="margin-top:1rem;">
+          <h3 style="margin-bottom:.4rem;">How We Work</h3>
+          <ol style="color:var(--muted);margin:0;padding:0 1.2rem;line-height:1.9;">
+            <li>Problem & outcomes: define success and constraints.</li>
+            <li>Experiment & metrics: decide what and why to measure.</li>
+            <li>Design, build, review: ship in tight, documented loops.</li>
+            <li>Launch & KPI readout: improve, scale, or pivot with data.</li>
+          </ol>
         </div>
       </div>
     </section>
@@ -368,16 +354,25 @@
         <div class="experience-item">
           <h3>Marketing Technology Lead — Wallex <span class="date">2024 – Present</span></h3>
           <ul>
+            <li>Built a 15-person squad and a robust measurement/automation stack.</li>
+            <li>Drove organic growth and inbound quality with search intent focus.</li>
+            <li>Tied marketing KPIs to product and revenue decisions.</li>
           </ul>
         </div>
         <div class="experience-item">
           <h3>Senior Product Manager — Tabdeal <span class="date">2023 – 2024</span></h3>
           <ul>
+            <li>Launched a portfolio recommendation engine; increased cash inflow.</li>
+            <li>Reduced signup friction and lifted activation rate.</li>
+            <li>Built an impact-first roadmap aligned with engineering delivery.</li>
           </ul>
         </div>
         <div class="experience-item">
           <h3>Product Marketing Manager — Huawei <span class="date">2019 – 2022</span></h3>
           <ul>
+            <li>Defined core messaging and orchestrated launches with sales channels.</li>
+            <li>Monitored market response and iterated on narrative quickly.</li>
+            <li>Partnered closely with engineering to represent customer needs.</li>
           </ul>
         </div>
       </div>
@@ -387,39 +382,36 @@
     <section id="testimonials" class="container" aria-labelledby="testimonials-title">
       <h2 id="testimonials-title">Testimonials</h2>
       <div class="card">
-        <blockquote>
-          “Ramin’s ability to unite product and marketing teams is unparalleled. His data-driven approach increased our user retention by 40%.”
-        </blockquote>
-        <footer><cite> CMO, Fintech Startup</cite></footer>
+        <blockquote>“Ramin aligns product and marketing like few others. His data-driven approach lifted our user retention by 40%.”</blockquote>
+        <footer><cite>CMO, Fintech Startup</cite></footer>
       </div>
       <div class="card">
-        <blockquote>
-          “We launched a successful MVP in under a month thanks to Ramin’s clear strategy and hands-on guidance.”
-        </blockquote>
-        <footer><cite> Founder, SaaS Platform</cite></footer>
+        <blockquote>“We shipped a successful MVP in under a month thanks to his clear strategy and hands-on support.”</blockquote>
+        <footer><cite>Founder, SaaS Platform</cite></footer>
       </div>
       <div class="card">
-        <blockquote>
-          “Ramin goes beyond marketing to understand our users. His growth programs lowered our CPA by 38% while improving LTV.”
-        </blockquote>
-         <footer><cite> CPO, Cryptocurrency Exchange</cite></footer>
+        <blockquote>“Ramin goes beyond campaigns to understand users. His programs cut CAC by 38% while improving LTV.”</blockquote>
+        <footer><cite>CPO, Cryptocurrency Exchange</cite></footer>
       </div>
+      <p style="color:var(--muted);margin-top:.6rem;">Want more case studies? Ping me and I’ll share relevant examples.</p>
     </section>
 
     <!-- Certificates -->
     <section id="certificates" class="container" aria-labelledby="certificates-title">
       <h2 id="certificates-title">Certificates</h2>
+      <p style="color:var(--muted);max-width:720px;">Selected courses and certifications that strengthen my decision-making and execution.</p>
       <div class="cert-container">
         <div class="cert-chip">Software Product Management <span>· University of Alberta</span></div>
-        <div class="cert-chip">Brand &amp; Product Management <span>· IE Business School</span></div>
+        <div class="cert-chip">Brand & Product Management <span>· IE Business School</span></div>
         <div class="cert-chip">Agile Analytics <span>· University of Virginia</span></div>
-        <div class="cert-chip">Project Management <span>· PMI.org</span></div>
-        <div class="cert-chip">Digital Marketing <span>· Google Learning</span></div>
+        <div class="cert-chip">Project Management <span>· PMI</span></div>
+        <div class="cert-chip">Digital Marketing <span>· Google</span></div>
         <div class="cert-chip">Product Management <span>· Product School</span></div>
         <div class="cert-chip">Certified Product Analysis <span>· Product School</span></div>
         <div class="cert-chip">UI/UX Design <span>· LinkedIn Learning</span></div>
-        <div class="cert-chip">Band Score 7.5 <span>· Ielts.org</span></div>
+        <div class="cert-chip">IELTS Band 7.5 <span>· IELTS.org</span></div>
       </div>
+      <p style="color:var(--muted);margin-top:.8rem;">Continuous learning is part of my operating system; I periodically add updates here.</p>
     </section>
 
     <!-- Skills -->
@@ -434,29 +426,31 @@
             <span class="chip">Growth Marketing</span>
             <span class="chip">Data Analysis</span>
             <span class="chip">Product & Project Management</span>
-            <span class="chip">Marketing Automation & Performance</span>
-            <span class="chip">Digital Marketing(SEO,ADS)</span>
+            <span class="chip">Automation & Performance</span>
+            <span class="chip">SEO & Ads</span>
           </div>
+          <p style="color:var(--muted);margin-top:.6rem;">Primary focus: shorten time-to-value and increase return rate.</p>
         </div>
         <div class="card">
           <h3>Soft Skills</h3>
           <div class="chips">
             <span class="chip">Team Building</span>
             <span class="chip">Stakeholder Alignment</span>
-            <span class="chip">Empathy</span>
+            <span class="chip">Empathy & Active Listening</span>
             <span class="chip">Communication & Collaboration</span>
             <span class="chip">Leadership & Influence</span>
             <span class="chip">Creativity & Innovation</span>
             <span class="chip">Resilience & Agility</span>
           </div>
+          <p style="color:var(--muted);margin-top:.6rem;">I keep processes simple and explicit so teams decide and execute faster.</p>
         </div>
       </div>
     </section>
 
-    <!-- Featured Blog -->
+    <!-- Blog -->
     <section id="featured-blog" class="container" aria-labelledby="blog-title">
       <h2 id="blog-title">From the Blog</h2>
-      <p style="color:var(--muted); max-width:720px;">Insights on product, growth and leadership — from real experience.</p>
+      <p style="color:var(--muted); max-width:720px;">Short, practical, and actionable notes on product, growth, and leadership.</p>
       <div id="blog-grid" class="svc__grid" style="margin-top:2rem;"></div>
       <div style="text-align:center; margin-top:2.4rem;"></div>
     </section>
@@ -464,84 +458,82 @@
     <!-- FAQ (Collapsible) -->
     <section id="faq" class="container" aria-labelledby="faq-title">
       <h2 id="faq-title">FAQ</h2>
-      <p style="color:var(--muted);max-width:720px;">Operational details, engagement models, and delivery mechanics.</p>
+      <p style="color:var(--muted);max-width:720px;">More questions? Reach out in the contact section.</p>
 
       <div class="svc__grid" style="margin-top:1.5rem;">
         <details class="card">
-          <summary><h3 style="display:inline;">How fast can you ship an MVP?</h3></summary>
-          <div>
-            <p>~3 weeks for a lean MVP: user flows, wireframes, core UI, analytics events, and a launch checklist. We timebox discovery to 3–5 days, then run two 1-week sprints and a 2–3 day hardening window.</p>
+          <summary id="q1"><h3 style="display:inline;font-weight:500;font-size:1rem;">How fast can you ship an MVP?</h3></summary>
+          <div role="region" aria-labelledby="q1">
+            <p>About <b>three weeks</b>: discovery and scoping, two one-week build sprints, then a short QA/hardening window and launch prep.</p>
           </div>
         </details>
 
         <details class="card">
-          <summary><h3 style="display:inline;">What does a typical engagement look like?</h3></summary>
-          <div>
-            <p>Two models: fixed-scope sprint (MVP/PMF) or monthly retainer (roadmap + growth ops). We work in 2-week increments with OKRs and a weekly business review.</p>
+          <summary id="q2"><h3 style="display:inline;font-weight:500;font-size:1rem;">What does a typical engagement look like?</h3></summary>
+          <div role="region" aria-labelledby="q2">
+            <p>Fixed-scope sprints for MVP/PMF, or a monthly retainer for roadmap and growth ops. Two-week increments with a weekly business review keep us accountable.</p>
           </div>
         </details>
 
         <details class="card">
-          <summary><h3 style="display:inline;">What deliverables can I expect?</h3></summary>
-          <div>
-            <p>Discovery notes, JTBD/flows, wireframes or high-fidelity UI, backlog/roadmap, instrumentation plan, launch playbook, and post-launch KPI readout.</p>
+          <summary id="q3"><h3 style="display:inline;font-weight:500;font-size:1rem;">What deliverables can I expect?</h3></summary>
+          <div role="region" aria-labelledby="q3">
+            <p>Discovery notes, JTBD/user flows, wireframes or high-fidelity UI, backlog/roadmap, instrumentation plan, a launch playbook, and a post-launch KPI readout.</p>
           </div>
         </details>
 
         <details class="card">
-          <summary><h3 style="display:inline;">How do you measure success?</h3></summary>
-          <div>
-            <p>North-star + guardrails. For SaaS/fintech that’s usually activation %, time-to-value, retention (D30/D90), CAC/LTV, and payback. We define leading indicators on day 1.</p>
+          <summary id="q4"><h3 style="display:inline;font-weight:500;font-size:1rem;">How do you measure success?</h3></summary>
+          <div role="region" aria-labelledby="q4">
+            <p>North-star plus guardrails: activation, time-to-value, D30/D90 retention, CAC/LTV, and payback. We agree on leading indicators on day one.</p>
           </div>
         </details>
 
         <details class="card">
-          <summary><h3 style="display:inline;">Do you handle growth as well as product?</h3></summary>
-          <div>
-            <p>Yes—SEO and paid media strategy, lifecycle automation, experimentation design, and analytics. Recent outcomes: +75% organic sessions, –38% CAC.</p>
+          <summary id="q5"><h3 style="display:inline;font-weight:500;font-size:1rem;">Do you handle growth as well as product?</h3></summary>
+          <div role="region" aria-labelledby="q5">
+            <p>Yes—SEO and paid strategy, lifecycle automation, experiment design, and analytics. Recent outcomes include +75% organic sessions and –38% CAC.</p>
           </div>
         </details>
 
         <details class="card">
-          <summary><h3 style="display:inline;">Tooling and handoff?</h3></summary>
-          <div>
-            <p>Design in Figma; tracking plans in GA4/Search Console/BI/Google Ads; delivery via Notion/Jira. Dev-ready specs and a clean backlog for your team to execute.</p>
+          <summary id="q6"><h3 style="display:inline;font-weight:500;font-size:1rem;">Tooling and handoff?</h3></summary>
+          <div role="region" aria-labelledby="q6">
+            <p>Figma for design; GA4/Search Console/BI/Ads for analytics; Notion/Jira for delivery. Handoff includes dev-ready specs and a groomed backlog.</p>
           </div>
         </details>
 
         <details class="card">
-          <summary><h3 style="display:inline;">Timezone, languages, and availability?</h3></summary>
-          <div>
-            <p>UAE time (GMT+4). English and Persian. Typical start within 1–2 weeks; urgent kickoffs possible if scope is tight and stakeholders are available.</p>
+          <summary id="q7"><h3 style="display:inline;font-weight:500;font-size:1rem;">Timezone, languages, and availability?</h3></summary>
+          <div role="region" aria-labelledby="q7">
+            <p>UAE (UTC+4). English and Persian. Typical start in 1–2 weeks; urgent kickoffs possible with tight scope and stakeholder access.</p>
           </div>
         </details>
 
         <details class="card">
-          <summary><h3 style="display:inline;">Pricing and NDAs?</h3></summary>
-          <div>
-            <p>Transparent, project-based pricing for MVP/PMF; monthly for retainers. Standard MNDA available on request; sensitive assets handled privately.</p>
+          <summary id="q8"><h3 style="display:inline;font-weight:500;font-size:1rem;">Pricing and NDAs?</h3></summary>
+          <div role="region" aria-labelledby="q8">
+            <p>Transparent, project-based pricing for MVP/PMF; monthly retainers for ongoing work. Standard MNDA available on request; sensitive assets handled privately.</p>
           </div>
         </details>
       </div>
 
       <div class="cta" style="margin-top:2rem;">
-        <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Project%20Enquiry"
+        <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Scope%20Discussion"
            data-gtm="cta_click" data-cta="faq_contact">Discuss your scope</a>
-        <a class="btn" href="assets/ramin-khaligh-resume.pdf" download
-           data-gtm="resume_download" data-source="faq">Résumé</a>
+        <a class="btn" href="/assets/ramin-khaligh-resume.pdf" download
+           data-gtm="resume_download" data-source="faq" aria-label="Download résumé">Résumé</a>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="container" aria-labelledby="contact-title">
       <h2 id="contact-title">Let’s Build Together</h2>
-      <p>Shaping an MVP, refining product-market fit or scaling growth? Let’s talk.</p>
+      <p>Shaping an MVP, finding product-market fit, or scaling growth? Let’s talk.</p>
       <div class="cta">
-        <!-- Restore the original mailto button for 'Get in Touch' and keep LinkedIn link -->
         <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Work%20with%20Ramin" data-gtm="cta_click" data-cta="contact_primary">Get in Touch</a>
         <a class="btn" href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener noreferrer" data-gtm="outbound_click" data-dst="linkedin">LinkedIn</a>
       </div>
-      <!-- Contact form added for convenience; optional to use alongside mailto -->
       <form action="mailto:hwraamin@gmail.com?subject=Project%20Enquiry" method="post" enctype="text/plain" style="margin-top:2rem;max-width:600px;">
         <div style="display:flex;flex-direction:column;gap:1rem;">
           <label for="name">Name</label>
@@ -553,6 +545,7 @@
           <button type="submit" class="btn primary" style="align-self:flex-start;" data-gtm="form_submit" data-form="contact">Submit</button>
         </div>
       </form>
+      <p style="color:var(--muted);margin-top:.8rem;">Your information is only used to coordinate a call and respond to your message.</p>
     </section>
   </main>
 
@@ -589,16 +582,16 @@
          style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;
                 background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);
                 transition:all .25s ease;">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16" aria-label="Back to top icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16" aria-label="Back to top">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
       </a>
     </p>
   </footer>
 
-  <!-- Blog loader script -->
+  <!-- Blog loader -->
   <script defer>
-  fetch('blog/posts.json')
+  fetch('/blog/posts.json')
     .then(res => res.json())
     .then(posts => {
       const container = document.getElementById('blog-grid');
@@ -623,7 +616,8 @@
           <div style="display:flex;flex-direction:column;justify-content:space-between;height:100%;">
             <a href="${href}" style="text-decoration:none;color:inherit;">
               <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
-                <img src="${img}" alt="${post.title}" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .25s ease;" />
+                <img src="${img}" alt="${post.title}" loading="lazy" width="1200" height="675"
+                     style="width:100%;height:100%;object-fit:cover;transition:transform .25s ease;" />
               </div>
               <h3>${post.title}</h3>
               <p style="color:var(--muted);min-height:3.6em;">${post.summary}</p>
@@ -638,10 +632,12 @@
       msg.textContent = 'No articles found.';
       msg.style.color = 'var(--muted)';
       msg.style.textAlign = 'center';
-      document.getElementById('blog-grid').appendChild(msg);
+      const el = document.getElementById('blog-grid');
+      if (el) el.appendChild(msg);
     });
   </script>
 
+  <!-- Service Worker -->
   <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
