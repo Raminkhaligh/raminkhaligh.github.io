@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="Content-Language" content="en-US" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog & Case Studies | Ramin Khaligh - رامین خلیق</title>
 
@@ -12,19 +13,26 @@
   <meta name="robots" content="index,follow" />
   <meta name="copyright" content="© 2025 Ramin Khaligh" />
   <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="canonical" href="https://raminkhaligh.github.io/blog/" />
   <link rel="alternate" hreflang="en" href="https://raminkhaligh.github.io/blog/" />
+  <link rel="alternate" hreflang="fa" href="https://raminkhaligh.github.io/fa/" />
   <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/blog/" />
 
   <!-- Performance -->
   <link rel="preconnect" href="https://raminkhaligh.github.io" crossorigin>
-  <link rel="preload" as="fetch" href="posts.json" crossorigin="anonymous" />
+  <link rel="preload" as="style" href="/assets/style.css" />
+  <link rel="preload" as="fetch" href="/blog/posts.json" crossorigin="anonymous" />
   <meta name="theme-color" content="#0b0d10" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="application-name" content="Ramin Khaligh Portfolio" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
+  <!-- Favicons (expanded for compatibility) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#0b0d10" />
 
   <!-- Social meta -->
   <meta property="og:title" content="Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
@@ -34,16 +42,30 @@
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-cover.png" />
   <meta property="og:site_name" content="Ramin Khaligh Portfolio" />
   <meta property="og:locale" content="en_US" />
-
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
   <meta name="twitter:description" content="Insights and case studies on product management, UX, and growth." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-cover.png" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../assets/style.css" />
+  <!-- Early theme apply (prevents flash) -->
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+      meta.setAttribute('content', theme === 'dark' ? '#0b0d10' : '#ffffff');
+    } catch(e) {}
+  })();
+  </script>
 
-  <!-- Structured data -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Structured data (Blog + Breadcrumb + WebPage + potential ItemList placeholder) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +80,8 @@
           "@type": "Person",
           "name": "Ramin Khaligh",
           "url": "https://raminkhaligh.github.io/"
-        }
+        },
+        "inLanguage": "en"
       },
       {
         "@type": "BreadcrumbList",
@@ -66,6 +89,15 @@
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raminkhaligh.github.io/"},
           {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://raminkhaligh.github.io/blog/"}
         ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://raminkhaligh.github.io/blog/#webpage",
+        "url": "https://raminkhaligh.github.io/blog/",
+        "name": "Blog & Case Studies",
+        "description": "Articles, frameworks, and real-world product/growth learnings by Ramin Khaligh.",
+        "isPartOf": {"@id": "https://raminkhaligh.github.io/#website"},
+        "inLanguage": "en"
       }
     ]
   }
@@ -94,17 +126,26 @@
   <header class="site-nav" role="navigation" aria-label="Primary">
     <div class="nav-content">
       <a class="brand" href="https://raminkhaligh.github.io/" aria-label="Home">
-        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
+        <img src="/assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
         <span>Ramin Khaligh</span>
       </a>
       <nav role="navigation">
-        <a href="../#about">About</a>
-        <a href="../#services">Services</a>
-        <a href="../#experience">Experience</a>
-        <a href="../#skills">Skills</a>
-        <a href="../#contact">Contact</a>
-        <a href="../blog/" aria-current="page">Blog</a>
-        <a class="btn primary" href="../assets/ramin-khaligh-resume.pdf" download>Résumé</a>
+        <a href="/#about">About</a>
+        <a href="/#services">Services</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#contact">Contact</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a class="btn primary" href="/assets/ramin-khaligh-resume.pdf" download>Résumé</a>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+          <span class="theme-toggle__icon" aria-hidden="true">🌓</span>
+          <span class="theme-toggle__label">Auto</span>
+        </button>
+
+        <!-- Language -->
+        <a class="btn" href="/fa/" style="margin-inline-start:.4rem;" aria-label="Persian version">فارسی</a>
       </nav>
     </div>
   </header>
@@ -116,10 +157,35 @@
       <p style="color:var(--muted); margin-top:0.25rem;">
         Thoughts, frameworks, and lessons from real-world product and growth experiences.
       </p>
+
+      <!-- Simple controls: search + sort (progressive enhancement) -->
+      <div class="card" style="margin-top:0.8rem;">
+        <form id="controls" style="display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:center;">
+          <label for="q" class="visually-hidden">Search</label>
+          <input id="q" name="q" type="search" placeholder="Search posts…" autocomplete="off"
+                 style="padding:.6rem;border:1px solid var(--line);border-radius:10px;min-width:220px;background:var(--elev-1);color:var(--ink);" />
+          <label for="sort" class="visually-hidden">Sort</label>
+          <select id="sort" name="sort" style="padding:.6rem;border:1px solid var(--line);border-radius:10px;background:var(--elev-1);color:var(--ink);">
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+            <option value="az">Title A → Z</option>
+            <option value="za">Title Z → A</option>
+          </select>
+          <button type="button" id="clearFilters" class="btn">Clear</button>
+        </form>
+      </div>
     </section>
 
     <section id="blog-list" class="container" aria-labelledby="blog-list-title">
-      <div id="blog-grid" class="svc__grid"></div>
+      <h2 id="blog-list-title" class="visually-hidden">Post list</h2>
+      <div id="blog-grid" class="svc__grid" style="margin-top:1rem;"></div>
+
+      <!-- Pagination (client-side) -->
+      <nav id="pager" aria-label="Pagination" style="display:flex;gap:.5rem;justify-content:center;margin:1rem 0;visibility:hidden;">
+        <button class="btn" id="prevPage" disabled>← Newer</button>
+        <span id="pageIndicator" style="align-self:center;color:var(--muted);"></span>
+        <button class="btn" id="nextPage" disabled>Older →</button>
+      </nav>
     </section>
 
     <div style="text-align:center; margin:0.6rem 0;">
@@ -162,48 +228,149 @@
     </p>
   </footer>
 
-  <!-- ===== Blog Loader (same style, optimized) ===== -->
+  <!-- ===== Theme runtime (same as main site) ===== -->
+  <script src="/assets/theme.js" defer></script>
+
+  <!-- ===== Blog Loader (optimized + filters + pagination) ===== -->
   <script defer>
-    fetch('posts.json')
+  (function() {
+    const POSTS_URL = '/blog/posts.json'; // keep absolute to avoid base path issues
+    const grid = document.getElementById('blog-grid');
+    const q = document.getElementById('q');
+    const sortSel = document.getElementById('sort');
+    const clearBtn = document.getElementById('clearFilters');
+
+    // simple pager
+    const pager = document.getElementById('pager');
+    const prevBtn = document.getElementById('prevPage');
+    const nextBtn = document.getElementById('nextPage');
+    const pageIndicator = document.getElementById('pageIndicator');
+
+    const PAGE_SIZE = 9;
+    let allPosts = [];
+    let filtered = [];
+    let page = 1;
+
+    function normalize(p) {
+      if (!p) return '#';
+      if (/^https?:\/\//i.test(p)) return p;
+      p = p.replace(/^([.\/]|(\.\.\/)+)/g, '');
+      if (!p.startsWith('/')) p = '/' + p;
+      return p;
+    }
+
+    function renderList(list) {
+      grid.innerHTML = '';
+      if (!list.length) {
+        const msg = document.createElement('p');
+        msg.textContent = 'No articles found.';
+        msg.style.color = 'var(--muted)';
+        msg.style.textAlign = 'center';
+        grid.appendChild(msg);
+        pager.style.visibility = 'hidden';
+        return;
+      }
+
+      const start = (page - 1) * PAGE_SIZE;
+      const slice = list.slice(start, start + PAGE_SIZE);
+
+      slice.forEach(post => {
+        const href = normalize(post.url);
+        const img = post.image ? normalize(post.image) : '/assets/blog-cover.png';
+        const dateStr = post.date ? new Date(post.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : '';
+        const article = document.createElement('article');
+        article.className = 'card';
+        article.innerHTML = `
+          <a href="${href}" style="text-decoration:none;color:inherit;">
+            <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
+              <img src="${img}" alt="${post.title}" loading="lazy" decoding="async" width="1200" height="675"
+                   style="width:100%;height:100%;object-fit:cover;transition:transform .25s ease;" />
+            </div>
+            <h3>${post.title}</h3>
+            <p style="color:var(--muted);min-height:3.6em;">${post.summary || ''}</p>
+          </a>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.6rem;">
+            <a href="${href}" class="btn">Read More →</a>
+            <small style="color:var(--muted);">${dateStr}</small>
+          </div>`;
+        grid.appendChild(article);
+      });
+
+      // pager
+      const totalPages = Math.ceil(list.length / PAGE_SIZE);
+      if (totalPages > 1) {
+        pager.style.visibility = 'visible';
+        prevBtn.disabled = page <= 1;
+        nextBtn.disabled = page >= totalPages;
+        pageIndicator.textContent = `Page ${page} of ${totalPages}`;
+      } else {
+        pager.style.visibility = 'hidden';
+      }
+    }
+
+    function applyFilters() {
+      const term = (q.value || '').trim().toLowerCase();
+      const s = sortSel.value;
+      filtered = allPosts.filter(p => {
+        if (!term) return true;
+        const hay = [
+          p.title || '',
+          p.summary || '',
+          (p.tags || []).join(' '),
+          (p.category || '')
+        ].join(' ').toLowerCase();
+        return hay.includes(term);
+      });
+
+      // sorting
+      filtered.sort((a,b) => {
+        if (s === 'new') return new Date(b.date) - new Date(a.date);
+        if (s === 'old') return new Date(a.date) - new Date(b.date);
+        if (s === 'az') return String(a.title).localeCompare(String(b.title));
+        if (s === 'za') return String(b.title).localeCompare(String(a.title));
+        return 0;
+      });
+
+      page = 1;
+      renderList(filtered);
+    }
+
+    // events
+    q && q.addEventListener('input', () => applyFilters());
+    sortSel && sortSel.addEventListener('change', () => applyFilters());
+    clearBtn && clearBtn.addEventListener('click', () => {
+      q.value = '';
+      sortSel.value = 'new';
+      applyFilters();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (page > 1) { page--; renderList(filtered); }
+    });
+    nextBtn.addEventListener('click', () => {
+      const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+      if (page < totalPages) { page++; renderList(filtered); }
+    });
+
+    // fetch posts
+    fetch(POSTS_URL)
       .then(res => res.json())
       .then(posts => {
-        if (!Array.isArray(posts)) return;
-        const container = document.getElementById('blog-grid');
-        const normalize = (p) => {
-          if (!p) return '#';
-          if (/^https?:\/\//i.test(p)) return p;
-          p = p.replace(/^([.\/]|(\.\.\/)+)/g, '');
-          if (!p.startsWith('/')) p = '/' + p;
-          return p;
-        };
-        posts.sort((a,b)=>new Date(b.date)-new Date(a.date));
-        posts.forEach(post => {
-          const href = normalize(post.url);
-          const img = post.image ? normalize(post.image) : '/assets/blog-cover.png';
-          const article = document.createElement('article');
-          article.className = 'card';
-          article.innerHTML = `
-            <a href="${href}" style="text-decoration:none;color:inherit;">
-              <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
-                <img src="${img}" alt="${post.title}" loading="lazy" decoding="async" width="640" height="360" style="width:100%;height:100%;object-fit:cover;transition:transform .25s ease;" />
-              </div>
-              <h3>${post.title}</h3>
-              <p style="color:var(--muted);min-height:3.6em;">${post.summary}</p>
-            </a>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.6rem;">
-              <a href="${href}" class="btn">Read More →</a>
-              <small style="color:var(--muted);">${new Date(post.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'})}</small>
-            </div>`;
-          container.appendChild(article);
-        });
+        if (!Array.isArray(posts)) throw new Error('Invalid posts.json');
+        // keep original sort newest first by default
+        posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+        allPosts = posts;
+        filtered = posts.slice();
+        renderList(filtered);
       })
-      .catch(()=>{
+      .catch(() => {
         const msg=document.createElement('p');
         msg.textContent='Unable to load posts right now. Please try again later.';
         msg.style.color='var(--muted)';
         msg.style.textAlign='center';
-        document.getElementById('blog-grid').appendChild(msg);
+        grid.appendChild(msg);
       });
+  })();
   </script>
 </body>
 </html>
