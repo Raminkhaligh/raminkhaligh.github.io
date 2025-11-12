@@ -9,12 +9,13 @@
   <meta name="publisher" content="Ramin Khaligh Consulting" />
   <meta name="keywords" content="Ramin Khaligh, رامین خلیق, Product Consultant, Growth Consultant, UX/UI Design, SaaS, Fintech, Product Marketing, Go-To-Market Strategy, Growth Marketing, Digital Marketing, Google Ads, App Development" />
   <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light dark" />
   <!-- Canonical & Language -->
   <link rel="canonical" href="https://raminkhaligh.github.io/" />
   <link rel="alternate" hreflang="en" href="https://raminkhaligh.github.io/" />
+  <link rel="alternate" hreflang="fa" href="https://raminkhaligh.github.io/fa/" />
+  <link rel="alternate" hreflang="fa-IR" href="https://raminkhaligh.github.io/fa-ltr/" />
   <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.github.io/" />
-  <meta name="color-scheme" content="light dark">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
   <!-- Performance -->
   <link rel="preconnect" href="https://raminkhaligh.github.io" crossorigin>
   <link rel="preload" as="fetch" href="blog/posts.json" crossorigin="anonymous" />
@@ -47,15 +48,31 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Ramin Khaligh" />
 
+  <!-- Early theme apply (prevents flash) -->
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('theme'); // 'light' | 'dark' | 'auto' | null
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+      meta.setAttribute('content', theme === 'dark' ? '#0b0d10' : '#ffffff');
+    } catch(e) {}
+  })();
+  </script>
+
   <link rel="stylesheet" href="assets/style.css" />
-  
-   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KVRSRD3Q');</script>
-<!-- End Google Tag Manager -->
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2XPCTE273"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X2XPCTE273');
+  </script>
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -155,89 +172,94 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     }
     ]
-    }
+  }
   </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": "https://raminkhaligh.github.io/#faqpage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How fast can you ship an MVP?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Approximately 3 weeks for a lean MVP: user flows, wireframes, core UI, analytics events, and a launch checklist. Discovery is 3–5 days, followed by two 1-week sprints and a 2–3 day hardening window."
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://raminkhaligh.github.io/#faqpage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast can you ship an MVP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Approximately 3 weeks for a lean MVP: user flows, wireframes, core UI, analytics events, and a launch checklist. Discovery is 3–5 days, followed by two 1-week sprints and a 2–3 day hardening window."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does a typical engagement look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Two models: fixed-scope sprint for MVP/PMF or monthly retainer for roadmap and growth ops. Work is organized in 2-week increments with OKRs and a weekly business review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deliverables can I expect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Discovery notes, JTBD/user flows, wireframes or high-fidelity UI, backlog/roadmap, instrumentation plan, launch playbook, and a post-launch KPI readout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you measure success?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "North-star and guardrail metrics. Typical set: activation rate, time-to-value, D30/D90 retention, CAC/LTV, and payback period. Leading indicators are defined on day 1."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle growth as well as product?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes—SEO and paid media strategy, lifecycle automation, experimentation design, and analytics. Recent outcomes include +75% organic sessions and –38% CAC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tooling and handoff?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Design in Figma; tracking plans via GA4/Search console/BI/Google ads; delivery through Notion/Jira. Handoff includes dev-ready specs and a groomed backlog."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Timezone, languages, and availability?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Based in UAE (GMT+4). English and Persian. Typical start within 1–2 weeks; urgent kickoffs available with aligned scope and stakeholder access."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pricing and NDAs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Transparent, project-based pricing for MVP/PMF and monthly retainers for ongoing work. Standard MNDA available; sensitive assets are handled privately."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What does a typical engagement look like?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Two models: fixed-scope sprint for MVP/PMF or monthly retainer for roadmap and growth ops. Work is organized in 2-week increments with OKRs and a weekly business review."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What deliverables can I expect?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Discovery notes, JTBD/user flows, wireframes or high-fidelity UI, backlog/roadmap, instrumentation plan, launch playbook, and a post-launch KPI readout."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you measure success?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "North-star and guardrail metrics. Typical set: activation rate, time-to-value, D30/D90 retention, CAC/LTV, and payback period. Leading indicators are defined on day 1."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you handle growth as well as product?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes—SEO and paid media strategy, lifecycle automation, experimentation design, and analytics. Recent outcomes include +75% organic sessions and –38% CAC."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Tooling and handoff?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Design in Figma; tracking plans via GA4/Search console/BI/Google ads; delivery through Notion/Jira. Handoff includes dev-ready specs and a groomed backlog."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Timezone, languages, and availability?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Based in UAE (GMT+4). English and Persian. Typical start within 1–2 weeks; urgent kickoffs available with aligned scope and stakeholder access."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Pricing and NDAs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Transparent, project-based pricing for MVP/PMF and monthly retainers for ongoing work. Standard MNDA available; sensitive assets are handled privately."
-      }
-    }
-  ]
-}
-</script>
+    ]
+  }
+  </script>
+
+  <!-- Theme behavior (toggle/auto listener) -->
+  <script src="assets/theme.js" defer></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVRSRD3Q"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVRSRD3Q"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- Skip link for accessibility -->
   <a href="#main" class="skip-link" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
   <!-- Navigation -->
   <header class="site-nav" role="navigation" aria-label="Primary">
     <div class="nav-content">
@@ -255,9 +277,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a class="btn primary" href="assets/ramin-khaligh-resume.pdf" download>Résumé</a>
+
+        <!-- Theme Toggle (added) -->
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Switch theme">
+          <span class="theme-toggle__icon" aria-hidden="true">🌓</span>
+          <span class="theme-toggle__label">Auto</span>
+        </button>
+
+        <!-- Link to Farsi LTR page (added) -->
+        <a class="btn" href="/fa-ltr/" style="margin-left:.4rem;">FA (LTR)</a>
       </nav>
     </div>
   </header>
+
   <!-- Main content -->
   <main id="main" role="main">
     <!-- Hero -->
@@ -265,20 +297,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Ramin Khaligh – Product &amp; Growth Consultant" width="200" height="200" fetchpriority="high" decoding="async" />
       <div class="hero-content">
         <h1 id="home-title" class="heading-hero">Building Products That Earn Loyalty.</h1>
-        <p>I’m <strong>Ramin Khaligh</strong> (رامین خلیق) a Product &amp; Growth Consultant. I partner with SaaS and fintech startups to design products, growth strategies and go‑to‑market plans that increase retention, boost revenue and reduce customer acquisition costs.</p>
+        <p>I’m <strong>Ramin Khaligh</strong> (رامین خلیق) a Product &amp; Growth Consultant. I partner with SaaS and fintech startups to design products, growth strategies and go-to-market plans that increase retention, boost revenue and reduce customer acquisition costs.</p>
         <div class="cta">
-          <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let's%20build%20together">Let’s Collaborate</a>
-          <a class="btn" href="#services">Explore Services</a>
+          <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Let's%20build%20together" data-gtm="cta_click" data-cta="hero_primary">Let’s Collaborate</a>
+          <a class="btn" href="#services" data-gtm="cta_click" data-cta="hero_secondary">Explore Services</a>
         </div>
       </div>
     </section>
+
     <!-- About -->
     <section id="about" class="container" aria-labelledby="about-title">
       <h2 id="about-title">About Me</h2>
       <p>Ramin Khaligh (رامین خلیق) with 8+ years at the intersection of <strong>product, growth and UX</strong>, consults SaaS and fintech teams and beyond ship results. My approach blends research, analytics and creativity — crafting products people keep using.</p>
       <p>I’m passionate about bridging the gap between product and marketing teams and translating user insights into actionable strategies. My multicultural perspective (fluent in English and Persian) allows me to collaborate across diverse teams.</p>
-      <p>Over the years I’ve delivered measurable impact: at Wallex I built a 15‑person MarTech squad that drove six‑figure revenue growth and lifted organic traffic by <strong>+75%</strong>; at Tabdeal I launched a portfolio recommendation engine that attracted <strong>$1.5M+</strong> in user inflow. These achievements fuel my belief that thoughtful product and growth work can materially move the needle for startups.</p>
+      <p>Over the years I’ve delivered measurable impact: at Wallex I built a 15-person MarTech squad that drove six-figure revenue growth and lifted organic traffic by <strong>+75%</strong>; at Tabdeal I launched a portfolio recommendation engine that attracted <strong>$1.5M+</strong> in user inflow. These achievements fuel my belief that thoughtful product and growth work can materially move the needle for startups.</p>
     </section>
+
     <!-- Services -->
     <section id="services" class="svc" aria-labelledby="svc-title">
       <div class="svc__wrap">
@@ -288,7 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="svc__subtitle">I partner with startups to design, launch and grow products that drive measurable value.</p>
           <div class="svc__chips">
             <span class="chip">MVP in 3 weeks</span>
-            <span class="chip">Market‑fit product</span>
+            <span class="chip">Market-fit product</span>
             <span class="chip">−38% CPA</span>
           </div>
         </div>
@@ -315,7 +349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </article>
           <article class="card">
             <h3 class="card__title">Growth &amp; Marketing</h3>
-            <p class="card__punch">Sustainable, data‑driven growth.</p>
+            <p class="card__punch">Sustainable, data-driven growth.</p>
             <ul class="card__list">
               <li>SEO, paid media &amp; analytics</li>
               <li>Lifecycle automation</li>
@@ -326,6 +360,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </section>
+
     <!-- Experience -->
     <section id="experience" class="container" aria-labelledby="exp-title">
       <h2 id="exp-title">Experience</h2>
@@ -347,18 +382,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </section>
+
     <!-- Testimonials -->
     <section id="testimonials" class="container" aria-labelledby="testimonials-title">
       <h2 id="testimonials-title">Testimonials</h2>
       <div class="card">
         <blockquote>
-          “Ramin’s ability to unite product and marketing teams is unparalleled. His data‑driven approach increased our user retention by 40%.”
+          “Ramin’s ability to unite product and marketing teams is unparalleled. His data-driven approach increased our user retention by 40%.”
         </blockquote>
         <footer><cite> CMO, Fintech Startup</cite></footer>
       </div>
       <div class="card">
         <blockquote>
-          “We launched a successful MVP in under a month thanks to Ramin’s clear strategy and hands‑on guidance.”
+          “We launched a successful MVP in under a month thanks to Ramin’s clear strategy and hands-on guidance.”
         </blockquote>
         <footer><cite> Founder, SaaS Platform</cite></footer>
       </div>
@@ -369,6 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <footer><cite> CPO, Cryptocurrency Exchange</cite></footer>
       </div>
     </section>
+
     <!-- Certificates -->
     <section id="certificates" class="container" aria-labelledby="certificates-title">
       <h2 id="certificates-title">Certificates</h2>
@@ -384,6 +421,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="cert-chip">Band Score 7.5 <span>· Ielts.org</span></div>
       </div>
     </section>
+
     <!-- Skills -->
     <section id="skills" class="container" aria-labelledby="skills-title">
       <h2 id="skills-title">Skills</h2>
@@ -414,6 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </section>
+
     <!-- Featured Blog -->
     <section id="featured-blog" class="container" aria-labelledby="blog-title">
       <h2 id="blog-title">From the Blog</h2>
@@ -421,84 +460,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="blog-grid" class="svc__grid" style="margin-top:2rem;"></div>
       <div style="text-align:center; margin-top:2.4rem;"></div>
     </section>
-<!-- FAQ (Collapsible) -->
-<section id="faq" class="container" aria-labelledby="faq-title">
-  <h2 id="faq-title">FAQ</h2>
-  <p style="color:var(--muted);max-width:720px;">Operational details, engagement models, and delivery mechanics.</p>
 
-  <div class="svc__grid" style="margin-top:1.5rem;">
-    <details class="card">
-      <summary><h3 style="display:inline;">How fast can you ship an MVP?</h3></summary>
-      <div>
-        <p>~3 weeks for a lean MVP: user flows, wireframes, core UI, analytics events, and a launch checklist. We timebox discovery to 3–5 days, then run two 1-week sprints and a 2–3 day hardening window.</p>
+    <!-- FAQ (Collapsible) -->
+    <section id="faq" class="container" aria-labelledby="faq-title">
+      <h2 id="faq-title">FAQ</h2>
+      <p style="color:var(--muted);max-width:720px;">Operational details, engagement models, and delivery mechanics.</p>
+
+      <div class="svc__grid" style="margin-top:1.5rem;">
+        <details class="card">
+          <summary><h3 style="display:inline;">How fast can you ship an MVP?</h3></summary>
+          <div>
+            <p>~3 weeks for a lean MVP: user flows, wireframes, core UI, analytics events, and a launch checklist. We timebox discovery to 3–5 days, then run two 1-week sprints and a 2–3 day hardening window.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary><h3 style="display:inline;">What does a typical engagement look like?</h3></summary>
+          <div>
+            <p>Two models: fixed-scope sprint (MVP/PMF) or monthly retainer (roadmap + growth ops). We work in 2-week increments with OKRs and a weekly business review.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary><h3 style="display:inline;">What deliverables can I expect?</h3></summary>
+          <div>
+            <p>Discovery notes, JTBD/flows, wireframes or high-fidelity UI, backlog/roadmap, instrumentation plan, launch playbook, and post-launch KPI readout.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary><h3 style="display:inline;">How do you measure success?</h3></summary>
+          <div>
+            <p>North-star + guardrails. For SaaS/fintech that’s usually activation %, time-to-value, retention (D30/D90), CAC/LTV, and payback. We define leading indicators on day 1.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary><h3 style="display:inline;">Do you handle growth as well as product?</h3></summary>
+          <div>
+            <p>Yes—SEO and paid media strategy, lifecycle automation, experimentation design, and analytics. Recent outcomes: +75% organic sessions, –38% CAC.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary><h3 style="display:inline;">Tooling and handoff?</h3></summary>
+          <div>
+            <p>Design in Figma; tracking plans in GA4/Search Console/BI/Google Ads; delivery via Notion/Jira. Dev-ready specs and a clean backlog for your team to execute.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary><h3 style="display:inline;">Timezone, languages, and availability?</h3></summary>
+          <div>
+            <p>UAE time (GMT+4). English and Persian. Typical start within 1–2 weeks; urgent kickoffs possible if scope is tight and stakeholders are available.</p>
+          </div>
+        </details>
+
+        <details class="card">
+          <summary><h3 style="display:inline;">Pricing and NDAs?</h3></summary>
+          <div>
+            <p>Transparent, project-based pricing for MVP/PMF; monthly for retainers. Standard MNDA available on request; sensitive assets handled privately.</p>
+          </div>
+        </details>
       </div>
-    </details>
 
-    <details class="card">
-      <summary><h3 style="display:inline;">What does a typical engagement look like?</h3></summary>
-      <div>
-        <p>Two models: fixed-scope sprint (MVP/PMF) or monthly retainer (roadmap + growth ops). We work in 2-week increments with OKRs and a weekly business review.</p>
+      <div class="cta" style="margin-top:2rem;">
+        <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Project%20Enquiry"
+           data-gtm="cta_click" data-cta="faq_contact">Discuss your scope</a>
+        <a class="btn" href="assets/ramin-khaligh-resume.pdf" download
+           data-gtm="resume_download" data-source="faq">Résumé</a>
       </div>
-    </details>
+    </section>
 
-    <details class="card">
-      <summary><h3 style="display:inline;">What deliverables can I expect?</h3></summary>
-      <div>
-        <p>Discovery notes, JTBD/flows, wireframes or high-fidelity UI, backlog/roadmap, instrumentation plan, launch playbook, and post-launch KPI readout.</p>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><h3 style="display:inline;">How do you measure success?</h3></summary>
-      <div>
-        <p>North-star + guardrails. For SaaS/fintech that’s usually activation %, time-to-value, retention (D30/D90), CAC/LTV, and payback. We define leading indicators on day 1.</p>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><h3 style="display:inline;">Do you handle growth as well as product?</h3></summary>
-      <div>
-        <p>Yes—SEO and paid media strategy, lifecycle automation, experimentation design, and analytics. Recent outcomes: +75% organic sessions, –38% CAC.</p>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><h3 style="display:inline;">Tooling and handoff?</h3></summary>
-      <div>
-        <p>Design in Figma; tracking plans in GA4/Search Console/BI/Google Ads; delivery via Notion/Jira. Dev-ready specs and a clean backlog for your team to execute.</p>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><h3 style="display:inline;">Timezone, languages, and availability?</h3></summary>
-      <div>
-        <p>UAE time (GMT+4). English and Persian. Typical start within 1–2 weeks; urgent kickoffs possible if scope is tight and stakeholders are available.</p>
-      </div>
-    </details>
-
-    <details class="card">
-      <summary><h3 style="display:inline;">Pricing and NDAs?</h3></summary>
-      <div>
-        <p>Transparent, project-based pricing for MVP/PMF; monthly for retainers. Standard MNDA available on request; sensitive assets handled privately.</p>
-      </div>
-    </details>
-  </div>
-
-  <div class="cta" style="margin-top:2rem;">
-    <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Project%20Enquiry"
-       data-gtm="cta_click" data-cta="faq_contact">Discuss your scope</a>
-    <a class="btn" href="assets/ramin-khaligh-resume.pdf" download
-       data-gtm="resume_download" data-source="faq">Résumé</a>
-  </div>
-</section>
     <!-- Contact -->
     <section id="contact" class="container" aria-labelledby="contact-title">
       <h2 id="contact-title">Let’s Build Together</h2>
-      <p>Shaping an MVP, refining product‑market fit or scaling growth? Let’s talk.</p>
+      <p>Shaping an MVP, refining product-market fit or scaling growth? Let’s talk.</p>
       <div class="cta">
         <!-- Restore the original mailto button for 'Get in Touch' and keep LinkedIn link -->
-        <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Work%20with%20Ramin">Get in Touch</a>
-        <a class="btn" href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn primary" href="mailto:hwraamin@gmail.com?subject=Work%20with%20Ramin" data-gtm="cta_click" data-cta="contact_primary">Get in Touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener noreferrer" data-gtm="outbound_click" data-dst="linkedin">LinkedIn</a>
       </div>
       <!-- Contact form added for convenience; optional to use alongside mailto -->
       <form action="mailto:hwraamin@gmail.com?subject=Project%20Enquiry" method="post" enctype="text/plain" style="margin-top:2rem;max-width:600px;">
@@ -509,11 +550,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="email" id="email" name="Email" required style="padding:.6rem;border:1px solid var(--line);border-radius:8px;" />
           <label for="message">Message</label>
           <textarea id="message" name="Message" rows="5" required style="padding:.6rem;border:1px solid var(--line);border-radius:8px;"></textarea>
-          <button type="submit" class="btn primary" style="align-self:flex-start;">Submit</button>
+          <button type="submit" class="btn primary" style="align-self:flex-start;" data-gtm="form_submit" data-form="contact">Submit</button>
         </div>
       </form>
     </section>
   </main>
+
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div style="display:flex;justify-content:center;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:.8rem;">
@@ -553,6 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
     </p>
   </footer>
+
   <!-- Blog loader script -->
   <script defer>
   fetch('blog/posts.json')
@@ -598,12 +641,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById('blog-grid').appendChild(msg);
     });
   </script>
+
   <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
-  });
-}
-</script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+    });
+  }
+  </script>
 </body>
 </html>
