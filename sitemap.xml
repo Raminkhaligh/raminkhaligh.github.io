@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://raminkhaligh.github.io/FA/index.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://raminkhaligh.github.io/blog/bridging-product-marketing-gap.html</loc>
     <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -32,12 +38,6 @@
   </url>
   <url>
     <loc>https://raminkhaligh.github.io/blog/when-the-ceo-is-a-dictator.html</loc>
-    <lastmod>2025-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://raminkhaligh.github.io/fa-ltr/index.html</loc>
     <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
