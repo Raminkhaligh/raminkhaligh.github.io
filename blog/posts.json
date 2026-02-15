@@ -1,20 +1,11 @@
 [
   {
-    "title": "How I Increased User Retention by 40% — Fintech Case Study | Ramin Khaligh",
-    "summary": "A detailed case study on how Ramin Khaligh improved user retention by 40% for a fintech product through UX optimization, lifecycle automation, and data-led growth.",
+    "title": "When the CEO is a Dictator — How Over-Control Kills Innovation | Ramin Khaligh",
+    "summary": "How micromanagement and top-down decision-making from a non-technical CEO can cripple innovation, delay launches, and destroy ownership culture in product and marketing teams.",
     "date": "2025-10-19",
     "lastmod": "2025-10-19",
-    "url": "blog/fintech-retention.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-fintech-retention.png",
-    "featured": false
-  },
-  {
-    "title": "Bridging the Product & Marketing Gap | Ramin Khaligh",
-    "summary": "How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
-    "url": "blog/bridging-product-marketing-gap.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
+    "url": "blog/when-the-ceo-is-a-dictator.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
     "featured": false
   },
   {
@@ -27,21 +18,30 @@
     "featured": false
   },
   {
+    "title": "Bridging the Product & Marketing Gap | Ramin Khaligh",
+    "summary": "How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams.",
+    "date": "2025-10-19",
+    "lastmod": "2025-10-19",
+    "url": "blog/bridging-product-marketing-gap.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
+    "featured": false
+  },
+  {
+    "title": "How I Increased User Retention by 40% — Fintech Case Study | Ramin Khaligh",
+    "summary": "A detailed case study on how Ramin Khaligh improved user retention by 40% for a fintech product through UX optimization, lifecycle automation, and data-led growth.",
+    "date": "2025-10-19",
+    "lastmod": "2025-10-19",
+    "url": "blog/fintech-retention.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-fintech-retention.png",
+    "featured": false
+  },
+  {
     "title": "When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh",
     "summary": "A real story on how ego, poor accountability, and weak culture can erode collaboration between product, tech, and marketing — and how leaders can rebuild trust and ownership.",
     "date": "2025-10-19",
     "lastmod": "2025-10-19",
     "url": "blog/when-tech-teams-stop-listening.html",
     "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
-    "featured": false
-  },
-  {
-    "title": "When the CEO is a Dictator — How Over-Control Kills Innovation | Ramin Khaligh",
-    "summary": "How micromanagement and top-down decision-making from a non-technical CEO can cripple innovation, delay launches, and destroy ownership culture in product and marketing teams.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
-    "url": "blog/when-the-ceo-is-a-dictator.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
     "featured": false
   }
 ]
