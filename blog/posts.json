@@ -1,20 +1,11 @@
 [
   {
-    "title": "When the CEO is a Dictator — How Over-Control Kills Innovation | Ramin Khaligh",
-    "summary": "How micromanagement and top-down decision-making from a non-technical CEO can cripple innovation, delay launches, and destroy ownership culture in product and marketing teams.",
+    "title": "When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh",
+    "summary": "A real story on how ego, poor accountability, and weak culture can erode collaboration between product, tech, and marketing — and how leaders can rebuild trust and ownership.",
     "date": "2025-10-19",
     "lastmod": "2025-10-19",
-    "url": "blog/when-the-ceo-is-a-dictator.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
-    "featured": false
-  },
-  {
-    "title": "When Leaders Become the Bottleneck — The Cost of Constant Interruptions | Ramin Khaligh",
-    "summary": "A real story about how constant interruptions and lack of respect for planning can destroy focus, create technical debt, and demotivate teams — and what leaders should do differently.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
-    "url": "blog/constant-interruptions-cost.html",
-    "image": "https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png",
+    "url": "blog/when-tech-teams-stop-listening.html",
+    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
     "featured": false
   },
   {
@@ -36,12 +27,21 @@
     "featured": false
   },
   {
-    "title": "When Tech Teams Stop Listening — Lessons on Accountability & Culture | Ramin Khaligh",
-    "summary": "A real story on how ego, poor accountability, and weak culture can erode collaboration between product, tech, and marketing — and how leaders can rebuild trust and ownership.",
+    "title": "When Leaders Become the Bottleneck — The Cost of Constant Interruptions | Ramin Khaligh",
+    "summary": "A real story about how constant interruptions and lack of respect for planning can destroy focus, create technical debt, and demotivate teams — and what leaders should do differently.",
     "date": "2025-10-19",
     "lastmod": "2025-10-19",
-    "url": "blog/when-tech-teams-stop-listening.html",
-    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
+    "url": "blog/constant-interruptions-cost.html",
+    "image": "https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png",
+    "featured": false
+  },
+  {
+    "title": "When the CEO is a Dictator — How Over-Control Kills Innovation | Ramin Khaligh",
+    "summary": "How micromanagement and top-down decision-making from a non-technical CEO can cripple innovation, delay launches, and destroy ownership culture in product and marketing teams.",
+    "date": "2025-10-19",
+    "lastmod": "2025-10-19",
+    "url": "blog/when-the-ceo-is-a-dictator.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
     "featured": false
   }
 ]
