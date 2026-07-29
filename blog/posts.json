@@ -1,47 +1,47 @@
 [
   {
-    "title": "When the CEO is a Dictator",
-    "summary": "How micromanagement and top-down control from a non-technical CEO cripple innovation, delay launches, and destroy ownership culture.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
-    "url": "blog/when-the-ceo-is-a-dictator.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
-    "featured": false
-  },
-  {
-    "title": "When Tech Teams Stop Listening",
-    "summary": "How ego, poor accountability, and weak culture erode collaboration between product, tech, and marketing — and how to rebuild trust.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
-    "url": "blog/when-tech-teams-stop-listening.html",
-    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
-    "featured": false
-  },
-  {
     "title": "Bridging the Product & Marketing Gap",
     "summary": "How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
+    "date": "2026-07-29",
+    "lastmod": "2026-07-29",
     "url": "blog/bridging-product-marketing-gap.html",
     "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
     "featured": false
   },
   {
+    "title": "How I Increased User Retention by 40%",
+    "summary": "A case study on how I improved fintech user retention by 40% through UX optimization, lifecycle automation, and data-led growth.",
+    "date": "2026-07-29",
+    "lastmod": "2026-07-29",
+    "url": "blog/fintech-retention.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-fintech-retention.png",
+    "featured": false
+  },
+  {
+    "title": "When the CEO is a Dictator",
+    "summary": "How micromanagement and top-down control from a non-technical CEO cripple innovation, delay launches, and destroy ownership culture.",
+    "date": "2026-07-29",
+    "lastmod": "2026-07-29",
+    "url": "blog/when-the-ceo-is-a-dictator.html",
+    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
+    "featured": false
+  },
+  {
     "title": "When Leaders Become the Bottleneck",
     "summary": "How constant interruptions destroy focus, create technical debt, and demotivate teams — and what leaders should do differently.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
+    "date": "2026-07-29",
+    "lastmod": "2026-07-29",
     "url": "blog/constant-interruptions-cost.html",
     "image": "https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png",
     "featured": false
   },
   {
-    "title": "How I Increased User Retention by 40%",
-    "summary": "A case study on how I improved fintech user retention by 40% through UX optimization, lifecycle automation, and data-led growth.",
-    "date": "2025-10-19",
-    "lastmod": "2025-10-19",
-    "url": "blog/fintech-retention.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-fintech-retention.png",
+    "title": "When Tech Teams Stop Listening",
+    "summary": "How ego, poor accountability, and weak culture erode collaboration between product, tech, and marketing — and how to rebuild trust.",
+    "date": "2026-07-29",
+    "lastmod": "2026-07-29",
+    "url": "blog/when-tech-teams-stop-listening.html",
+    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
     "featured": false
   }
 ]
