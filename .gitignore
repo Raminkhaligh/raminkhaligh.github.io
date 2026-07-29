@@ -1,0 +1,10 @@
+# Build artifacts / stale drafts — never part of the live site
+_site/
+.jekyll-cache/
+includes_/
+index1.html
+index3.html
+
+# Local tooling, not site content
+.claude/
+skills-lock.json

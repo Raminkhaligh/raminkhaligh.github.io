@@ -35,8 +35,12 @@ def extract_meta(html):
     title = re.search(r"<title>(.*?)</title>", html, re.I | re.S)
     desc = re.search(r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', html, re.I)
     image = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\'](.*?)["\']', html, re.I)
+    raw_title = title.group(1).strip() if title else "Untitled"
+    # <title> is "Post Title | Site Name" for SEO; strip the site-name suffix
+    # so cards/alt text show just the post title, not the full SEO string.
+    display_title = raw_title.split("|")[0].strip() if "|" in raw_title else raw_title
     return {
-        "title": title.group(1).strip() if title else "Untitled",
+        "title": display_title,
         "summary": desc.group(1).strip() if desc else "",
         "image": image.group(1).strip() if image else None
     }

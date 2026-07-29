@@ -59,4 +59,36 @@ document.addEventListener("DOMContentLoaded", () => {
     highlightActive();
   }
 
+
+  /* ===== Reading Time ===== */
+  const article = document.querySelector("article");
+  const readTimeSpan = document.getElementById("read-time");
+  if (article && readTimeSpan) {
+    const words = (article.innerText || article.textContent).trim().split(/\s+/).length;
+    readTimeSpan.textContent = Math.ceil(words / 200) + " min read";
+  }
+
+
+  /* ===== Share Button (native share sheet, clipboard-copy fallback) ===== */
+  const shareBtn = document.getElementById("share-btn");
+  if (shareBtn) {
+    const shareIcon = shareBtn.innerHTML;
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    shareBtn.addEventListener("click", () => {
+      const shareData = {
+        title: document.title,
+        text: ogTitle ? ogTitle.content : document.title,
+        url: window.location.href
+      };
+      if (navigator.share) {
+        navigator.share(shareData).catch(() => {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareData.url).then(() => {
+          shareBtn.innerHTML = '<span class="share-copied">Copied!</span>';
+          setTimeout(() => { shareBtn.innerHTML = shareIcon; }, 2000);
+        });
+      }
+    });
+  }
+
 });

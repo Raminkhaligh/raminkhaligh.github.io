@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How I Increased User Retention by 40% — Fintech Case Study | Ramin Khaligh</title>
+  <title>How I Increased User Retention by 40% | Ramin Khaligh</title>
 
   <!-- ✅ SEO -->
-  <meta name="description" content="A detailed case study on how Ramin Khaligh improved user retention by 40% for a fintech product through UX optimization, lifecycle automation, and data-led growth." />
+  <meta name="description" content="A case study on how I improved fintech user retention by 40% through UX optimization, lifecycle automation, and data-led growth." />
   <meta name="keywords" content="Case Study, Product Growth, Fintech, Retention, UX, Lifecycle Marketing, Ramin Khaligh" />
   <meta name="author" content="Ramin Khaligh" />
   <meta name="language" content="en" />
-  <link rel="canonical" href="https://raminkhaligh.github.io/case-studies/fintech-retention.html" />
+  <link rel="canonical" href="https://raminkhaligh.github.io/blog/fintech-retention.html" />
   <meta name="robots" content="index,follow" />
 
   <!-- ✅ Open Graph -->
@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-fintech-retention.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://raminkhaligh.github.io/case-studies/fintech-retention.html" />
+  <meta property="og:url" content="https://raminkhaligh.github.io/blog/fintech-retention.html" />
   <meta property="article:published_time" content="2025-10-13T00:00:00+00:00" />
   <meta property="article:modified_time" content="2025-10-19T00:00:00+00:00" />
   <meta property="article:section" content="Case Study" />
@@ -34,43 +34,28 @@
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-fintech-retention.png" />
 
   <!-- ✅ Favicon & preload -->
-  <link rel="icon" href="/assets/favicon.png" sizes="any" type="image/png" />
-  <link rel="preload" href="../assets/logo.png" as="image" type="image/png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+  <link rel="preload" href="/assets/logo.png" as="image" type="image/png" />
+
+  <!-- ✅ Early theme apply (no-flash, matches home) -->
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+      meta.setAttribute('content', theme === 'dark' ? '#0b0d10' : '#ffffff');
+    } catch(e) {}
+  })();
+  </script>
 
   <!-- ✅ Styles -->
-  <link rel="stylesheet" href="../assets/style.css" />
-  <link rel="stylesheet" href="../assets/blog-post.css" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="stylesheet" href="/assets/blog-post.css" />
 
-  <!-- ✅ Enhancements -->
-  <style>
-    .share-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.25rem;
-      border-radius: 6px;
-      transition: background 0.25s ease, transform 0.2s ease;
-    }
-    .share-btn:hover {
-      background: rgba(255, 255, 255, 0.06);
-      transform: translateY(-1px);
-    }
-    .author-profile {
-      margin-top: 3rem;
-      padding: 1.5rem;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.02);
-      box-shadow: var(--shadow-1);
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-    }
-    .author-profile:hover { border-color: var(--accent); }
-  </style>
 
   <!-- ✅ Structured Data -->
   <script type="application/ld+json">
@@ -91,7 +76,7 @@
         "publisher": { "@type": "Person", "name": "Ramin Khaligh" },
         "datePublished": "2025-10-13",
         "dateModified": "2025-10-19",
-        "url": "https://raminkhaligh.github.io/case-studies/fintech-retention.html",
+        "url": "https://raminkhaligh.github.io/blog/fintech-retention.html",
         "articleSection": "Case Studies",
         "timeRequired": "PT5M"
       }
@@ -102,21 +87,67 @@
 
 <body id="top">
   <!-- ===== Header ===== -->
- <header class="site-nav">
+  <header class="site-nav" data-lang="en" data-home="false">
     <div class="nav-content">
-      <a class="brand" href="https://raminkhaligh.github.io/">
-        <img src="../assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" />
+      <a class="brand" href="/" aria-label="Home">
+        <img src="/assets/logo.png" alt="Ramin Khaligh logo" width="28" height="28" decoding="async" />
         <span>Ramin Khaligh</span>
       </a>
-      <nav>
-        <a href="../#about">About</a>
-        <a href="../#services">Services</a>
-        <a href="../#experience">Experience</a>
-        <a href="../#skills">Skills</a>
-        <a href="../#contact">Contact</a>
-        <a href="../blog/" aria-current="page">Blog</a>
-        <a class="btn primary" href="../assets/ramin-khaligh-resume.pdf" download>Résumé</a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/#services" class="nav-link">Services</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="services-submenu" aria-label="Show Services submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="services-submenu">
+              <li><a href="/services/product-ux-design.html">Product &amp; UX Design</a></li>
+              <li><a href="/services/product-strategy-gtm.html">Product Strategy &amp; GTM</a></li>
+              <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
+          <li class="nav-item"><a href="/#faq" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-utility">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+            </svg>
+            <span class="theme-toggle__label">Auto</span>
+          </button>
+          <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+            </svg>
+            <span>فارسی</span>
+          </a>
+        </div>
       </nav>
+
+      <div class="nav-cta">
+        <a class="btn primary" href="/assets/ramin-khaligh-resume.pdf" download aria-label="Download résumé">Résumé</a>
+        <button type="button" class="hamburger" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -133,12 +164,12 @@
   <main class="container two-column">
     <div class="content-wrapper">
       <article class="card">
-        <header style="margin-bottom:2rem;">
+        <header class="post-header">
           <h1 class="heading-hero">How I Increased User Retention by 40%</h1>
-          <p style="color:var(--muted); margin-bottom:0.2rem;">
+          <p class="post-header__excerpt">
             A fintech case study on driving retention through UX improvements, behavioral automation, and data-led growth.
           </p>
-          <p style="color:var(--muted); font-size:0.85rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <p class="post-header__meta">
             Published on <time datetime="2025-10-13">Oct 13, 2025</time> · <span id="read-time"></span>
             <button id="share-btn" class="share-btn" title="Share this article" aria-label="Share">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
@@ -148,7 +179,7 @@
           </p>
         </header>
 
-        <img src="../assets/blog-fintech-retention.png" alt="Fintech dashboard showing retention metrics" loading="lazy" decoding="async" />
+        <img src="/assets/blog-fintech-retention.png" alt="Fintech dashboard showing retention metrics" loading="lazy" decoding="async" />
 
         <h2 id="challenge">The Challenge</h2>
         <p>The product had strong acquisition but suffered from churn. Only 32% of users returned after 30 days. My goal: uncover friction points and design data-informed interventions to push retention above 50%.</p>
@@ -171,19 +202,20 @@
           <li>Shared KPIs align product and marketing toward sustainable growth.</li>
           <li>Micro-feedback loops outperform large surveys for continuous iteration.</li>
         </ul>
-        <p>If you’re facing similar challenges, <a href="mailto:hwraamin@gmail.com?subject=Retention Strategy Inquiry">let’s discuss how I can help</a>.</p>
+        <p>If you’re facing similar challenges, <a href="mailto:raaminpro@gmail.com?subject=Retention Strategy Inquiry">let’s discuss how I can help</a>.</p>
 
         <!-- ===== Author ===== -->
         <section class="author-profile">
+          <img class="author-avatar" src="/assets/profile.jpg" alt="Ramin Khaligh" width="60" height="60" loading="lazy" />
           <div class="author-info">
             <p>Written by <a href="https://raminkhaligh.github.io/">Ramin Khaligh | رامین خلیق</a></p>
-            <p style="font-size:0.9rem; color:var(--muted);">Marketing & Product Leader focused on growth systems, UX, and data-driven strategy.</p>
+            <p>Marketing & Product Leader focused on growth systems, UX, and data-driven strategy.</p>
           </div>
         </section>
 
         <div class="cta">
-          <a href="../case-studies/" class="btn">← Back to Case Studies</a>
-          <a href="https://raminkhaligh.github.io/" class="btn primary">Go to Homepage</a>
+          <a href="/blog/" class="btn">← Back to Blog</a>
+          <a href="/" class="btn primary">Go to Homepage</a>
         </div>
       </article>
     </div>
@@ -198,61 +230,39 @@
   </main>
 
   <!-- ===== Footer ===== -->
- <footer class="footer" role="contentinfo">
-    <div style="display:flex;justify-content:center;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:.8rem;">
-      <a href="mailto:hwraamin@gmail.com" target="_blank" rel="noopener" aria-label="Email"
-         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+  <footer class="footer" role="contentinfo">
+    <div class="footer-socials">
+      <a href="mailto:raaminpro@gmail.com" class="icon-btn" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0L12 13.5 2.25 6.75" />
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener" aria-label="LinkedIn"
-         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18">
+      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM2 9h4v12H2zM4 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
         </svg>
       </a>
-      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener" aria-label="Instagram"
-         style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
         </svg>
       </a>
     </div>
-    <p style="display:flex;justify-content:center;align-items:center;gap:.6rem;">
-      © 2025 Ramin Khaligh · All Rights Reserved
-      <a href="#top" aria-label="Back to top" 
-         style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;
-                background:rgba(255,255,255,.04);border:1px solid var(--line);box-shadow:var(--shadow-1);
-                transition:all .25s ease;">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16">
+    <p class="footer-bottom">
+      © 2026 Ramin Khaligh · All Rights Reserved
+      <a href="#top" class="icon-btn icon-btn--sm" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
       </a>
     </p>
   </footer>
   <!-- ✅ Blog JS -->
-  <script src="../assets/blog-post.js" defer></script>
+  <script src="/assets/theme.js" defer></script>
+  <script src="/assets/nav.js" defer></script>
+  <script src="/assets/blog-post.js" defer></script>
 
-  <!-- ✅ Read time & Share -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const article = document.querySelector("article");
-      const words = article.innerText.trim().split(/\s+/).length;
-      document.getElementById("read-time").textContent = Math.ceil(words / 200) + " min read";
-
-      const shareBtn = document.getElementById("share-btn");
-      shareBtn.addEventListener("click", () => {
-        const data = { title: document.title, url: window.location.href };
-        if (navigator.share) navigator.share(data);
-        else navigator.clipboard.writeText(data.url);
-      });
-    });
-  </script>
 </body>
 </html>

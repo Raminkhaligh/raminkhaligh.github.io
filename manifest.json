@@ -8,20 +8,15 @@
   "description": "Product & Marketing Manager helping startups design, launch, and grow data-driven products people love.",
   "icons": [
     {
-      "src": "/assets/favicon-32.png",
+      "src": "/assets/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/assets/favicon-180.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/favicon.png",
-      "sizes": "512x512",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/assets/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

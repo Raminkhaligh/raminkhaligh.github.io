@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "id": "services",
+      "anchor": "services",
+      "label": {
+        "en": "Services",
+        "fa": "خدمات"
+      },
+      "submenu": [
+        {
+          "anchor": "svc-product-design",
+          "page": "/services/product-ux-design.html",
+          "label": {
+            "en": "Product & UX Design",
+            "fa": "طراحی محصول و تجربهٔ کاربری"
+          }
+        },
+        {
+          "anchor": "svc-strategy-gtm",
+          "label": {
+            "en": "Product Strategy & GTM",
+            "fa": "راهبرد محصول و عرضه به بازار"
+          },
+          "page": "/services/product-strategy-gtm.html"
+        },
+        {
+          "anchor": "svc-growth-marketing",
+          "label": {
+            "en": "Growth & Marketing",
+            "fa": "رشد و بازاریابی داده‌محور"
+          },
+          "page": "/services/growth-marketing.html"
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "anchor": "experience",
+      "label": {
+        "en": "Experience",
+        "fa": "سوابق"
+      }
+    },
+    {
+      "id": "skills",
+      "anchor": "skills",
+      "label": {
+        "en": "Skills",
+        "fa": "مهارت‌ها"
+      }
+    },
+    {
+      "id": "about",
+      "anchor": "about",
+      "label": {
+        "en": "About",
+        "fa": "درباره"
+      }
+    },
+    {
+      "id": "blog",
+      "anchor": "featured-blog",
+      "page": "/blog/",
+      "label": {
+        "en": "Blog",
+        "fa": "بلاگ"
+      }
+    },
+    {
+      "id": "faq",
+      "anchor": "faq",
+      "label": {
+        "en": "FAQ",
+        "fa": "پرسش‌های متداول"
+      }
+    },
+    {
+      "id": "contact",
+      "anchor": "contact",
+      "label": {
+        "en": "Contact",
+        "fa": "تماس"
+      }
+    }
+  ]
+}
