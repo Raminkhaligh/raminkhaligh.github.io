@@ -6,7 +6,11 @@ Scans all .html files under blog/ and extracts:
  - title from <title>
  - summary from <meta name="description">
  - og:image or default image
- - date and lastmod from git log
+ - date/lastmod from each post's own article:published_time /
+   article:modified_time meta tags, falling back to git log only if a
+   post doesn't have them (git history is a poor proxy for editorial
+   publish date — e.g. it goes wrong entirely after a history rewrite
+   or a squashed/consolidated commit)
  - auto-detect thumbnail from blog/images/
 
 Outputs blog/posts.json sorted by most recent date.
@@ -35,6 +39,8 @@ def extract_meta(html):
     title = re.search(r"<title>(.*?)</title>", html, re.I | re.S)
     desc = re.search(r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', html, re.I)
     image = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\'](.*?)["\']', html, re.I)
+    published = re.search(r'<meta[^>]+property=["\']article:published_time["\'][^>]+content=["\'](.*?)["\']', html, re.I)
+    modified = re.search(r'<meta[^>]+property=["\']article:modified_time["\'][^>]+content=["\'](.*?)["\']', html, re.I)
     raw_title = title.group(1).strip() if title else "Untitled"
     # <title> is "Post Title | Site Name" for SEO; strip the site-name suffix
     # so cards/alt text show just the post title, not the full SEO string.
@@ -42,7 +48,9 @@ def extract_meta(html):
     return {
         "title": display_title,
         "summary": desc.group(1).strip() if desc else "",
-        "image": image.group(1).strip() if image else None
+        "image": image.group(1).strip() if image else None,
+        "published": published.group(1).strip()[:10] if published else None,
+        "modified": modified.group(1).strip()[:10] if modified else None,
     }
 
 def detect_thumbnail(html_file):
@@ -61,22 +69,24 @@ def main():
 
         html = html_file.read_text(encoding="utf-8", errors="ignore")
         meta = extract_meta(html)
-        date = get_last_commit_date(html_file)
+        fallback_date = get_last_commit_date(html_file)
+        date = meta["published"] or fallback_date
+        lastmod = meta["modified"] or date
         image = meta["image"] or detect_thumbnail(html_file)
 
         posts.append({
             "title": meta["title"],
             "summary": meta["summary"],
             "date": date,
-            "lastmod": date,
+            "lastmod": lastmod,
             "url": f"blog/{html_file.name}",
             "image": image,
             "featured": False
         })
 
     posts.sort(key=lambda x: x["date"], reverse=True)
-    OUTPUT_FILE.write_text(json.dumps(posts, indent=2, ensure_ascii=False))
-    print(f"✅ Generated {OUTPUT_FILE} with {len(posts)} posts.")
+    OUTPUT_FILE.write_text(json.dumps(posts, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Generated {OUTPUT_FILE} with {len(posts)} posts.")
 
 if __name__ == "__main__":
     main()
