@@ -7,7 +7,7 @@
   <title>Blog & Case Studies | Ramin Khaligh - رامین خلیق</title>
 
   <!-- SEO (aligned with home) -->
-  <meta name="description" content="Articles, case studies, and insights from Ramin Khaligh | رامین خلیق — on product management, UX, and growth." />
+  <meta name="description" content="Articles, case studies, and insights from Ramin Khaligh | رامین خلیق, on product management, UX, and growth." />
   <meta name="keywords" content="Product Management, UX, Growth, Product Strategy, Leadership, Ramin Khaligh, Case Studies" />
   <meta name="author" content="Ramin Khaligh" />
   <meta name="robots" content="index,follow" />
@@ -53,8 +53,7 @@
   (function() {
     try {
       var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      var theme = saved === 'light' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
@@ -177,16 +176,30 @@
               <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="/#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/projects/" class="nav-link">Projects</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="Show Projects submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">Gamified SEO Growth</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">Crypto Onboarding Wizard</a></li>
+              <li><a href="/projects/marketing-automation.html">Lifecycle Automation</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">HMS Ecosystem Rescue</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">GTM & Portfolio Expansion</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">OSS Modernization</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
-          <li class="nav-item"><a href="/#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-utility">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
             <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
@@ -194,7 +207,6 @@
             <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
             </svg>
-            <span class="theme-toggle__label">Auto</span>
           </button>
           <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

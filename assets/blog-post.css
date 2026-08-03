@@ -1,14 +1,22 @@
 /* ============================================================
-   Blog & Article Layout — Ramin Khaligh (blog-post.css)
-   Works for both blog index page and single blog posts
+   Blog Post Layout — Ramin Khaligh (blog-post.css)
+   Loaded only by individual article pages (/blog/*.html).
+   Shares tokens and .card/.btn/.breadcrumb-list with style.css.
    ============================================================ */
 
-/* ===== General Container ===== */
+/* ===== Page shell ===== */
 main.container {
-  padding-top: 4rem;
+  padding-top: 2.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* ===== Breadcrumb (article width, not the sitewide 1100px container) ===== */
+.breadcrumb-nav {
+  max-width: 760px;
+  margin: 0 auto 1rem;
+  padding-inline: var(--gutter);
 }
 
 /* ===== Article Card ===== */
@@ -17,174 +25,73 @@ article.card {
   max-width: 760px;
   margin: 0 auto 3rem;
   padding: 2rem;
-  border-radius: 16px;
-  background: var(--elev-1);
-  box-shadow: var(--shadow-1);
 }
 
-/* ===== Post header (excerpt + meta row) ===== */
-.post-header { margin-bottom: 2rem; }
-.post-header__excerpt { color: var(--muted); margin-bottom: 0.2rem; }
-.post-header__meta { color: var(--muted); font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-
-/* ===== Article Image ===== */
 article.card img {
   width: 100%;
   height: auto;
   max-height: 420px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
   margin-bottom: 2rem;
   display: block;
 }
 
-/* ===== Breadcrumb Navigation ===== */
-.breadcrumb {
-  max-width: 760px;
-  margin: 1.2rem auto 0.8rem;
-  padding: 0 1rem;
+/* ===== Post header (title, excerpt, meta row) ===== */
+.post-header { margin-bottom: 2rem; }
+.post-header__excerpt { color: var(--muted); font-size: 1.05rem; line-height: 1.6; margin: 0.6rem 0 1rem; }
+.post-header__meta {
+  color: var(--muted);
   font-size: 0.85rem;
-  color: var(--muted);
   display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-}
-
-.breadcrumb a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb span {
-  margin: 0 0.4rem;
-  color: var(--muted);
-}
-
-/* ===== Call To Action Buttons ===== */
-.cta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2.5rem;
-}
-
-@media (max-width: 600px) {
-  .cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.6rem;
-  }
-}
-
-.cta .btn {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-
-/* ===== Related Posts Section ===== */
-.related-posts {
-  margin-top: 3rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--line);
-  padding-top: 1.5rem;
 }
 
-.related-posts h3 {
-  margin-bottom: 0.5rem;
+#read-time { color: var(--accent); font-weight: 500; }
+
+/* ===== Typography ===== */
+article.card h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  scroll-margin-top: 6rem;
 }
 
-.related-posts ul {
-  list-style: none;
-  padding-inline-start: 0;
-  line-height: 1.8;
-}
-
-.related-posts a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.related-posts a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Blog Grid (for index page) ===== */
-#blog-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-#blog-grid article.card {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: var(--shadow-1);
-  background: var(--elev-1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#blog-grid article.card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-2);
-}
+article.card p { line-height: 1.75; margin-bottom: 1.1rem; }
+article.card ul { line-height: 1.75; margin: 0 0 1.1rem; padding-inline-start: 1.3rem; }
+article.card li { margin-bottom: 0.4rem; }
+article.card strong { color: var(--ink); }
 
 /* ===== Blockquotes ===== */
 blockquote {
+  position: relative;
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem 1.25rem 2.25rem;
   border-inline-start: 3px solid var(--accent);
-  padding-inline-start: 1rem;
-  color: var(--muted);
-  margin: 1.5rem 0;
+  border-radius: var(--radius-s);
+  background: var(--glass);
+  color: var(--ink);
+  font-size: 1.05rem;
   font-style: italic;
+  line-height: 1.6;
 }
 
-/* ===== Blog Header ===== */
-#blog-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0.8rem auto 2rem;
-}
-
-#blog-header h1 {
-  margin-bottom: 0.25rem;
-}
-
-#blog-header p {
-  color: var(--muted);
-  margin-top: 0.2rem;
-}
-
-/* ===== Smooth Lazy Image Load ===== */
-img[loading="lazy"] {
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-img[loading="lazy"].loaded {
-  opacity: 1;
-}
-
-/* ===== Reading Progress Bar ===== */
-#reading-progress {
-  position: fixed;
-  top: 0;
-  inset-inline-start: 0;
-  height: 4px;
-  width: 0;
-  background: var(--accent);
-  z-index: 9999;
-  transition: width 0.1s ease-out, opacity 0.3s ease;
-  opacity: 0;
-}
-
-#reading-progress.active {
-  opacity: 1;
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.4rem;
+  left: 0.6rem;
+  font-size: 2rem;
+  line-height: 1;
+  font-style: normal;
+  color: var(--accent);
+  opacity: 0.6;
 }
 
 /* ===== Table of Contents ===== */
@@ -193,11 +100,12 @@ img[loading="lazy"].loaded {
   top: 6rem;
   background: var(--elev-1);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 1rem 1.2rem;
-  margin: 2rem 0;
+  border-radius: var(--radius-m);
+  padding: 1.1rem 1.25rem;
   font-size: 0.9rem;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 #table-of-contents strong {
@@ -207,38 +115,27 @@ img[loading="lazy"].loaded {
   font-weight: 600;
 }
 
-#table-of-contents ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#table-of-contents li {
-  margin-bottom: 0.4rem;
-  line-height: 1.6;
-}
+#table-of-contents ul { list-style: none; margin: 0; padding: 0; }
+#table-of-contents li { margin-bottom: 0.5rem; line-height: 1.5; }
 
 #table-of-contents a {
   color: var(--muted);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s var(--ease);
 }
 
 #table-of-contents a:hover,
 #table-of-contents a.active {
   color: var(--accent);
-  text-decoration: underline;
 }
 
-/* Hide TOC until the two-column grid below can actually fit it side-by-side —
-   otherwise it fights the article for space in the flex row (squished tablet layout). */
+/* Hide TOC until the two-column grid below can fit it side-by-side, otherwise
+   it fights the article for space in the flex row (squished tablet layout). */
 @media (max-width: 1099px) {
-  #table-of-contents {
-    display: none;
-  }
+  #table-of-contents { display: none; }
 }
 
-/* ===== Two-Column Layout (optional) ===== */
+/* ===== Two-Column Layout (article + sticky TOC sidebar) ===== */
 @media (min-width: 1100px) {
   main.container.two-column {
     display: grid;
@@ -247,144 +144,41 @@ img[loading="lazy"].loaded {
     align-items: start;
   }
 
-  .sidebar {
-    position: sticky;
-    top: 6rem;
-    height: fit-content;
-  }
+  .sidebar { position: sticky; top: 6rem; height: fit-content; }
 }
 
-/* ===== Responsive Adjustments ===== */
-@media (min-width: 700px) {
-  #blog-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  }
-}
-
-@media (min-width: 1000px) {
-  article.card,
-  .breadcrumb {
-    max-width: 640px;
-  }
-
-  article.card img {
-    max-height: 320px;
-  }
-}
-
-/* ===== Smooth Scrolling ===== */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ===== Utility: Selection ===== */
-::selection {
-  background: var(--accent);
-  color: #fff;
-}
-/* =====================================================
-   BLOG POST EXTENSIONS — Compatible with main style.css
-   ===================================================== */
-
-/* ===== Reading time ===== */
-#read-time {
-  color: var(--accent);
-}
-
-/* ===== Related Topics ===== */
-.related-topics {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-.related-topics strong {
-  display: block;
-  margin-bottom: 0.4rem;
-  color: var(--accent);
-}
-
-.related-topics ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.related-topics li {
-  margin: 0;
-}
-
-.related-topics a {
-  color: var(--accent);
-  background: var(--glass);
+/* ===== Author Profile ===== */
+.author-profile {
+  margin-top: 3rem;
+  padding: 1.5rem;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0.25rem 0.6rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.related-topics a:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
-/* ===== Share Section ===== */
-.share-post {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-.share-post strong {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.share-icons {
+  border-radius: var(--radius-m);
+  background: var(--elev-1);
+  box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.2rem;
+  transition: border-color 0.3s var(--ease);
 }
 
-.share-icons a,
-.share-icons button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: var(--glass);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-1);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.share-copied { font-size: 0.8rem; color: var(--accent); }
+.author-profile:hover { border-color: color-mix(in oklab, var(--line), var(--accent) 40%); }
 
-.share-icons a:hover,
-.share-icons button:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  transform: scale(1.05);
+article.card .author-avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  margin-bottom: 0;
 }
 
-.share-icons svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--accent);
-  transition: stroke 0.2s ease;
-}
+.author-info p { margin: 0 0 0.3rem; line-height: 1.4; }
+.author-info p:last-child { margin-bottom: 0; color: var(--muted); }
+.author-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.author-info a:hover { text-decoration: underline; }
 
-.share-icons a:hover svg,
-.share-icons button:hover svg {
-  stroke: #fff;
-}
-
-/* ===== Share Button (single icon-button variant used on post pages) ===== */
+/* ===== Share Button (icon-button variant in the post meta row) ===== */
 .share-btn {
   background: none;
   border: none;
@@ -392,120 +186,66 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem;
-  border-radius: 6px;
-  transition: background 0.25s ease, transform 0.2s ease;
-}
-.share-btn:hover {
-  background: var(--glass);
-  transform: translateY(-1px);
+  padding: 0.3rem;
+  border-radius: var(--radius-s);
+  transition: background 0.25s var(--ease), transform 0.2s var(--ease);
 }
 
-/* ===== Author Profile (post-footer byline card) ===== */
-.author-profile {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--elev-1);
-  box-shadow: var(--shadow-1);
+.share-btn:hover { background: var(--glass); transform: translateY(-1px); }
+.share-copied { font-size: 0.8rem; color: var(--accent); font-weight: 500; }
+
+/* ===== Closing CTA + trust microcopy ===== */
+.cta {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.2rem;
-  transition: border-color 0.3s ease;
-}
-.author-profile:hover { border-color: var(--accent); }
-.author-info p { margin: 0 0 0.3rem; line-height: 1.4; }
-.author-info p:last-child { margin-bottom: 0; }
-.author-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
-.author-info a:hover { text-decoration: underline; }
-.author-avatar {
-  flex-shrink: 0;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border: 2px solid var(--accent);
-}
-@media (max-width: 600px) {
-  .author-profile {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.2rem;
-  }
-  .author-avatar { width: 56px; height: 56px; }
-}
-
-/* ===== Author Bio ===== */
-.author-bio {
-  display: flex;
-  align-items: flex-start;
   gap: 1rem;
   margin-top: 2.5rem;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--elev-1);
-  box-shadow: var(--shadow-1);
 }
 
-.author-bio img {
-  border-radius: 50%;
-  flex-shrink: 0;
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
+.cta .btn { padding: 0.6rem 1.2rem; font-size: 0.95rem; }
+
+.cta + .hero__trust { margin-top: 0.75rem; text-align: center; }
+
+@media (max-width: 600px) {
+  .cta { flex-direction: column-reverse; align-items: stretch; gap: 0.6rem; }
 }
 
-.author-bio h3 {
-  margin: 0 0 0.2rem;
-  color: var(--accent);
+/* ===== Smooth Lazy Image Load ===== */
+img[loading="lazy"] { transition: opacity 0.3s var(--ease); opacity: 0; }
+img[loading="lazy"].loaded { opacity: 1; }
+
+/* ===== Reading Progress Bar ===== */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  height: 3px;
+  width: 0;
+  background: var(--accent);
+  z-index: 9999;
+  transition: width 0.1s ease-out, opacity 0.3s var(--ease);
+  opacity: 0;
 }
 
-.author-bio p {
-  margin: 0 0 0.5rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.6;
+#reading-progress.active { opacity: 1; }
+
+/* ===== Utility: Selection ===== */
+::selection { background: var(--accent); color: #fff; }
+
+/* ===== Responsive Adjustments ===== */
+@media (min-width: 1000px) {
+  article.card { max-width: 640px; }
+  .breadcrumb-nav { max-width: 640px; }
+  article.card img { max-height: 320px; }
 }
 
-.author-bio .btn.small {
-  padding: 0.3rem 0.8rem;
-  font-size: 0.8rem;
-  border-radius: 6px;
-}
-
-/* ===== Typography adjustments ===== */
-article.card h2 {
-  margin-top: 1.8rem;
-  margin-bottom: 0.6rem;
-  color: var(--accent);
-}
-
-article.card p {
-  line-height: 1.7;
-  margin-bottom: 1rem;
-}
-
-/* ===== Responsive adjustments ===== */
 @media (max-width: 768px) {
-  article.card {
-    padding: 1.5rem;
-  }
+  article.card { padding: 1.5rem; }
+}
 
-  .author-bio {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .author-bio img {
-    width: 64px;
-    height: 64px;
-  }
-
-  .related-topics ul,
-  .share-icons {
-    justify-content: center;
-  }
+@media (max-width: 600px) {
+  .author-profile { flex-direction: column; align-items: flex-start; padding: 1.2rem; }
+  article.card .author-avatar { width: 56px; height: 56px; }
 }

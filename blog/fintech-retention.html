@@ -14,8 +14,8 @@
   <meta name="robots" content="index,follow" />
 
   <!-- ✅ Open Graph -->
-  <meta property="og:title" content="How I Increased User Retention by 40% — Fintech Case Study" />
-  <meta property="og:description" content="How UX optimization and lifecycle automation improved fintech user retention by 40% in 12 weeks — a real case study by Ramin Khaligh." />
+  <meta property="og:title" content="How I Increased User Retention by 40%: Fintech Case Study" />
+  <meta property="og:description" content="How UX optimization and lifecycle automation improved fintech user retention by 40% in 12 weeks, a real case study by Ramin Khaligh." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-fintech-retention.png" />
   <meta property="og:image:width" content="1200" />
@@ -29,7 +29,7 @@
 
   <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How I Increased User Retention by 40% — Fintech Case Study" />
+  <meta name="twitter:title" content="How I Increased User Retention by 40%: Fintech Case Study" />
   <meta name="twitter:description" content="How UX experiments and data-led lifecycle marketing boosted fintech user retention by 40%." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-fintech-retention.png" />
 
@@ -42,8 +42,7 @@
   (function() {
     try {
       var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      var theme = saved === 'light' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
@@ -64,7 +63,7 @@
     "@graph": [
       {
         "@type": "BlogPosting",
-        "headline": "How I Increased User Retention by 40% — Fintech Case Study",
+        "headline": "How I Increased User Retention by 40%: Fintech Case Study",
         "description": "A detailed case study by Ramin Khaligh showing how UX optimization and lifecycle automation increased fintech user retention by 40%.",
         "image": {
           "@type": "ImageObject",
@@ -111,16 +110,30 @@
               <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="/#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/projects/" class="nav-link">Projects</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="Show Projects submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">Gamified SEO Growth</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">Crypto Onboarding Wizard</a></li>
+              <li><a href="/projects/marketing-automation.html">Lifecycle Automation</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">HMS Ecosystem Rescue</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">GTM & Portfolio Expansion</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">OSS Modernization</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
-          <li class="nav-item"><a href="/#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-utility">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
             <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
@@ -128,7 +141,6 @@
             <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
             </svg>
-            <span class="theme-toggle__label">Auto</span>
           </button>
           <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -152,12 +164,14 @@
   </header>
 
   <!-- ===== Breadcrumb ===== -->
-   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="https://raminkhaligh.github.io/">Home</a>
-    <span>›</span>
-    <a href="https://raminkhaligh.github.io/blog/">Blog</a>
-    <span>›</span>
-    <span>Fintech Retention</span>
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-list">
+      <li><a href="/">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page">Fintech Retention</li>
+    </ol>
   </nav>
 
   <!-- ===== Main Content ===== -->
@@ -198,7 +212,7 @@
 
         <h2 id="takeaways">Takeaways</h2>
         <ul>
-          <li>Retention starts at activation — simplicity drives stickiness.</li>
+          <li>Retention starts at activation: simplicity drives stickiness.</li>
           <li>Shared KPIs align product and marketing toward sustainable growth.</li>
           <li>Micro-feedback loops outperform large surveys for continuous iteration.</li>
         </ul>
@@ -214,9 +228,10 @@
         </section>
 
         <div class="cta">
-          <a href="/blog/" class="btn">← Back to Blog</a>
-          <a href="/" class="btn primary">Go to Homepage</a>
+          <a href="/#contact" class="btn primary" data-gtm="cta_click">Book a Strategy Call</a>
+          <a href="/blog/" class="btn" data-gtm="cta_click">← Back to Blog</a>
         </div>
+        <p class="hero__trust">No spam · Typical response time: under 24 hours · Confidential and direct</p>
       </article>
     </div>
 

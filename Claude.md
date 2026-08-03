@@ -1,8 +1,8 @@
 1 Identity
 Name: Ramin Khaligh — رامین خلیق
-Role: Senior Product & Marketing Consultant
+Role: Growth-Focused Product & Marketing Leader
 Core value proposition
-I bridge engineering and marketing to build scalable SaaS and fintech products that improve retention, reduce CAC, and drive predictable revenue.
+I drive acquisition, engagement, and retention through data-driven strategy and cross-functional execution, leading hybrid teams of 20+ across engineering, marketing, and business at companies including Huawei (China), Clarity (Australia), and Iran's top tech firms. Over 8 years, I've built products from zero, scaled the features that already worked, and killed the ones that didn't, managing multi-million dollar go-to-market initiatives along the way.
 Brand attributes
 
 * Analytical and engineering-minded
@@ -57,6 +57,7 @@ Writing rules
 * Prefer clear decisions over generic claims
 * Keep paragraphs short
 * Use bullets when scanning is better than reading
+* Never use em dashes (—) or spaced hyphens as a sentence connector. This is a dead giveaway of AI-generated copy. Split into two sentences, use a comma, a period, or a colon instead. Hyphens stay allowed only inside compound words (go-to-market, cross-functional, time-to-value) and as the separator in job-title lines (Title — Company) or date ranges (2023 – 2024)
 * Every claim must support a business result
 
 ### Copy formula

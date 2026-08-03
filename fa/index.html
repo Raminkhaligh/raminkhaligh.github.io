@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Language" content="fa-IR" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>مشاور محصول و بازاریابی – رامین خلیق</title>
-  <meta name="description" content="رامین خلیق به استارتاپ‌ها کمک می‌کند محصولاتی داده‌محور بسازند که نگهداشت، رشد و درآمد را افزایش می‌دهد؛ با تمرکز بر نتیجهٔ تجاری." />
+  <meta name="description" content="رامین خلیق به تیم‌های SaaS و فین‌تک کمک می‌کند محصولات داده‌محور و مقیاس‌پذیر بسازند؛ محصولاتی که نگهداشت کاربر را بالا می‌برند، هزینه جذب (CAC) را کاهش می‌دهند و درآمد قابل پیش‌بینی می‌سازند." />
   <meta name="author" content="رامین خلیق" />
   <meta name="publisher" content="Ramin Khaligh Consulting" />
   <meta name="keywords" content="رامین خلیق, مشاور محصول, مشاور رشد, طراحی تجربه کاربری, ساس, فین‌تک, بازاریابی محصول, ورود به بازار, بازاریابی دیجیتال, افزایش نگهداشت, کاهش هزینه جذب" />
@@ -25,7 +25,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="مشاور محصول و رشد – رامین خلیق" />
-  <meta property="og:description" content="ساخت محصولات داده‌محور با نگهداشت و درآمد پایدار. راهبرد محصول، تجربهٔ کاربری و بازاریابی رشد با اجرای چابک." />
+  <meta property="og:description" content="محصولات با کارایی بالا. رشد قابل پیش‌بینی. من در کنار تیم‌های فنی می‌مانم تا نقشه راه را به فیچرهای عرضه‌شده و بودجه تبلیغات را به درآمد تبدیل کنم." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/fa/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
@@ -36,7 +36,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="مشاور محصول و رشد – رامین خلیق" />
-  <meta name="twitter:description" content="همراه شما در طراحی، عرضه و رشد محصول؛ با نتایج قابل‌اندازه‌گیری و گزارش‌دهی شفاف." />
+  <meta name="twitter:description" content="کمک به بنیان‌گذاران برای تبدیل جذب، تعامل و نگه‌داشت کاربر به درآمد قابل پیش‌بینی. کیس‌استادی‌های واقعی، نتایج قابل اندازه‌گیری." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
 
   <!-- Icons -->
@@ -58,8 +58,7 @@
   (function() {
     try {
       var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      var theme = saved === 'light' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
@@ -102,7 +101,7 @@
         "@type": "Person",
         "@id": "https://raminkhaligh.github.io/#ramin",
         "name": "رامین خلیق",
-        "jobTitle": "مشاور محصول و بازاریابی",
+        "jobTitle": "مشاور محصول و رشد",
         "url": "https://raminkhaligh.github.io/fa/",
         "image": "https://raminkhaligh.github.io/assets/profile.jpg",
         "email": "mailto:raaminpro@gmail.com",
@@ -172,14 +171,11 @@
     "@type":"FAQPage",
     "@id":"https://raminkhaligh.github.io/fa/#faqpage",
     "mainEntity":[
-      {"@type":"Question","name":"نمونهٔ اولیه را در چه زمانی می‌سازید؟","acceptedAnswer":{"@type":"Answer","text":"معمولاً در حدود سه هفته: چند روز برای کشف مسئله و محدوده، دو چرخهٔ یک‌هفته‌ای برای طراحی و ساخت، و چند روز برای آزمون نهایی و آماده‌سازی عرضه."}},
-      {"@type":"Question","name":"مدل همکاری شما چگونه است؟","acceptedAnswer":{"@type":"Answer","text":"یا همکاریِ محدوده‌دار برای نمونهٔ اولیه و تناسب با بازار، یا همکاریِ ماهانه برای نقشهٔ راه و عملیات رشد. کار در دوره‌های دوهفته‌ای و با مرور هفتگی پیش می‌رود."}},
-      {"@type":"Question","name":"چه تحویل‌‌هایی دریافت می‌کنیم؟","acceptedAnswer":{"@type":"Answer","text":"یادداشت‌های کشف مسئله، جریان‌های کاربر، وایرفریم یا رابط کاربری نهایی، فهرست کارها و نقشهٔ راه، برنامهٔ سنجش، دستورالعمل عرضه و گزارش شاخص‌ها پس از عرضه."}},
-      {"@type":"Question","name":"موفقیت را با چه سنجه‌هایی می‌سنجید؟","acceptedAnswer":{"@type":"Answer","text":"یک سنجهٔ راهبردیِ اصلی و چند سنجهٔ حفاظتی: فعال‌سازی، زمان تا رسیدن به ارزش، نگهداشت سی‌روزه و نودروزه، هزینهٔ جذب و ارزش طول‌عمر."}},
-      {"@type":"Question","name":"آیا رشد هم بخشی از کار شماست؟","acceptedAnswer":{"@type":"Answer","text":"بله؛ از بهینه‌سازی برای موتورهای جست‌وجو و تبلیغات هدفمند تا خودکارسازی پیام‌ها و طراحی آزمایش‌ها. نتیجهٔ معمول: افزایش ترافیک باکیفیت و کاهش هزینهٔ جذب."}},
-      {"@type":"Question","name":"تحویل کار چگونه مستند می‌شود؟","acceptedAnswer":{"@type":"Answer","text":"همه‌چیز با شرح دقیق، سنجه‌های پایش و فهرست کارهای آمادهٔ توسعه تحویل می‌شود تا تیم شما بدون ابهام اجرا را آغاز کند."}},
-      {"@type":"Question","name":"دسترسی زمانی شما چگونه است؟","acceptedAnswer":{"@type":"Answer","text":"مقر من امارات است. معمولاً ظرف یک تا دو هفته می‌توانیم شروع کنیم. برای شروع فوری، با شفاف‌سازی محدوده و دسترسی ذی‌نفعان هماهنگ می‌کنیم."}},
-      {"@type":"Question","name":"هزینه‌ها و محرمانگی چگونه است؟","acceptedAnswer":{"@type":"Answer","text":"برای پروژه‌های مشخص، قیمت‌گذاری شفاف و ثابت داریم و برای همکاری مستمر، قرارداد ماهانه. توافق‌نامهٔ محرمانگی استاندارد و مدیریت امن دارایی‌ها برقرار است."}}
+      {"@type":"Question","name":"روند توسعه و ارائه یک MVP چقدر زمان می‌برد؟","acceptedAnswer":{"@type":"Answer","text":"معمولاً حدود سه هفته. چند روز ابتدایی را صرف کشف و تعریف محدوده پروژه می‌کنیم، سپس دو اسپرینت یک هفته‌ای برای توسعه در نظر می‌گیریم و زمان پایانی را کاملاً به تست کیفیت (QA) و آماده‌سازی لانچ اختصاص می‌دهیم."}},
+      {"@type":"Question","name":"تیم فنی من دقیقاً چه خروجی‌هایی دریافت خواهد کرد؟","acceptedAnswer":{"@type":"Answer","text":"شفافیت مطلق. آن‌ها مستندات UI آماده برای توسعه، جریان‌های کاربری مستند، یک بک‌لاگ کاملاً پالایش‌شده، و ساختار پیاده‌سازی ابزارهای تحلیل را دریافت می‌کنند تا از همان روز اول معیارهای درست رصد شوند."}},
+      {"@type":"Question","name":"موفقیت را چگونه اندازه‌گیری می‌کنید؟","acceptedAnswer":{"@type":"Answer","text":"ما در همان روز اول یک معیار ستاره قطبی را نهایی می‌کنیم. این معیار با شاخص‌های کنترل‌کننده دقیقی بالانس می‌شود: نرخ فعال‌سازی کاربر، زمان رسیدن به ارزش، نرخ نگهداشت ۳۰ روزه، و دوره بازگشت سرمایه CAC."}},
+      {"@type":"Question","name":"مدل قرارداد و همکاری به چه شکل است؟","acceptedAnswer":{"@type":"Answer","text":"به دو روش: پروژه‌محور برای یک لانچ مشخص، یا قرارداد ماهیانه برای عملیات رشد مستمر. در هر دو حالت، ما همواره در چرخه‌های دو هفته‌ای با جلسات مرور هفتگی بسیار شفاف کار می‌کنیم."}},
+      {"@type":"Question","name":"هزینه‌ها و زمان‌بندی شروع کار چگونه است؟","acceptedAnswer":{"@type":"Answer","text":"قیمت‌گذاری برای پروژه‌های محدوده‌دار، کاملاً ثابت و شفاف است. من در امارات (منطقه زمانی UTC+4) مستقر هستم و معمولاً فرآیند آنبوردینگ کلاینت‌های جدید ظرف ۱ الی ۲ هفته آغاز می‌شود. امضای قرارداد عدم افشا نیز مورد استقبال است."}}
     ]
   }
   </script>
@@ -217,16 +213,30 @@
               <li><a href="/services/growth-marketing.html">رشد و بازاریابی داده‌محور</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#experience" class="nav-link">سوابق</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">مهارت‌ها</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">درباره</a></li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="#projects" class="nav-link">پروژه‌ها</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="نمایش زیرمنوی پروژه‌ها">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="16" height="16">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">رشد سئوی گیمیفای‌شده</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">ویزارد آنبوردینگ کریپتو</a></li>
+              <li><a href="/projects/marketing-automation.html">اتوماسیون چرخه عمر</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">نجات اکوسیستم هواوی</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">استراتژی ورود به بازار</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">نوسازی سیستم‌های مخابراتی</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="#featured-blog" class="nav-link">بلاگ</a></li>
-          <li class="nav-item"><a href="#faq" class="nav-link">پرسش‌های متداول</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">تماس</a></li>
         </ul>
 
         <div class="nav-utility">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="تعویض حالت نمایش">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="تغییر به حالت روشن" title="تغییر به حالت روشن">
             <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
@@ -234,7 +244,6 @@
             <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
             </svg>
-            <span class="theme-toggle__label">خودکار</span>
           </button>
           <a class="btn lang-switch" href="/" aria-label="نسخهٔ انگلیسی">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -263,23 +272,17 @@
          HERO SECTION
     =========================================== -->
     <section id="top" class="hero container" aria-labelledby="home-title">
-      <svg class="hero__signature" viewBox="0 0 600 320" fill="none" aria-hidden="true" focusable="false">
-        <path d="M20 276 L140 214 L240 238 L350 130 L460 158 L580 36" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-        <circle cx="20" cy="276" r="5" fill="var(--accent)" />
-        <circle cx="240" cy="238" r="5" fill="var(--accent)" />
-        <circle cx="460" cy="158" r="5" fill="var(--accent)" />
-        <circle cx="580" cy="36" r="6" fill="var(--accent-strong)" />
-      </svg>
       <img class="profile-photo" src="/assets/profile.jpg" alt="رامین خلیق، مشاور استراتژی محصول و رشد" width="200" height="200" fetchpriority="high" decoding="async" />
       <div class="hero-content">
         <p class="kicker kicker--muted">مشاور استراتژی محصول و خلق رشد</p>
-        <h1 id="home-title" class="heading-hero">محصولات با کارایی بالا.<br/>رشد پایدار و قابل پیش‌بینی.</h1>
+        <h1 id="home-title" class="heading-hero">محصولات با کارایی بالا<br/>رشد پایدار و قابل پیش‌بینی</h1>
         <p class="lede">
-          من در کنار بنیان‌گذاران کسب‌وکارهای SaaS و فین‌تک قرار می‌گیرم تا شکاف میان مهندسی و بازاریابی را پر کنم. ما بک‌لاگ‌های آشفته را به فیچرهای سودآور، و بودجه‌های بازاریابی را به درآمد قابل اندازه‌گیری تبدیل می‌کنیم.
+          من در کنار بنیان‌گذاران کسب‌وکارهای SaaS و فین‌تک قرار می‌گیرم تا جذب، تعامل و نگه‌داشت کاربر را به درآمد قابل پیش‌بینی تبدیل کنم. تیم‌های ترکیبی بالای ۲۰ نفره در مهندسی، بازاریابی و کسب‌وکار را رهبری می‌کنم، از ساخت محصولات تازه از صفر تا مقیاس‌دهی به محصولاتی که از قبل جواب داده‌اند، تا کمپین‌های گو-تو-مارکت چند میلیون دلاری.
         </p>
         <div class="cta hero-cta">
           <a class="btn primary" href="#contact" data-gtm="cta_click">رزرو جلسه استراتژی</a>
           <a class="btn" href="#services" data-gtm="cta_click">مشاهده توانمندی‌ها</a>
+        </div>
       </div>
     </section>
 
@@ -310,14 +313,11 @@
 <section class="container logo-strip-section" aria-label="Trusted by industry leaders">
       <p class="logo-strip__title">Trusted by teams at</p>
       <div class="logo-strip__track">
-        <!-- Huawei is naturally small, needs optical scaling up -->
-        <img class="client-logo opt-scale-up" src="/assets/huawei.svg" alt="Huawei" loading="lazy" />
-        
+        <img class="client-logo" src="/assets/huawei.svg" alt="Huawei" loading="lazy" />
         <img class="client-logo" src="/assets/xpay.svg" alt="XPay" loading="lazy" />
-        <img class="client-logo" src="/assets/wallex.svg" alt="Wallex" loading="lazy" />
-        
-        <!-- Tabdeal is chunky, needs optical scaling down -->
-        <img class="client-logo opt-scale-down" src="/assets/tabdeal.svg" alt="Tabdeal" loading="lazy" />
+        <img class="client-logo" data-tone="light" src="/assets/wallex.svg" alt="Wallex" loading="lazy" />
+        <img class="client-logo" data-tone="light" src="/assets/tabdeal.svg" alt="Tabdeal" loading="lazy" />
+        <img class="client-logo" data-tone="light" src="/assets/snapp.svg" alt="Snapp" loading="lazy" />
       </div>
     </section>
     <!-- ==========================================
@@ -341,6 +341,7 @@
               <li>تست‌های کاربردپذیری و تکرار چابک (Iteration)</li>
             </ul>
             <p class="card__outcome"><strong>دستاورد:</strong> افزایش نرخ فعال‌سازی و کاهش چشمگیر فشار بر تیم پشتیبانی.</p>
+            <a class="card__cta" href="/services/product-ux-design.html">مشاهده این خدمت ←</a>
           </article>
 
           <article class="card" id="svc-strategy-gtm">
@@ -352,6 +353,7 @@
               <li>طراحی فریم‌ورک‌های لانچ و هماهنگی تیمی</li>
             </ul>
             <p class="card__outcome"><strong>دستاورد:</strong> ورود سریع‌تر به بازار با همسویی کامل تمامی دپارتمان‌ها.</p>
+            <a class="card__cta" href="/services/product-strategy-gtm.html">مشاهده این خدمت ←</a>
           </article>
 
           <article class="card" id="svc-growth-marketing">
@@ -363,8 +365,102 @@
               <li>بهینه‌سازی قیف فروش و تحلیل کوهورت (Cohort)</li>
             </ul>
             <p class="card__outcome"><strong>دستاورد:</strong> کاهش هزینه جذب (CAC) و بهینه‌سازی ارزش طول عمر مشتری (LTV).</p>
+            <a class="card__cta" href="/services/growth-marketing.html">مشاهده این خدمت ←</a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CASE STUDIES / PROJECTS
+    =========================================== -->
+    <section id="projects" class="container section--tight" aria-labelledby="projects-title">
+      <p class="kicker">نمونه کارها</p>
+      <h2 id="projects-title">نمونه‌های اجرا شده</h2>
+      <p class="section-lede section-lede--spaced">پروژه‌های واقعی با محدودیت‌های واقعی و اعداد واقعی: هرکدام چگونه حل شد و چه نتیجه‌ای داشت.</p>
+
+      <div class="scroll-row" role="region" aria-label="نمونه کارها، قابل اسکرول">
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/gamified-seo-growth.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-gamified-seo-growth.svg" alt="تصویرسازی جریان کاربران شبکه‌های اجتماعی به سمت گوگل و رسیدن به رتبه یک" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">مهندسی رشد ارگانیک وقتی گوگل تبلیغات را ممنوع می‌کند</h3>
+              <p class="blog-card__excerpt">حلقه جستجوی گیمیفای‌شده‌ای که یک صرافی ارز دیجیتال را به رتبه یک گوگل رساند و ثبت‌نام ارگانیک را ۴۰۰٪ افزایش داد.</p>
+              <span class="blog-card__cta">مطالعه نمونه کار ←</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/crypto-onboarding-wizard.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-crypto-onboarding-wizard.svg" alt="Illustration of the crypto onboarding wizard routing a user to their matching product" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">انسانی‌سازی آنبوردینگ کریپتو برای جهش ۷٪ در نرخ تبدیل</h3>
+              <p class="blog-card__excerpt">ویزارد آنبوردینگ مبتنی بر پرسونا که کاربران جدید را به محصول مناسب هدایت کرد و نرخ تبدیل را ۷٪ افزایش داد.</p>
+              <span class="blog-card__cta">مطالعه نمونه کار ←</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/marketing-automation.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-marketing-automation.svg" alt="Illustration of the lifecycle automation engine nudging a stalled user through the funnel" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">افزایش ۱۴٪ درآمد از طریق اتوماسیون چرخه عمر</h3>
+              <p class="blog-card__excerpt">موتور اتوماسیون چرخه عمر مبتنی بر رویداد با WebEngage که ریزش کاربر را ۶٪ کاهش و کمیسیون پلتفرم را ۱۴٪ افزایش داد.</p>
+              <span class="blog-card__cta">مطالعه نمونه کار ←</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/hms-ecosystem-rescue.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-hms-ecosystem-rescue.svg" alt="Illustration of a Huawei device reconnected to the super app through a native HMS integration" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">نجات سهم بازار از بحران تحریم‌های GMS</h3>
+              <p class="blog-card__excerpt">یکپارچه‌سازی سفارشی HMS با اسنپ و کافه‌بازار که سهم بازار هوآوی در ایران را پس از قطع دسترسی به Google Mobile Services نجات داد.</p>
+              <span class="blog-card__cta">مطالعه نمونه کار ←</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/huawei-market-expansion.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-huawei-market-expansion.svg" alt="تصویرسازی سبد محصولات منتخب که در قالب یک باندل عرضه شد و ۱۰٪ سهم بازار گرفت" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">رسیدن به ۱۰٪ سهم بازار با استراتژی کامل GTM</h3>
+              <p class="blog-card__excerpt">انتخاب محصول جهانی، استراتژی ورود به بازار ۷P و کنترل دقیق زنجیره تأمین که ۱۰٪ سهم بازار گرفت و هزینه جذب مشتری را ۱۵٪ کاهش داد.</p>
+              <span class="blog-card__cta">مطالعه نمونه کار ←</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/telecom-oss-modernization.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-telecom-oss-modernization.svg" alt="تصویرسازی مستندات در حال تغذیه شبکه میکروسرویس مخابراتی، با سرعت تیم رو به رشد" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">اصلاح موتور: نوسازی OSS مخابراتی و فرهنگ تیم</h3>
+              <p class="blog-card__excerpt">چطور انضباط مستندسازی و استانداردهای TM Forum سرعت تیم ۱۴ نفره را ۳۰٪ و رضایت کاربر را ۲۵٪ افزایش داد.</p>
+              <span class="blog-card__cta">مطالعه نمونه کار ←</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div class="back-link-row">
+        <a class="btn" href="/projects/">مشاهده همه نمونه کارها ←</a>
       </div>
     </section>
 
@@ -402,6 +498,14 @@
           </ul>
         </div>
 
+        <div class="experience-item">
+          <h3>مدیر ارشد فنی محصول — Clarity <span class="experience-item__date">۱۴۰۱ – ۱۴۰۲</span></h3>
+          <ul>
+            <li>هدایت تیمی ۱۴ نفره برای ساخت میکروسرویس‌های OSS تلکام مطابق استانداردهای TM Forum برای انبارش شبکه و دارایی.</li>
+            <li>معرفی متدولوژی Lean و مستندسازی HLD و PRD که سرعت تیم را ۳۰٪ و رضایت کاربران را ۲۵٪ افزایش داد.</li>
+          </ul>
+        </div>
+
         <div class="experience-item experience-item--last">
           <h3>مدیر بازاریابی محصول — هوآوی (Huawei) <span class="experience-item__date">۲۰۱۹ – ۲۰۲۲</span></h3>
           <ul>
@@ -427,23 +531,27 @@
             <span class="chip">تدوین نقشه راه محصول</span>
             <span class="chip">طراحی UI/UX</span>
             <span class="chip">تحلیل داده‌های رشد</span>
-            <span class="chip">بهینه‌سازی نرخ تبدیل (CRO)</span>
-            <span class="chip">زیرساخت‌های MarTech</span>
+            <span class="chip">بهینه‌سازی نرخ تبدیل و فانل (CRO)</span>
+            <span class="chip">اتوماسیون MarTech</span>
             <span class="chip">سئو و Search Intent</span>
+            <span class="chip">A/B Testing</span>
+            <span class="chip">قیمت‌گذاری و مونتایزیشن</span>
+            <span class="chip">تحلیل محصول (Product Analytics)</span>
           </div>
-          <p class="card__outcome"><strong>تمرکز:</strong> کوتاه کردن زمان رسیدن به ارزش کاربر (TTV) و به حداکثر رساندن نرخ نگهداشت بلندمدت.</p>
         </div>
 
         <div class="card">
           <h3 class="card__title">رهبری و عملیات</h3>
           <div class="chip-row">
             <span class="chip">رهبری کراس‌فانکشنال</span>
+            <span class="chip">ساخت و مقیاس‌دهی تیم</span>
             <span class="chip">همسوسازی ذی‌نفعان</span>
+            <span class="chip">برنامه‌ریزی OKR</span>
             <span class="chip">ارتباطات شفاف فنی</span>
             <span class="chip">توسعه چابک (Agile)</span>
-            <span class="chip">مسئولیت‌پذیری مطلق</span>
+            <span class="chip">اجرای گو-تو-مارکت</span>
+            <span class="chip">مدیریت پیمانکاران و مشتریان</span>
           </div>
-          <p class="card__outcome"><strong>فلسفه:</strong> مستندات را شفاف و فرآیندها را چابک نگه دارید تا تیم مهندسی بدون ابهام و با بالاترین سرعت حرکت کند.</p>
         </div>
       </div>
     </section>
@@ -491,8 +599,13 @@
 
       <div class="skills-grid">
         <div class="card">
-          <h3 class="card__title">ریشه‌های تحلیلی. ذهنیت رشد.</h3>
-          <p>من مسیرم را به عنوان یک مهندس تحلیل‌گر آغاز کردم؛ به این معنی که رشد محصول را یک سیستم مهندسی می‌بینم که باید بهینه‌سازی شود. طی <b>+۸ سال</b> گذشته، تمرکزم را بر حل سخت‌ترین چالش‌ها در حوزه‌های کریپتو، Web3 و فین‌تک گذاشته‌ام و همواره بر داده‌های سخت تکیه می‌کنم، نه فرضیات. تسلط کامل به <b>فارسی و انگلیسی</b> به من اجازه می‌دهد در تیم‌های بین‌المللی و توزیع‌شده، شکاف‌های ارتباطی را بدون نقص پر کنم.</p>
+          <h3 class="card__title">رهبری میان‌بخشی. رشد داده‌محور.</h3>
+          <p><b>۸ سال</b> رهبری تیم‌های بالای <b>۲۰ نفره</b> در مهندسی، بازاریابی، محصول و کسب‌وکار. داده را به استراتژی تبدیل می‌کنم: عرضه فیچرهای پرتأثیر، اجرای لانچ‌های گو-تو-مارکت چند میلیون دلاری، و مقیاس‌دهی ترافیک ارگانیک از طریق فانل‌های خودکار. مسلط به <b>فارسی و انگلیسی</b>، برای تیم‌های بین‌المللی.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">تجربه‌ی جهانی. غریزه‌ی ساخت.</h3>
+          <p>تجربه‌ی من <b>هوآوی (چین)</b>، <b>Clarity (استرالیا)</b> و برخی از برترین شرکت‌های فناوری ایران را در بر می‌گیرد؛ بازارهای متفاوت، اما یک انضباط ثابت. محصولاتی را از صفر ساخته‌ام، و فیچرهای موجود را فراتر از سقفشان برده‌ام. به همان اندازه مهم، یاد گرفته‌ام کِی باید فیچری را که جایگاهش را توجیه نمی‌کرد کنار بگذارم تا وقت تیم صرف جایی شود که بازگشت واقعی دارد.</p>
         </div>
 
         <div class="card">
@@ -603,9 +716,9 @@
           <span class="chip">+۸ سال تجربه اجرا</span>
         </div>
 
-        <form class="contact-form" data-sending-label="در حال ارسال…" data-success-message="پیام شما ارسال شد — ظرف یک روز کاری پاسخ خواهم داد." data-error-message="مشکلی پیش آمد. لطفاً مستقیماً به raaminpro@gmail.com ایمیل بزنید.">
+        <form class="contact-form" data-sending-label="در حال ارسال…" data-success-message="پیام شما ارسال شد. ظرف یک روز کاری پاسخ خواهم داد." data-error-message="مشکلی پیش آمد. لطفاً مستقیماً به raaminpro@gmail.com ایمیل بزنید.">
           <input type="hidden" name="access_key" value="d38bc787-1d27-4344-aa6e-0ccded87adae" />
-          <input type="hidden" name="subject" value="Project Enquiry — raminkhaligh.github.io/fa" />
+          <input type="hidden" name="subject" value="Project Enquiry via raminkhaligh.github.io/fa" />
           <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-stack">
             <input class="form-field" type="text" name="name" placeholder="نام و نام خانوادگی" required />

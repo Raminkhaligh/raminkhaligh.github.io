@@ -3,12 +3,13 @@
 Auto-generate content/nav.json for Ramin Khaligh's portfolio site.
 
 content/nav.seed.json is the hand-maintained base: top-level nav items
-(Experience, Skills, About, Blog, FAQ, Contact) plus any Services submenu
-entries that are still just in-page anchors on the homepage.
+(Experience, Skills, About, Blog, FAQ, Contact) plus any Services/Projects
+submenu entries that are still just in-page anchors on the homepage.
 
-This script scans services/*.html and, for each page, adds or refreshes a
-matching submenu entry so new service pages show up in the nav automatically
-— no manual JSON editing needed. Each services page should carry:
+This script scans services/*.html and projects/*.html and, for each page,
+adds or refreshes a matching submenu entry under the corresponding nav item
+so new pages show up in the nav automatically — no manual JSON editing
+needed. Each page should carry:
 
   <meta name="nav-label" content="Short Nav Label" />
   <meta name="nav-label-fa" content="برچسب کوتاه فارسی" />  (optional)
@@ -16,15 +17,15 @@ matching submenu entry so new service pages show up in the nav automatically
 If nav-label is missing, the part of <title> before " | " is used instead.
 
 If this page replaces one of the anchor-only entries still seeded in
-nav.seed.json (a service that only exists as an on-page card so far), add:
+nav.seed.json (an item that only exists as an on-page card so far), add:
 
   <meta name="nav-replaces" content="svc-growth-marketing" />
 
 using that entry's "anchor" value — the generator upgrades that entry in
 place (adds "page", refreshes its label) instead of appending a duplicate.
 
-Run this after adding/removing a page under services/, or let the
-generate-nav GitHub Action do it on every push to main.
+Run this after adding/removing a page under services/ or projects/, or let
+the generate-nav GitHub Action do it on every push to main.
 """
 
 import re
@@ -32,9 +33,14 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-SERVICES_DIR = ROOT / "services"
 SEED_FILE = ROOT / "content" / "nav.seed.json"
 OUTPUT_FILE = ROOT / "content" / "nav.json"
+
+# Nav item id -> directory it's auto-populated from.
+SCAN_TARGETS = {
+    "services": ROOT / "services",
+    "projects": ROOT / "projects",
+}
 
 
 def extract_meta_content(html, name):
@@ -52,20 +58,18 @@ def extract_nav_label(html):
     return en, fa
 
 
-def main():
-    seed = json.loads(SEED_FILE.read_text(encoding="utf-8"))
-    services_item = next(item for item in seed["items"] if item["id"] == "services")
-    submenu = services_item.setdefault("submenu", [])
+def sync_submenu(nav_item, source_dir, url_prefix):
+    submenu = nav_item.setdefault("submenu", [])
     existing_by_page = {entry["page"]: entry for entry in submenu if entry.get("page")}
 
     discovered_urls = set()
-    for html_file in sorted(SERVICES_DIR.glob("*.html")):
+    for html_file in sorted(source_dir.glob("*.html")):
         if html_file.name == "index.html":
             continue
         html = html_file.read_text(encoding="utf-8", errors="ignore")
         label_en, label_fa = extract_nav_label(html)
         replaces = extract_meta_content(html, "nav-replaces")
-        url = f"/services/{html_file.name}"
+        url = f"{url_prefix}{html_file.name}"
         discovered_urls.add(url)
 
         if url in existing_by_page:
@@ -86,13 +90,27 @@ def main():
 
     # Drop auto-added entries whose page no longer exists. Anchor-only
     # entries (no "page" field) are hand-maintained and never removed here.
-    services_item["submenu"] = [
+    nav_item["submenu"] = [
         entry for entry in submenu
         if not entry.get("page") or entry["page"] in discovered_urls
     ]
+    return len(nav_item["submenu"])
+
+
+def main():
+    seed = json.loads(SEED_FILE.read_text(encoding="utf-8"))
+    items_by_id = {item["id"]: item for item in seed["items"]}
+
+    counts = []
+    for item_id, source_dir in SCAN_TARGETS.items():
+        nav_item = items_by_id.get(item_id)
+        if nav_item is None or not source_dir.is_dir():
+            continue
+        count = sync_submenu(nav_item, source_dir, f"/{item_id}/")
+        counts.append(f"{count} {item_id}")
 
     OUTPUT_FILE.write_text(json.dumps(seed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Generated {OUTPUT_FILE} with {len(services_item['submenu'])} services submenu entries.")
+    print(f"Generated {OUTPUT_FILE} with {', '.join(counts)} submenu entries.")
 
 
 if __name__ == "__main__":

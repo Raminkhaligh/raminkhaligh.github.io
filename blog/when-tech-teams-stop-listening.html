@@ -6,7 +6,7 @@
   <title>When Tech Teams Stop Listening | Ramin Khaligh</title>
 
   <!-- ✅ SEO -->
-  <meta name="description" content="How ego, poor accountability, and weak culture erode collaboration between product, tech, and marketing — and how to rebuild trust." />
+  <meta name="description" content="How ego, poor accountability, and weak culture erode collaboration between product, tech, and marketing, and how to rebuild trust." />
   <meta name="keywords" content="Leadership, Accountability, Tech Culture, Product Management, Collaboration, Engineering Teams, Ramin Khaligh Blog" />
   <meta name="language" content="en" />
   <meta name="author" content="Ramin Khaligh" />
@@ -14,8 +14,8 @@
   <meta name="robots" content="index,follow" />
 
   <!-- ✅ Open Graph -->
-  <meta property="og:title" content="When Tech Teams Stop Listening — Lessons on Accountability & Culture" />
-  <meta property="og:description" content="A true story about how ego and poor accountability can fracture collaboration between tech and marketing — and what leaders can do differently." />
+  <meta property="og:title" content="When Tech Teams Stop Listening: Lessons on Accountability & Culture" />
+  <meta property="og:description" content="A true story about how ego and poor accountability can fracture collaboration between tech and marketing, and what leaders can do differently." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png" />
   <meta property="og:image:width" content="1200" />
@@ -29,8 +29,8 @@
 
   <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="When Tech Teams Stop Listening — Lessons on Accountability & Culture" />
-  <meta name="twitter:description" content="How ego, poor accountability, and lack of shared ownership destroy team culture — and how to rebuild it." />
+  <meta name="twitter:title" content="When Tech Teams Stop Listening: Lessons on Accountability & Culture" />
+  <meta name="twitter:description" content="How ego, poor accountability, and lack of shared ownership destroy team culture, and how to rebuild it." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png" />
 
   <!-- ✅ Favicon & preload -->
@@ -42,8 +42,7 @@
   (function() {
     try {
       var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      var theme = saved === 'light' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
@@ -61,7 +60,7 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "When Tech Teams Stop Listening — Lessons on Accountability & Culture",
+    "headline": "When Tech Teams Stop Listening: Lessons on Accountability & Culture",
     "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
     "author": {
       "@type": "Person",
@@ -74,7 +73,7 @@
     },
     "datePublished": "2025-10-19",
     "dateModified": "2025-10-19",
-    "description": "A real story on how ego and lack of accountability in tech teams can destroy collaboration and culture — and what leaders can do to fix it.",
+    "description": "A real story on how ego and lack of accountability in tech teams can destroy collaboration and culture, and what leaders can do to fix it.",
     "url": "https://raminkhaligh.github.io/blog/when-tech-teams-stop-listening.html",
     "articleSection": "Leadership & Culture",
     "timeRequired": "PT6M"
@@ -108,16 +107,30 @@
               <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="/#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/projects/" class="nav-link">Projects</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="Show Projects submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">Gamified SEO Growth</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">Crypto Onboarding Wizard</a></li>
+              <li><a href="/projects/marketing-automation.html">Lifecycle Automation</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">HMS Ecosystem Rescue</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">GTM & Portfolio Expansion</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">OSS Modernization</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
-          <li class="nav-item"><a href="/#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-utility">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
             <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
@@ -125,7 +138,6 @@
             <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
             </svg>
-            <span class="theme-toggle__label">Auto</span>
           </button>
           <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -149,12 +161,14 @@
   </header>
 
   <!-- ===== Breadcrumb ===== -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="https://raminkhaligh.github.io/">Home</a>
-    <span>›</span>
-    <a href="https://raminkhaligh.github.io/blog/">Blog</a>
-    <span>›</span>
-    <span>When Tech Teams Stop Listening</span>
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-list">
+      <li><a href="/">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page">When Tech Teams Stop Listening</li>
+    </ol>
   </nav>
 
   <!-- ===== Main Content ===== -->
@@ -179,29 +193,29 @@
 
         <h2 id="situation">The Situation</h2>
         <p>
-          It started with a simple, well-documented request — a clear need from marketing backed by data and user feedback.
+          It started with a simple, well-documented request, a clear need from marketing backed by data and user feedback.
           The specs were ready, discussions held, mockups shared. Yet deadlines slipped, communication froze, and when the output
           finally arrived, it was rushed, incomplete, and disconnected from the goal.
         </p>
         <p>
           As the Product Marketing Manager, I escalated the issue. A review meeting was called with the Head of Product,
-          Tech Lead, and Frontend Lead — the goal was alignment. Instead, it exposed something deeper.
+          Tech Lead, and Frontend Lead. The goal was alignment. Instead, it exposed something deeper.
         </p>
 
         <h2 id="failure">Where It Went Wrong</h2>
         <p>
-          The meeting devolved quickly. The frontend lead claimed “requirements kept changing” — despite clear documentation to the contrary.
+          The meeting devolved quickly. The frontend lead claimed “requirements kept changing”, despite clear documentation to the contrary.
           When I calmly presented the facts, emotions took over. Voices rose. Accountability vanished.
-          Leadership joined in — defensive, dismissive, unwilling to reflect. 
+          Leadership joined in: defensive, dismissive, unwilling to reflect.
         </p>
         <p>
           What should have been a chance to rebuild trust became an ego battle. 
-          No resolution. No reflection. Just noise — the sound of a culture cracking.
+          No resolution. No reflection. Just noise: the sound of a culture cracking.
         </p>
 
         <h2 id="root-cause">The Root Cause</h2>
         <p>
-          The real problem wasn’t deadlines — it was <strong>culture</strong>. There were no shared goals, no accountability, and no psychological safety.
+          The real problem wasn’t deadlines. It was <strong>culture</strong>. There were no shared goals, no accountability, and no psychological safety.
           The tech team saw marketing as outsiders; product leadership avoided responsibility.
           The outcome was predictable: <em>no ownership, no progress, no collaboration</em>.
         </p>
@@ -211,21 +225,21 @@
           <li><strong>Shared OKRs:</strong> Tech, product, and marketing accountable to one north-star metric.</li>
           <li><strong>Transparent processes:</strong> Weekly demos, async updates, and open progress visibility.</li>
           <li><strong>Psychological safety:</strong> A culture where disagreement doesn’t equal disrespect.</li>
-          <li><strong>Ownership mindset:</strong> Everyone owns the outcome — not just their function.</li>
+          <li><strong>Ownership mindset:</strong> Everyone owns the outcome, not just their function.</li>
           <li><strong>Feedback loops:</strong> Replace blame with retros; fix systems, not people.</li>
         </ul>
 
         <h2 id="lesson">The Lesson</h2>
         <p>
-          Culture reveals itself in conflict. It’s easy to collaborate when things are smooth — real leadership shows up when tensions rise.
+          Culture reveals itself in conflict. It’s easy to collaborate when things are smooth. Real leadership shows up when tensions rise.
           If your team can’t handle feedback without defensiveness, frameworks and OKRs won’t save you.
         </p>
 
         <blockquote>
-          “Culture isn’t built in success — it’s built in disagreement, when people choose to listen instead of react.”
+          “Culture isn’t built in success. It’s built in disagreement, when people choose to listen instead of react.”
         </blockquote>
 
-        <p><strong>Lesson in one line:</strong> Transparency and accountability aren’t just management buzzwords — they’re the foundation of growth, trust, and delivery.</p>
+        <p><strong>Lesson in one line:</strong> Transparency and accountability aren’t just management buzzwords. They’re the foundation of growth, trust, and delivery.</p>
 
         <!-- ===== Author Profile ===== -->
         <section class="author-profile">
@@ -237,9 +251,10 @@
         </section>
 
         <div class="cta">
-          <a href="/blog/" class="btn">← Back to Blog</a>
-          <a href="/" class="btn primary">Go to Homepage</a>
+          <a href="/#contact" class="btn primary" data-gtm="cta_click">Book a Strategy Call</a>
+          <a href="/blog/" class="btn" data-gtm="cta_click">← Back to Blog</a>
         </div>
+        <p class="hero__trust">No spam · Typical response time: under 24 hours · Confidential and direct</p>
       </article>
     </div>
 

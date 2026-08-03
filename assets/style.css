@@ -28,9 +28,6 @@
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
   --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.15);
-  /* Aliases: several pages/blog-post.css reference --shadow-1/--shadow-2 */
-  --shadow-1: var(--shadow-sm);
-  --shadow-2: var(--shadow-md);
 
   /* Radii & Rhythm */
   --radius-s: 10px; 
@@ -163,7 +160,13 @@ html[dir="rtl"] body { font-family: "Vazirmatn", Tahoma, Arial, var(--font-sans)
   display: flex; align-items: center; gap: 8px;
   margin-inline-start: 8px; padding-inline-start: 8px; border-inline-start: 1px solid var(--line);
 }
-.lang-switch { margin-inline-start: 0; }
+/* Compact icon-only variant — .btn.lang-switch beats the plain .btn rule
+   below on specificity, since .btn sets padding later in the cascade */
+.btn.lang-switch {
+  margin-inline-start: 0; width: 36px; height: 36px; padding: 0;
+  border-radius: 50%; gap: 0;
+}
+.lang-switch span { display: none; }
 
 /* Dropdown / submenu (e.g. Services -> individual offerings) */
 .submenu-toggle {
@@ -222,48 +225,6 @@ html[dir="rtl"] body { font-family: "Vazirmatn", Tahoma, Arial, var(--font-sans)
   .nav-cta .btn { padding: 8px 14px; font-size: 0.9rem; }
 }
 
-/* ==========================================
-   LANGUAGE TOGGLE (SEGMENTED CONTROL)
-========================================== */
-.lang-toggle {
-  display: inline-flex;
-  align-items: center;
-  background-color: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  padding: 4px;
-  gap: 2px;
-}
-
-.lang-toggle__btn {
-  font-family: inherit;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 4px 12px;
-  border-radius: 20px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-/* استایل حالت انتخاب شده */
-.lang-toggle__btn.is-active {
-  background-color: var(--ink); /* در دارک مود سفید و در لایت مود سیاه می‌شود */
-  color: var(--bg); /* رنگ متن معکوس می‌شود */
-  cursor: default;
-  box-shadow: var(--shadow-sm, 0 2px 4px rgba(0,0,0,0.1));
-}
-
-/* استایل هاور برای زبانی که انتخاب نشده */
-a.lang-toggle__btn:hover {
-  color: var(--ink);
-  background-color: var(--glass);
-}
-
 /* Theme toggle */
 .theme-toggle {
   display: inline-flex; align-items: center; justify-content: center;
@@ -272,14 +233,13 @@ a.lang-toggle__btn:hover {
   cursor: pointer; transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
 }
 .theme-toggle:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); background: var(--glass); }
-.theme-toggle__label { display: none; } /* Hide text, keep icon */
 .theme-toggle__icon { width: 18px; height: 18px; color: var(--accent); }
 .theme-toggle__icon--moon { display: none; }
 :root[data-theme="dark"] .theme-toggle__icon--sun { display: none; }
 :root[data-theme="dark"] .theme-toggle__icon--moon { display: block; }
 
-/* Language switcher: small globe icon ahead of the label */
-.lang-switch svg { width: 16px; height: 16px; flex: 0 0 auto; }
+/* Language switcher: icon-only, sized to match .theme-toggle */
+.lang-switch svg { width: 18px; height: 18px; flex: 0 0 auto; }
 /* Active Navigation Link */
 .nav-link[aria-current="page"],
 .submenu a[aria-current="page"] {
@@ -339,7 +299,11 @@ a.lang-toggle__btn:hover {
 }
 :root[data-theme="dark"] .hero__signature { opacity: 0.22; }
 @media (max-width: 900px) { .hero__signature { display: none; } }
-.hero .profile-photo, .hero-content { position: relative; z-index: 1; }
+.hero .profile-photo { position: relative; z-index: 1; }
+/* Centering lived only on the outer .hero wrapper and relied on inheritance
+   to reach every child — declared again here, directly on the text
+   container, so it can't silently break if that chain is ever disrupted. */
+.hero-content { position: relative; z-index: 1; text-align: center; }
 .hero__trust { margin-top: 0.4rem; font-size: 0.85rem; color: var(--muted); }
 .kicker {
   color: var(--accent); font-size: 0.85rem; font-weight: 600;
@@ -369,7 +333,10 @@ a.lang-toggle__btn:hover {
 .hero .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem; }
 .hero-cta { margin-top: 0.75rem; margin-bottom: 0.5rem; }
 .hero-chips { justify-content: center; margin-top: 0.75rem; }
-.hero .lede { font-size: 1.1rem; line-height: 1.55; margin-bottom: 0.85rem; max-width: 760px; }
+/* margin-inline: auto — .hero-content shrinks to its widest child (flex
+   align-items: center), so a narrower max-width child without auto margins
+   sits flush at the start edge instead of centering within it */
+.hero .lede { font-size: 1.1rem; line-height: 1.55; margin-bottom: 0.85rem; max-width: 760px; margin-inline: auto; }
 
 
 
@@ -453,6 +420,9 @@ a.lang-toggle__btn:hover {
 .card__title { color: var(--accent); }
 .card__list { color: var(--muted); padding-inline-start: 1.2rem; margin-top: 1rem; line-height: 1.7; }
 .card__outcome { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.95rem; }
+/* Link to a card's dedicated page (services cards linking out to /services/*.html) */
+.card__cta { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; color: var(--accent); font-weight: 600; }
+.card__cta:hover { text-decoration: underline; }
 /* Row of chips inside a card (skills/toolkit cards) */
 .chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
 /* Small icon tile above a card heading (deliverables/process-step cards) */
@@ -470,7 +440,30 @@ a.lang-toggle__btn:hover {
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 }
 
+/* ===== Horizontally scrollable card row (home: Case Studies) =====
+   Three cards fit the container exactly on desktop; a fourth (or more)
+   overflows and becomes swipe/scroll-able instead of wrapping to a new row.
+   The scrollbar itself is hidden — native scrollbar rendering (track/thumb/
+   step-arrows) is inconsistent across browsers and reads as a stray UI
+   element under the row. The partial next card + scroll-snap are the
+   affordance instead; touch, trackpad, and shift+wheel all still scroll it. */
+.scroll-row {
+  display: flex; gap: var(--grid-gap);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.scroll-row::-webkit-scrollbar { display: none; }
+.scroll-row > * {
+  flex: 0 0 min(85vw, 320px);
+  scroll-snap-align: start;
+}
+@media (min-width: 700px) {
+  .scroll-row > * { flex-basis: calc((100% - 2 * var(--grid-gap)) / 3); }
+}
+
 /* ===== Experience Timeline ===== */
+.experience-timeline { margin-top: 2.5rem; max-width: 800px; }
 .experience-item {
   position: relative; padding-inline-start: 28px; border-inline-start: 2px solid var(--line); margin-bottom: 2rem;
 }
@@ -603,6 +596,9 @@ textarea.form-field { resize: vertical; }
 .blog-card__media { width: 100%; aspect-ratio: 16/9; overflow: hidden; border-bottom: 1px solid var(--line); }
 .blog-card__img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s var(--ease); }
 .blog-card__link:hover .blog-card__img { transform: scale(1.04); }
+/* Portrait screenshots (phone UI captures) in a 16:9 card: cover() would crop
+   away most of the frame. Show the full capture letterboxed instead. */
+.blog-card__img--contain { object-fit: contain; background: var(--bg-contrast); }
 .blog-card__body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1 1 auto; }
 .blog-card__title { font-size: 1.16rem; margin-bottom: 0.5rem; color: var(--ink); }
 .blog-card__excerpt { color: var(--muted); margin-bottom: 1.5rem; flex-grow: 1; }
@@ -611,10 +607,20 @@ textarea.form-field { resize: vertical; }
 .blog-card__footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 1.5rem 1.5rem; }
 .blog-card__date { color: var(--muted); font-size: 0.85rem; }
 
+/* Empty state for a visual asset not yet supplied — keeps the grid rhythm
+   without a broken image request */
+.blog-card__media--placeholder {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.5rem; height: 100%; color: var(--muted);
+  background: var(--glass);
+}
+.blog-card__media--placeholder span { font-size: 0.8rem; font-weight: 500; }
+
 /* ===== Blog index: breadcrumb, controls, pagination ===== */
 .breadcrumb-nav { margin: 0.6rem 0 0.4rem; }
 .breadcrumb-list { list-style: none; display: flex; gap: 0.4rem; padding: 0; margin: 0; color: var(--muted); font-size: 0.92rem; }
-.breadcrumb-list a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--line); }
+.breadcrumb-list a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--line); transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+.breadcrumb-list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .breadcrumb-list [aria-current] { color: var(--ink); }
 
 .blog-controls { margin-top: 0.8rem; }
@@ -706,34 +712,37 @@ textarea.form-field { resize: vertical; }
   gap: 3rem; /* Tighter gap for mobile */
 }
 
+/* Every logo renders in an identical bounding box regardless of its own
+   intrinsic aspect ratio — object-fit: contain shrinks wide wordmarks to
+   fit the width and narrow/tall marks to fit the height, so nothing needs
+   per-logo optical-scale tweaking as new logos are added. */
 .client-logo {
-  /* Baseline height for perfectly proportioned logos (XPay, Wallex) */
-  height: 28px;
-  width: auto;
+  width: 100px;
+  height: 30px;
   object-fit: contain;
-  
-  /* Integration into Design System: Forces monochrome and mutes the logos */
-  filter: grayscale(100%) brightness(200%) opacity(0.5);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Source logos are either dark-on-transparent (most) or white-on-transparent
+     (e.g. Wallex, Snapp) — --logo-invert flips per logo tone × active theme
+     below, so every mark stays visible against both a light and dark page
+     background instead of one specific case going invisible. */
+  --logo-invert: 0;
+  filter: grayscale(100%) invert(var(--logo-invert)) opacity(0.55);
+  transition: filter 0.3s var(--ease), transform 0.3s var(--ease);
   cursor: default;
 }
 
-/* Optical Alignment Tweaks */
-.opt-scale-up {
-  /* Force a much larger height to overcome Huawei's built-in padding */
-  height: 48px !important; 
-  max-height: none;
-}
+/* Dark mode inverts dark-toned logos (the default) so they read light-on-dark */
+:root[data-theme="dark"] .client-logo { --logo-invert: 1; }
 
-.opt-scale-down {
-  /* Restrict Tabdeal's heavy blockiness */
-  height: 22px !important; 
-}
+/* Logos already white/light-toned in their source file need the opposite:
+   invert for light mode (dark bg the graphic assumed becomes readable
+   against a white page) and stay as-is in dark mode. */
+.client-logo[data-tone="light"] { --logo-invert: 1; }
+:root[data-theme="dark"] .client-logo[data-tone="light"] { --logo-invert: 0; }
 
 /* Premium Hover State */
 .client-logo:hover {
-  /* On hover, they turn pure white and lift slightly */
-  filter: grayscale(100%) brightness(300%) opacity(1);
+  filter: grayscale(100%) invert(var(--logo-invert)) opacity(1);
   transform: translateY(-2px);
 }
 
@@ -742,17 +751,9 @@ textarea.form-field { resize: vertical; }
   .logo-strip__track {
     gap: 4.5rem; /* Wider spread on desktop */
   }
-  
+
   .client-logo {
-    height: 32px;
-  }
-  
-  .opt-scale-up {
-    /* Scale up proportionally for desktop */
-    height: 56px !important; 
-  }
-  
-  .opt-scale-down {
-    height: 26px !important;
+    width: 120px;
+    height: 36px;
   }
 }

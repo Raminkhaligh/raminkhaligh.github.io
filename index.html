@@ -32,11 +32,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
+  <meta property="og:image:alt" content="Ramin Khaligh portfolio cover" />
   <meta property="og:site_name" content="Ramin Khaligh Portfolio" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Product Strategy & Growth Consultant | Ramin Khaligh" />
+  <meta name="twitter:description" content="I help founders turn acquisition, engagement, and retention into predictable revenue. Real case studies, measurable results." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
   <meta name="twitter:creator" content="@ramin_khaligh" />
 
@@ -52,8 +55,7 @@
   (function() {
     try {
       var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      var theme = saved === 'light' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
@@ -161,16 +163,30 @@
               <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="#projects" class="nav-link">Projects</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="Show Projects submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">Gamified SEO Growth</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">Crypto Onboarding Wizard</a></li>
+              <li><a href="/projects/marketing-automation.html">Lifecycle Automation</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">HMS Ecosystem Rescue</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">GTM & Portfolio Expansion</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">OSS Modernization</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="#featured-blog" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-utility">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
             <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
@@ -178,7 +194,6 @@
             <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
             </svg>
-            <span class="theme-toggle__label">Auto</span>
           </button>
           <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -207,19 +222,12 @@
          HERO SECTION
     =========================================== -->
     <section id="top" class="hero container" aria-labelledby="home-title">
-      <svg class="hero__signature" viewBox="0 0 600 320" fill="none" aria-hidden="true" focusable="false">
-        <path d="M20 276 L140 214 L240 238 L350 130 L460 158 L580 36" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-        <circle cx="20" cy="276" r="5" fill="var(--accent)" />
-        <circle cx="240" cy="238" r="5" fill="var(--accent)" />
-        <circle cx="460" cy="158" r="5" fill="var(--accent)" />
-        <circle cx="580" cy="36" r="6" fill="var(--accent-strong)" />
-      </svg>
       <img class="profile-photo" src="/assets/profile.jpg" alt="Ramin Khaligh, Product & Growth Consultant" width="200" height="200" fetchpriority="high" decoding="async" />
       <div class="hero-content">
         <p class="kicker kicker--muted">Product Strategy & Growth Consulting</p>
-        <h1 id="home-title" class="heading-hero">High-Performing Products.<br/>Predictable Growth.</h1>
+        <h1 id="home-title" class="heading-hero">High-Performing Products<br/>Predictable Growth</h1>
         <p class="lede">
-          I partner with SaaS and fintech founders to bridge the gap between engineering and marketing. We turn messy backlogs into shipped features, and ad spend into measurable revenue.
+          Ramin Khaligh partners with founders to turn acquisition, engagement, and retention into predictable revenue. He leads hybrid teams of 20+ across engineering, marketing, and business, building new products from scratch and scaling the ones that already work, through to multi-million dollar go-to-market launches.
         </p>
         <div class="cta hero-cta">
           <a class="btn primary" href="#contact" data-gtm="cta_click">Book a Strategy Call</a>
@@ -257,14 +265,11 @@
  <section class="container logo-strip-section" aria-label="Trusted by industry leaders">
       <p class="logo-strip__title">Trusted by teams at</p>
       <div class="logo-strip__track">
-        <!-- Huawei is naturally small, needs optical scaling up -->
-        <img class="client-logo opt-scale-up" src="/assets/huawei.svg" alt="Huawei" loading="lazy" />
-        
+        <img class="client-logo" src="/assets/huawei.svg" alt="Huawei" loading="lazy" />
         <img class="client-logo" src="/assets/xpay.svg" alt="XPay" loading="lazy" />
-        <img class="client-logo" src="/assets/wallex.svg" alt="Wallex" loading="lazy" />
-        
-        <!-- Tabdeal is chunky, needs optical scaling down -->
-        <img class="client-logo opt-scale-down" src="/assets/tabdeal.svg" alt="Tabdeal" loading="lazy" />
+        <img class="client-logo" data-tone="light" src="/assets/wallex.svg" alt="Wallex" loading="lazy" />
+        <img class="client-logo" data-tone="light" src="/assets/tabdeal.svg" alt="Tabdeal" loading="lazy" />
+        <img class="client-logo" data-tone="light" src="/assets/snapp.svg" alt="Snapp" loading="lazy" />
       </div>
     </section>
 
@@ -289,6 +294,7 @@
               <li>Usability testing & iteration</li>
             </ul>
             <p class="card__outcome"><strong>Outcome:</strong> Higher activation, fewer support tickets.</p>
+            <a class="card__cta" href="/services/product-ux-design.html">Explore this service →</a>
           </article>
 
           <article class="card" id="svc-strategy-gtm">
@@ -300,6 +306,7 @@
               <li>Launch frameworks</li>
             </ul>
             <p class="card__outcome"><strong>Outcome:</strong> Faster market entry with total team alignment.</p>
+            <a class="card__cta" href="/services/product-strategy-gtm.html">Explore this service →</a>
           </article>
 
           <article class="card" id="svc-growth-marketing">
@@ -311,8 +318,102 @@
               <li>Funnel & cohort optimization</li>
             </ul>
             <p class="card__outcome"><strong>Outcome:</strong> Lower CAC, maximized lifetime value.</p>
+            <a class="card__cta" href="/services/growth-marketing.html">Explore this service →</a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CASE STUDIES / PROJECTS
+    =========================================== -->
+    <section id="projects" class="container section--tight" aria-labelledby="projects-title">
+      <p class="kicker">Case Studies</p>
+      <h2 id="projects-title">Proof of Work</h2>
+      <p class="section-lede section-lede--spaced">Real engagements, real constraints, real numbers: how each one was solved and what it moved.</p>
+
+      <div class="scroll-row" role="region" aria-label="Case studies, scrollable">
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/gamified-seo-growth.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-gamified-seo-growth.svg" alt="Illustration of a social audience feeding into Google search, pushing organic rank to #1" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Engineering Organic Growth When Google Bans Your Ads</h3>
+              <p class="blog-card__excerpt">A gamified search loop that took a crypto exchange to #1 on Google and grew organic signups 400%.</p>
+              <span class="blog-card__cta">Read the case study →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/crypto-onboarding-wizard.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-crypto-onboarding-wizard.svg" alt="Illustration of the crypto onboarding wizard routing a user to their matching product" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Humanizing Crypto Onboarding for a 7% Conversion Leap</h3>
+              <p class="blog-card__excerpt">A persona-driven onboarding wizard that routed new crypto users to the right product and lifted conversion 7%.</p>
+              <span class="blog-card__cta">Read the case study →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/marketing-automation.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-marketing-automation.svg" alt="Illustration of the lifecycle automation engine nudging a stalled user through the funnel" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Scaling Revenue by 14% via Lifecycle Automation</h3>
+              <p class="blog-card__excerpt">An event-driven WebEngage lifecycle engine that cut user churn 6% and lifted platform commissions 14%.</p>
+              <span class="blog-card__cta">Read the case study →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/hms-ecosystem-rescue.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-hms-ecosystem-rescue.svg" alt="Illustration of a Huawei device reconnected to the super app through a native HMS integration" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Rescuing Market Share from the GMS Sanctions Crisis</h3>
+              <p class="blog-card__excerpt">Custom HMS integrations with Snapp and Cafe Bazaar that saved Huawei's Iranian market share after Google Mobile Services was cut off.</p>
+              <span class="blog-card__cta">Read the case study →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/huawei-market-expansion.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-huawei-market-expansion.svg" alt="Illustration of a curated product portfolio bundled and launched to capture 10% market share" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Scaling to 10% Market Share via Full-Lifecycle GTM</h3>
+              <p class="blog-card__excerpt">Global product selection, a 7P Go-To-Market strategy, and strict supply chain control that captured 10% market share and cut CAC by 15%.</p>
+              <span class="blog-card__cta">Read the case study →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/projects/telecom-oss-modernization.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/illustrations/cover-telecom-oss-modernization.svg" alt="Illustration of documentation feeding a telecom microservice network, with team velocity climbing" loading="lazy" decoding="async" width="800" height="450" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Fixing the Engine: Modernizing Telecom OSS &amp; Team Culture</h3>
+              <p class="blog-card__excerpt">How documentation discipline and TM Forum standards lifted a 14-person team's velocity 30% and user satisfaction 25%.</p>
+              <span class="blog-card__cta">Read the case study →</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div class="back-link-row">
+        <a class="btn" href="/projects/">View All Case Studies →</a>
       </div>
     </section>
 
@@ -349,6 +450,14 @@
           </ul>
         </div>
 
+        <div class="experience-item">
+          <h3>Technical Product Manager — Clarity <span class="experience-item__date">2022 – 2023</span></h3>
+          <ul>
+            <li>Led a 14-person team building TM Forum-standard OSS microservices for telecom network and asset inventory.</li>
+            <li>Introduced Lean methodology and documented HLDs and PRDs, lifting team velocity 30% and user satisfaction 25%.</li>
+          </ul>
+        </div>
+
         <div class="experience-item experience-item--last">
           <h3>Product Marketing Manager — Huawei <span class="experience-item__date">2019 – 2022</span></h3>
           <ul>
@@ -374,22 +483,27 @@
             <span class="chip">Product Roadmapping</span>
             <span class="chip">UI/UX Design</span>
             <span class="chip">Growth Analytics</span>
-            <span class="chip">CRO</span>
-            <span class="chip">MarTech Stacks</span>
+            <span class="chip">CRO & Funnel Optimization</span>
+            <span class="chip">MarTech Automation</span>
             <span class="chip">SEO & Search Intent</span>
+            <span class="chip">A/B Testing</span>
+            <span class="chip">Pricing & Monetization</span>
+            <span class="chip">Product Analytics</span>
           </div>
-          <p class="card__outcome"><strong>Focus:</strong> Shorten time-to-value and maximize user retention.</p>
         </div>
 
         <div class="card">
           <h3 class="card__title">Leadership & Operations</h3>
           <div class="chip-row">
             <span class="chip">Cross-Functional Leadership</span>
+            <span class="chip">Team Building & Scaling</span>
             <span class="chip">Stakeholder Alignment</span>
+            <span class="chip">OKR Planning</span>
             <span class="chip">Technical Communication</span>
             <span class="chip">Agile Delivery</span>
+            <span class="chip">Go-To-Market Execution</span>
+            <span class="chip">Vendor & Client Management</span>
           </div>
-          <p class="card__outcome"><strong>Philosophy:</strong> Keep documentation clear and processes lean so engineering moves fast without ambiguity.</p>
         </div>
       </div>
     </section>
@@ -437,13 +551,18 @@
 
       <div class="skills-grid">
         <div class="card">
-          <h3 class="card__title">Analytical Roots. Growth Mindset.</h3>
-          <p>Trained as an analytical engineer, I view product growth as a system to be optimized. With <b>8+ years</b> focused on the hard problems in crypto, Web3, and fintech, I rely on data, not assumptions. Fluent in <b>English and Persian</b>, I bridge communication gaps across international tech teams.</p>
+          <h3 class="card__title">Cross-Functional Leadership. Data-Driven Growth.</h3>
+          <p><b>8 years</b> leading <b>20+</b> person teams across engineering, marketing, product, and business. I turn data into strategy: shipping high-impact features, running multi-million dollar go-to-market launches, and scaling organic traffic through automated funnels. Fluent in <b>English and Persian</b>, built for international tech teams.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">Global Track Record. Builder's Instinct.</h3>
+          <p>My work spans <b>Huawei (China)</b>, <b>Clarity (Australia)</b>, and Iran's top tech companies: different markets, same discipline. I've built products from zero, and I've taken existing features and pushed them past their ceiling. Just as important, I've learned when to kill a feature that wasn't earning its place, so the team's time went where the return was real.</p>
         </div>
 
         <div class="card">
           <h3 class="card__title">The Personal Drive</h3>
-          <p>The discipline doesn't end at the screen. Being my family's sole provider taught me early that "good enough" fails. That accountability shapes my life: a strict zero-junk routine, active endurance training, and a deep respect for the raw mechanics of classic muscle cars. I also balance modern, minimal UI principles with the intricate aesthetic of traditional Iranian design.</p>
+          <p>The discipline doesn't end at the screen. Being my family's sole provider taught me early that "good enough" fails. That accountability shapes my life: a strict zero-junk routine, active endurance training, and a deep respect for the nature. I also balance modern, minimal UI principles with the intricate technological advancements.</p>
         </div>
       </div>
     </section>
@@ -549,9 +668,9 @@
           <span class="chip">8+ years shipping</span>
         </div>
 
-        <form class="contact-form" data-sending-label="Sending…" data-success-message="Thanks — your message is on its way. I'll reply within one business day." data-error-message="Something went wrong. Please email me directly at raaminpro@gmail.com.">
+        <form class="contact-form" data-sending-label="Sending…" data-success-message="Thanks. Your message is on its way. I'll reply within one business day." data-error-message="Something went wrong. Please email me directly at raaminpro@gmail.com.">
           <input type="hidden" name="access_key" value="d38bc787-1d27-4344-aa6e-0ccded87adae" />
-          <input type="hidden" name="subject" value="Project Enquiry — raminkhaligh.github.io" />
+          <input type="hidden" name="subject" value="Project Enquiry via raminkhaligh.github.io" />
           <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-stack">
             <input class="form-field" type="text" name="name" placeholder="Your Name" required />

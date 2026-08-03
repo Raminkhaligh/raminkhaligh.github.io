@@ -14,7 +14,7 @@
   <meta name="robots" content="index,follow" />
 
   <!-- ✅ Open Graph -->
-  <meta property="og:title" content="When the CEO is a Dictator — How Over-Control Kills Innovation" />
+  <meta property="og:title" content="When the CEO is a Dictator: How Over-Control Kills Innovation" />
   <meta property="og:description" content="The dangers of micromanagement, centralized control, and how product managers can rebuild trust and autonomy in dysfunctional teams." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-ceo-dictator.png" />
@@ -29,8 +29,8 @@
 
   <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="When the CEO is a Dictator — How Over-Control Kills Innovation" />
-  <meta name="twitter:description" content="How top-down micromanagement and lack of trust cripple innovation — and how to rebuild autonomy." />
+  <meta name="twitter:title" content="When the CEO is a Dictator: How Over-Control Kills Innovation" />
+  <meta name="twitter:description" content="How top-down micromanagement and lack of trust cripple innovation, and how to rebuild autonomy." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-ceo-dictator.png" />
 
   <!-- ✅ Favicon & preload -->
@@ -42,8 +42,7 @@
   (function() {
     try {
       var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      var theme = saved === 'light' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
@@ -63,7 +62,7 @@
     "@graph": [
       {
         "@type": "BlogPosting",
-        "headline": "When the CEO is a Dictator — How Over-Control Kills Innovation",
+        "headline": "When the CEO is a Dictator: How Over-Control Kills Innovation",
         "image": {
           "@type": "ImageObject",
           "url": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
@@ -125,16 +124,30 @@
               <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="/#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/projects/" class="nav-link">Projects</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="Show Projects submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">Gamified SEO Growth</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">Crypto Onboarding Wizard</a></li>
+              <li><a href="/projects/marketing-automation.html">Lifecycle Automation</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">HMS Ecosystem Rescue</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">GTM & Portfolio Expansion</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">OSS Modernization</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
-          <li class="nav-item"><a href="/#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-utility">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
             <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
@@ -142,7 +155,6 @@
             <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
             </svg>
-            <span class="theme-toggle__label">Auto</span>
           </button>
           <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -166,12 +178,14 @@
   </header>
 
   <!-- ===== Breadcrumb ===== -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="https://raminkhaligh.github.io/">Home</a>
-    <span>›</span>
-    <a href="https://raminkhaligh.github.io/blog/">Blog</a>
-    <span>›</span>
-    <span>When the CEO is a Dictator</span>
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-list">
+      <li><a href="/">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page">When the CEO is a Dictator</li>
+    </ol>
   </nav>
 
   <!-- ===== Main Content ===== -->
@@ -197,11 +211,11 @@
         <img src="/assets/blog-ceo-dictator.png" alt="Illustration representing micromanagement culture" loading="lazy" decoding="async" />
 
         <h2 id="culture">The Culture of Over-Control</h2>
-        <p>In many startups, the CEO’s early energy fuels growth — but unchecked, that same control becomes a bottleneck. When every detail — from ad copy to deployment — needs personal approval, decision velocity collapses. Teams stop building; they start waiting.</p>
+        <p>In many startups, the CEO’s early energy fuels growth, but unchecked, that same control becomes a bottleneck. When every detail (from ad copy to deployment) needs personal approval, decision velocity collapses. Teams stop building; they start waiting.</p>
 
         <h2 id="cost">The Hidden Cost of Micromanagement</h2>
-        <p>When one person dictates every decision, progress turns into dependency. Engineers delay releases. Designers stop iterating. Marketers hesitate to experiment — because feedback is unpredictable and emotional, not data-driven.</p>
-        <blockquote>“When people stop taking initiative, innovation doesn’t just slow down — it disappears.”</blockquote>
+        <p>When one person dictates every decision, progress turns into dependency. Engineers delay releases. Designers stop iterating. Marketers hesitate to experiment, because feedback is unpredictable and emotional, not data-driven.</p>
+        <blockquote>“When people stop taking initiative, innovation doesn’t just slow down. It disappears.”</blockquote>
         <p>Metrics decline, but morale collapses faster. The organization shifts from ownership to obedience, and creative people disengage silently.</p>
 
         <h2 id="symptoms">Symptoms of a Dictatorship Culture</h2>
@@ -214,16 +228,16 @@
         </ul>
 
         <h2 id="autonomy">How Product Managers Can Rebuild Autonomy</h2>
-        <p>The antidote isn’t confrontation — it’s structure. The PM’s job is to transform control into clarity. Micromanagement often stems from fear — fear of chaos or inconsistency — and that fear can be neutralized through process.</p>
+        <p>The antidote isn’t confrontation. It’s structure. The PM’s job is to transform control into clarity. Micromanagement often stems from fear (fear of chaos or inconsistency), and that fear can be neutralized through process.</p>
         <ul>
-          <li><strong>Define decision tiers:</strong> Separate strategic, tactical, and operational choices — not everything needs executive review.</li>
+          <li><strong>Define decision tiers:</strong> Separate strategic, tactical, and operational choices, not everything needs executive review.</li>
           <li><strong>Document reasoning:</strong> Use transparent briefs so intent and data are visible, not hidden in Slack threads.</li>
           <li><strong>Set shared KPIs:</strong> When everyone agrees on success metrics, autonomy becomes measurable.</li>
           <li><strong>Establish review rhythms:</strong> Replace ad-hoc interruptions with structured check-ins focused on progress, not perfection.</li>
         </ul>
 
         <h2 id="lesson">From Control to Confidence</h2>
-        <p>Control isn’t leadership — it’s a reaction to fear. True leaders build systems that work without them. Empowered teams don’t just execute faster; they make better decisions because they feel trusted.</p>
+        <p>Control isn’t leadership. It’s a reaction to fear. True leaders build systems that work without them. Empowered teams don’t just execute faster; they make better decisions because they feel trusted.</p>
         <blockquote>“Control limits scalability. Trust builds it.”</blockquote>
         <p><strong>Lesson in one line:</strong> Great leaders replace micromanagement with mechanisms that make trust visible and repeatable.</p>
 
@@ -237,9 +251,10 @@
         </section>
 
         <div class="cta">
-          <a href="/blog/" class="btn">← Back to Blog</a>
-          <a href="/" class="btn primary">Go to Homepage</a>
+          <a href="/#contact" class="btn primary" data-gtm="cta_click">Book a Strategy Call</a>
+          <a href="/blog/" class="btn" data-gtm="cta_click">← Back to Blog</a>
         </div>
+        <p class="hero__trust">No spam · Typical response time: under 24 hours · Confidential and direct</p>
       </article>
     </div>
 

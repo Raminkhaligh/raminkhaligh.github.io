@@ -14,7 +14,7 @@
   <meta name="robots" content="index,follow" />
 
   <!-- ✅ Open Graph -->
-  <meta property="og:title" content="Bridging the Product & Marketing Gap — How PMs Can Unite Growth and Conversion" />
+  <meta property="og:title" content="Bridging the Product & Marketing Gap: How PMs Can Unite Growth and Conversion" />
   <meta property="og:description" content="A practical guide for product managers on bridging product and marketing goals to build alignment, reduce conflict, and accelerate growth." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://raminkhaligh.github.io/assets/blog-bridge-gap.png" />
@@ -29,7 +29,7 @@
 
   <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bridging the Product & Marketing Gap — How PMs Can Unite Growth and Conversion" />
+  <meta name="twitter:title" content="Bridging the Product & Marketing Gap: How PMs Can Unite Growth and Conversion" />
   <meta name="twitter:description" content="How product managers can align product and marketing goals to reduce friction and build true collaboration." />
   <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/blog-bridge-gap.png" />
 
@@ -42,8 +42,7 @@
   (function() {
     try {
       var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = (saved === 'light' || saved === 'dark') ? saved : (prefersDark ? 'dark' : 'light');
+      var theme = saved === 'light' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
       if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
@@ -117,16 +116,30 @@
               <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="/#experience" class="nav-link">Experience</a></li>
-          <li class="nav-item"><a href="/#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="/#about" class="nav-link">About</a></li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/projects/" class="nav-link">Projects</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="Show Projects submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">Gamified SEO Growth</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">Crypto Onboarding Wizard</a></li>
+              <li><a href="/projects/marketing-automation.html">Lifecycle Automation</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">HMS Ecosystem Rescue</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">GTM & Portfolio Expansion</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">OSS Modernization</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
-          <li class="nav-item"><a href="/#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-utility">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" title="Toggle color theme">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
             <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
@@ -134,7 +147,6 @@
             <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
             </svg>
-            <span class="theme-toggle__label">Auto</span>
           </button>
           <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -158,12 +170,14 @@
   </header>
 
   <!-- ===== Breadcrumb ===== -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="https://raminkhaligh.github.io/">Home</a>
-    <span>›</span>
-    <a href="https://raminkhaligh.github.io/blog/">Blog</a>
-    <span>›</span>
-    <span>Bridging the Product & Marketing Gap</span>
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-list">
+      <li><a href="/">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page">Bridging the Product & Marketing Gap</li>
+    </ol>
   </nav>
 
   <!-- ===== Main Content ===== -->
@@ -187,22 +201,22 @@
         <img src="/assets/blog-bridge-gap.png" alt="Illustration showing collaboration between Product and Marketing teams" loading="lazy" decoding="async" />
 
         <h2 id="misalignment">Why Product & Marketing Drift Apart</h2>
-        <p>In fast-moving organizations, product and marketing often drift apart — not from incompetence, but from misaligned incentives. Marketing chases lower CAC and volume. Product optimizes for conversion and retention. The result? A funnel full of leads that don’t activate, and finger-pointing between teams.</p>
-        <p>When this happens, growth slows — not because either team is failing, but because they’re running different races on the same track.</p>
+        <p>In fast-moving organizations, product and marketing often drift apart, not from incompetence, but from misaligned incentives. Marketing chases lower CAC and volume. Product optimizes for conversion and retention. The result? A funnel full of leads that don’t activate, and finger-pointing between teams.</p>
+        <p>When this happens, growth slows, not because either team is failing, but because they’re running different races on the same track.</p>
 
         <h2 id="translator">The Product Manager as Translator</h2>
-        <p>Enter the product manager — the bridge between growth and experience. The PM’s unique position allows them to translate strategy into shared understanding. Instead of mediating conflict, they align incentives.</p>
+        <p>Enter the product manager, the bridge between growth and experience. The PM’s unique position allows them to translate strategy into shared understanding. Instead of mediating conflict, they align incentives.</p>
         <ul>
           <li><strong>Shared metrics:</strong> Replace vanity KPIs with a common goal like <em>“Cost per Activated User”</em>.</li>
           <li><strong>Joint experiments:</strong> Design experiments where marketing efficiency and in-product activation are measured together.</li>
-          <li><strong>Data storytelling:</strong> Turn analytics into shared narratives — insights that connect cause and effect across teams.</li>
+          <li><strong>Data storytelling:</strong> Turn analytics into shared narratives: insights that connect cause and effect across teams.</li>
         </ul>
 
         <h2 id="collaboration">Facilitating Collaboration, Not Blame</h2>
-        <p>Misalignment isn’t solved by meetings — it’s solved by structure. PMs can create frameworks that make collaboration habitual, not situational:</p>
+        <p>Misalignment isn’t solved by meetings. It’s solved by structure. PMs can create frameworks that make collaboration habitual, not situational:</p>
         <ul>
           <li><strong>Shared quarterly planning:</strong> Co-create goals that link acquisition inputs to retention outputs.</li>
-          <li><strong>Cross-functional retros:</strong> Debrief together after launches — treating performance as a shared outcome.</li>
+          <li><strong>Cross-functional retros:</strong> Debrief together after launches, treating performance as a shared outcome.</li>
           <li><strong>Define boundaries clearly:</strong> Marketing owns channels; product owns experiences. But both own the user journey.</li>
         </ul>
 
@@ -211,7 +225,7 @@
 
         <blockquote>“Marketing brings users to the door; product keeps them inside. Real success happens when both teams agree on what the door looks like.”</blockquote>
 
-        <p><strong>Lesson in one line:</strong> Alignment isn’t a process — it’s a mindset. Great PMs make teams see the same customer, not just the same dashboard.</p>
+        <p><strong>Lesson in one line:</strong> Alignment isn’t a process. It’s a mindset. Great PMs make teams see the same customer, not just the same dashboard.</p>
 
         <!-- ===== Author Profile ===== -->
         <section class="author-profile">
@@ -223,9 +237,10 @@
         </section>
 
         <div class="cta">
-          <a href="/blog/" class="btn">← Back to Blog</a>
-          <a href="/" class="btn primary">Go to Homepage</a>
+          <a href="/#contact" class="btn primary" data-gtm="cta_click">Book a Strategy Call</a>
+          <a href="/blog/" class="btn" data-gtm="cta_click">← Back to Blog</a>
         </div>
+        <p class="hero__trust">No spam · Typical response time: under 24 hours · Confidential and direct</p>
       </article>
     </div>
 
