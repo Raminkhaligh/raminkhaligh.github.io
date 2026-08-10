@@ -39,13 +39,13 @@
   <meta property="og:description" content="Explore insights, frameworks, and product case studies by Ramin Khaligh." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raminkhaligh.github.io/blog/" />
-  <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
+  <meta property="og:image" content="https://raminkhaligh.github.io/assets/og-cover.webp" />
   <meta property="og:site_name" content="Ramin Khaligh Portfolio" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog & Case Studies | Ramin Khaligh - رامین خلیق" />
   <meta name="twitter:description" content="Insights and case studies on product management, UX, and growth." />
-  <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/og-cover.png" />
+  <meta name="twitter:image" content="https://raminkhaligh.github.io/assets/og-cover.webp" />
   <meta name="twitter:creator" content="@ramin_khaligh" />
 
   <!-- Early theme apply (no-flash, same as home) -->
@@ -365,7 +365,7 @@
 
       slice.forEach(post => {
         const href = normalize(post.url);
-        const img = post.image ? normalize(post.image) : '/assets/og-cover.png';
+        const img = post.image ? normalize(post.image) : '/assets/og-cover.webp';
         const dateStr = post.date ? new Date(post.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : '';
         const article = document.createElement('article');
         article.className = 'card blog-card';

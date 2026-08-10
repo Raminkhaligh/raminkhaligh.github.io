@@ -5,7 +5,7 @@
     "date": "2026-08-10",
     "lastmod": "2026-08-10",
     "url": "blog/bimebazar-vs-bimedotcom-vs-snappbime.html",
-    "image": "https://raminkhaligh.github.io/assets/better-call-ramin-khaligh.png",
+    "image": "/assets/better-call-ramin-khaligh.webp",
     "featured": false
   },
   {
@@ -14,7 +14,7 @@
     "date": "2025-10-19",
     "lastmod": "2025-10-19",
     "url": "blog/when-tech-teams-stop-listening.html",
-    "image": "https://raminkhaligh.github.io/assets/when-tech-teams-stop-listening.png",
+    "image": "/assets/when-tech-teams-stop-listening.webp",
     "featured": false
   },
   {
@@ -23,7 +23,7 @@
     "date": "2025-10-18",
     "lastmod": "2025-10-19",
     "url": "blog/constant-interruptions-cost.html",
-    "image": "https://raminkhaligh.github.io/assets/when-leaders-become-bottleneck.png",
+    "image": "/assets/when-leaders-become-bottleneck.webp",
     "featured": false
   },
   {
@@ -32,7 +32,7 @@
     "date": "2025-10-13",
     "lastmod": "2025-10-19",
     "url": "blog/bridging-product-marketing-gap.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-bridge-gap.png",
+    "image": "/assets/blog-bridge-gap.webp",
     "featured": false
   },
   {
@@ -41,7 +41,7 @@
     "date": "2025-10-13",
     "lastmod": "2025-10-19",
     "url": "blog/fintech-retention.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-fintech-retention.png",
+    "image": "/assets/blog-fintech-retention.webp",
     "featured": false
   },
   {
@@ -50,7 +50,7 @@
     "date": "2025-10-13",
     "lastmod": "2025-10-19",
     "url": "blog/when-the-ceo-is-a-dictator.html",
-    "image": "https://raminkhaligh.github.io/assets/blog-ceo-dictator.png",
+    "image": "/assets/blog-ceo-dictator.webp",
     "featured": false
   }
 ]

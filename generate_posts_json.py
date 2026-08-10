@@ -23,7 +23,8 @@ ROOT = Path(__file__).parent
 BLOG_DIR = ROOT / "blog"
 IMG_DIR = BLOG_DIR / "images"
 OUTPUT_FILE = BLOG_DIR / "posts.json"
-DEFAULT_IMAGE = "/assets/og-cover.png"
+DEFAULT_IMAGE = "/assets/og-cover.webp"
+SITE_ORIGIN = "https://raminkhaligh.github.io"
 
 def get_last_commit_date(path):
     try:
@@ -45,10 +46,17 @@ def extract_meta(html):
     # <title> is "Post Title | Site Name" for SEO; strip the site-name suffix
     # so cards/alt text show just the post title, not the full SEO string.
     display_title = raw_title.split("|")[0].strip() if "|" in raw_title else raw_title
+    # og:image must be absolute (required by the OG spec for crawlers), but
+    # the card/thumbnail render on-page from this same value, so keep it
+    # root-relative here — otherwise local/staging previews try to hotlink
+    # the live production asset instead of the file being edited.
+    img = image.group(1).strip() if image else None
+    if img and img.startswith(SITE_ORIGIN):
+        img = img[len(SITE_ORIGIN):]
     return {
         "title": display_title,
         "summary": desc.group(1).strip() if desc else "",
-        "image": image.group(1).strip() if image else None,
+        "image": img,
         "published": published.group(1).strip()[:10] if published else None,
         "modified": modified.group(1).strip()[:10] if modified else None,
     }
