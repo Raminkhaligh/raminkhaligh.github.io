@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const readTimeSpan = document.getElementById("read-time");
   if (article && readTimeSpan) {
     const words = (article.innerText || article.textContent).trim().split(/\s+/).length;
-    readTimeSpan.textContent = Math.ceil(words / 200) + " min read";
+    const minutes = Math.ceil(words / 200);
+    const isFa = document.documentElement.lang.startsWith("fa");
+    readTimeSpan.textContent = isFa ? `زمان مطالعه: ${minutes} دقیقه` : `${minutes} min read`;
   }
 
 
