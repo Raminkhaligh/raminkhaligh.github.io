@@ -43,7 +43,15 @@ def generate_sitemap(url_paths: list[str], output_path: str) -> None:
         "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">",
     ]
     for rel_path in url_paths:
-        url = urljoin(BASE_URL, rel_path)
+        # index.html canonicalizes to its directory with a trailing slash
+        # (matches each page's own <link rel="canonical">) rather than the
+        # literal /index.html path — keeps the sitemap from splitting
+        # ranking signal across two URLs for the same page.
+        if os.path.basename(rel_path) == "index.html":
+            dir_part = rel_path[: -len("index.html")]
+            url = urljoin(BASE_URL, dir_part)
+        else:
+            url = urljoin(BASE_URL, rel_path)
         # Homepages (English + Farsi) are the primary entry points — rank above subpages.
         priority = "1.0" if rel_path in ("index.html", "fa/index.html") else "0.7"
         lines.append("  <url>")
