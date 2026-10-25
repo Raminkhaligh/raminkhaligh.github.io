@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found | Ramin Khaligh</title>
+  <meta name="description" content="The page you were looking for doesn't exist. Head back to Ramin Khaligh's homepage for product strategy, growth consulting, and case studies." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://raminkhaligh.ir/404.html" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+  <meta name="theme-color" content="#0b0d10" />
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('theme');
+      var theme = saved === 'light' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#0b0d10' : '#ffffff');
+    } catch(e) {}
+  })();
+  </script>
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body id="top">
+  <main id="main" class="container" style="min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding-top:6rem;">
+    <div class="card" style="max-width:560px; padding:3rem 2rem;">
+      <p class="kicker kicker--muted">404</p>
+      <h1 class="heading-hero" style="font-size:clamp(1.8rem,4vw,2.6rem);">This page took a wrong turn</h1>
+      <p class="lede" style="margin:1rem 0 1.75rem;">The URL you followed doesn't exist (or moved). Let's get you back on track.</p>
+      <div class="cta" style="justify-content:center;">
+        <a class="btn primary" href="/">Back to Homepage</a>
+        <a class="btn" href="/blog/">Read the Blog</a>
+        <a class="btn" href="/projects/">Browse Case Studies</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

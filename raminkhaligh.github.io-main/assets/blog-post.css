@@ -1,0 +1,251 @@
+/* ============================================================
+   Blog Post Layout — Ramin Khaligh (blog-post.css)
+   Loaded only by individual article pages (/blog/*.html).
+   Shares tokens and .card/.btn/.breadcrumb-list with style.css.
+   ============================================================ */
+
+/* ===== Page shell ===== */
+main.container {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== Breadcrumb (article width, not the sitewide 1100px container) ===== */
+.breadcrumb-nav {
+  max-width: 760px;
+  margin: 0 auto 1rem;
+  padding-inline: var(--gutter);
+}
+
+/* ===== Article Card ===== */
+article.card {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+}
+
+article.card img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* ===== Post header (title, excerpt, meta row) ===== */
+.post-header { margin-bottom: 2rem; }
+.post-header__excerpt { color: var(--muted); font-size: 1.05rem; line-height: 1.6; margin: 0.6rem 0 1rem; }
+.post-header__meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+#read-time { color: var(--accent); font-weight: 500; }
+
+/* ===== Typography ===== */
+article.card h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  scroll-margin-top: 6rem;
+}
+
+article.card p { line-height: 1.75; margin-bottom: 1.1rem; }
+article.card ul { line-height: 1.75; margin: 0 0 1.1rem; padding-inline-start: 1.3rem; }
+article.card li { margin-bottom: 0.4rem; }
+article.card strong { color: var(--ink); }
+
+/* ===== Blockquotes ===== */
+blockquote {
+  position: relative;
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem 1.25rem 2.25rem;
+  border-inline-start: 3px solid var(--accent);
+  border-radius: var(--radius-s);
+  background: var(--glass);
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.4rem;
+  left: 0.6rem;
+  font-size: 2rem;
+  line-height: 1;
+  font-style: normal;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+/* ===== Table of Contents ===== */
+#table-of-contents {
+  position: sticky;
+  top: 6rem;
+  background: var(--elev-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 1.1rem 1.25rem;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+#table-of-contents strong {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+#table-of-contents ul { list-style: none; margin: 0; padding: 0; }
+#table-of-contents li { margin-bottom: 0.5rem; line-height: 1.5; }
+
+#table-of-contents a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+#table-of-contents a:hover,
+#table-of-contents a.active {
+  color: var(--accent);
+}
+
+/* Hide TOC until the two-column grid below can fit it side-by-side, otherwise
+   it fights the article for space in the flex row (squished tablet layout). */
+@media (max-width: 1099px) {
+  #table-of-contents { display: none; }
+}
+
+/* ===== Two-Column Layout (article + sticky TOC sidebar) ===== */
+@media (min-width: 1100px) {
+  main.container.two-column {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .sidebar { position: sticky; top: 6rem; height: fit-content; }
+}
+
+/* ===== Author Profile ===== */
+.author-profile {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--elev-1);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  transition: border-color 0.3s var(--ease);
+}
+
+.author-profile:hover { border-color: color-mix(in oklab, var(--line), var(--accent) 40%); }
+
+article.card .author-avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  margin-bottom: 0;
+}
+
+.author-info p { margin: 0 0 0.3rem; line-height: 1.4; }
+.author-info p:last-child { margin-bottom: 0; color: var(--muted); }
+.author-info a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.author-info a:hover { text-decoration: underline; }
+
+/* ===== Share Button (icon-button variant in the post meta row) ===== */
+.share-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border-radius: var(--radius-s);
+  transition: background 0.25s var(--ease), transform 0.2s var(--ease);
+}
+
+.share-btn:hover { background: var(--glass); transform: translateY(-1px); }
+.share-copied { font-size: 0.8rem; color: var(--accent); font-weight: 500; }
+
+/* ===== Closing CTA + trust microcopy ===== */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.cta .btn { padding: 0.6rem 1.2rem; font-size: 0.95rem; }
+
+.cta + .hero__trust { margin-top: 0.75rem; text-align: center; }
+
+@media (max-width: 600px) {
+  .cta { flex-direction: column-reverse; align-items: stretch; gap: 0.6rem; }
+}
+
+/* ===== Smooth Lazy Image Load ===== */
+img[loading="lazy"] { transition: opacity 0.3s var(--ease); opacity: 0; }
+img[loading="lazy"].loaded { opacity: 1; }
+
+/* ===== Reading Progress Bar ===== */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  height: 3px;
+  width: 0;
+  background: var(--accent);
+  z-index: 9999;
+  transition: width 0.1s ease-out, opacity 0.3s var(--ease);
+  opacity: 0;
+}
+
+#reading-progress.active { opacity: 1; }
+
+/* ===== Utility: Selection ===== */
+::selection { background: var(--accent); color: #fff; }
+
+/* ===== Responsive Adjustments ===== */
+@media (min-width: 1000px) {
+  article.card { max-width: 640px; }
+  .breadcrumb-nav { max-width: 640px; }
+  article.card img { max-height: 320px; }
+}
+
+@media (max-width: 768px) {
+  article.card { padding: 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .author-profile { flex-direction: column; align-items: flex-start; padding: 1.2rem; }
+  article.card .author-avatar { width: 56px; height: 56px; }
+}

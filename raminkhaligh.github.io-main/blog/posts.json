@@ -1,0 +1,56 @@
+[
+  {
+    "title": "How I Increased User Retention by 40% in Fintech",
+    "summary": "A detailed case study on improving fintech user retention by 40% through UX optimization, lifecycle automation, and data-led growth strategies.",
+    "date": "2026-10-25",
+    "lastmod": "2026-10-25",
+    "url": "blog/fintech-retention.html",
+    "image": "/assets/blog-fintech-retention.webp",
+    "featured": true
+  },
+  {
+    "title": "نقد مدیریت محصول بیمه بازار، اسنپ بیمه و بیمه دات کام",
+    "summary": "چگونه ضعف مدیریت محصول و مارکتینگ اتومیشن در پلتفرم‌های بیمه دات کام، بیمه بازار و اسنپ بیمه باعث ریزش کاربر می‌شود؟ درس‌هایی برای مدیر محصول و مدیر مارکتینگ جهت بهبود تجربه کاربری.",
+    "date": "2026-08-10",
+    "lastmod": "2026-08-10",
+    "url": "blog/bimebazar-vs-bimedotcom-vs-snappbime.html",
+    "image": "/assets/better-call-ramin-khaligh.webp",
+    "featured": false
+  },
+  {
+    "title": "When Tech Teams Stop Listening",
+    "summary": "How ego, poor accountability, and weak culture erode collaboration between product, tech, and marketing, and how to rebuild trust.",
+    "date": "2025-10-19",
+    "lastmod": "2025-10-19",
+    "url": "blog/when-tech-teams-stop-listening.html",
+    "image": "/assets/when-tech-teams-stop-listening.webp",
+    "featured": false
+  },
+  {
+    "title": "When Leaders Become the Bottleneck",
+    "summary": "How constant interruptions destroy focus, create technical debt, and demotivate teams, and what leaders should do differently.",
+    "date": "2025-10-18",
+    "lastmod": "2025-10-19",
+    "url": "blog/constant-interruptions-cost.html",
+    "image": "/assets/when-leaders-become-bottleneck.webp",
+    "featured": false
+  },
+  {
+    "title": "Bridging the Product & Marketing Gap",
+    "summary": "How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams.",
+    "date": "2025-10-13",
+    "lastmod": "2025-10-19",
+    "url": "blog/bridging-product-marketing-gap.html",
+    "image": "/assets/blog-bridge-gap.webp",
+    "featured": false
+  },
+  {
+    "title": "When the CEO is a Dictator",
+    "summary": "How micromanagement and top-down control from a non-technical CEO cripple innovation, delay launches, and destroy ownership culture.",
+    "date": "2025-10-13",
+    "lastmod": "2025-10-19",
+    "url": "blog/when-the-ceo-is-a-dictator.html",
+    "image": "/assets/blog-ceo-dictator.webp",
+    "featured": false
+  }
+]

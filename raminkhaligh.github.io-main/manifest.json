@@ -1,0 +1,22 @@
+{
+  "name": "Ramin Khaligh Portfolio",
+  "short_name": "RaminKhaligh",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "description": "Product & Marketing Manager helping startups design, launch, and grow data-driven products people love.",
+  "icons": [
+    {
+      "src": "/assets/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

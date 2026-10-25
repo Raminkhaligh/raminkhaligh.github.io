@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "id": "services",
+      "anchor": "services",
+      "label": { "en": "Services", "fa": "خدمات" },
+      "submenu": [
+        {
+          "anchor": "svc-product-design",
+          "page": "/services/product-ux-design.html",
+          "label": { "en": "Product & UX Design", "fa": "طراحی محصول و تجربهٔ کاربری" }
+        },
+        {
+          "anchor": "svc-strategy-gtm",
+          "label": { "en": "Product Strategy & GTM", "fa": "راهبرد محصول و عرضه به بازار" }
+        },
+        {
+          "anchor": "svc-growth-marketing",
+          "label": { "en": "Growth & Marketing", "fa": "رشد و بازاریابی داده‌محور" }
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "anchor": "projects",
+      "page": "/projects/",
+      "label": { "en": "Projects", "fa": "پروژه‌ها" },
+      "submenu": [
+        {
+          "anchor": "proj-gamified-seo-growth",
+          "page": "/projects/gamified-seo-growth.html",
+          "label": { "en": "Gamified SEO Growth", "fa": "رشد سئوی گیمیفای‌شده" }
+        },
+        {
+          "anchor": "proj-crypto-onboarding-wizard",
+          "page": "/projects/crypto-onboarding-wizard.html",
+          "label": { "en": "Crypto Onboarding Wizard", "fa": "ویزارد آنبوردینگ کریپتو" }
+        },
+        {
+          "anchor": "proj-marketing-automation",
+          "page": "/projects/marketing-automation.html",
+          "label": { "en": "Lifecycle Automation", "fa": "اتوماسیون چرخه عمر" }
+        },
+        {
+          "anchor": "proj-hms-ecosystem-rescue",
+          "page": "/projects/hms-ecosystem-rescue.html",
+          "label": { "en": "HMS Ecosystem Rescue", "fa": "نجات اکوسیستم هواوی" }
+        },
+        {
+          "anchor": "proj-huawei-market-expansion",
+          "page": "/projects/huawei-market-expansion.html",
+          "label": { "en": "GTM & Portfolio Expansion", "fa": "استراتژی ورود به بازار" }
+        },
+        {
+          "anchor": "proj-telecom-oss-modernization",
+          "page": "/projects/telecom-oss-modernization.html",
+          "label": { "en": "OSS Modernization", "fa": "نوسازی سیستم‌های مخابراتی" }
+        }
+      ]
+    },
+    {
+      "id": "blog",
+      "anchor": "featured-blog",
+      "page": "/blog/",
+      "label": { "en": "Blog", "fa": "بلاگ" }
+    },
+    {
+      "id": "contact",
+      "anchor": "contact",
+      "label": { "en": "Contact", "fa": "تماس" }
+    }
+  ]
+}

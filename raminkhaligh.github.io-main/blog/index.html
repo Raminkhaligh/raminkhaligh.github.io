@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Language" content="en-US" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog: Product, UX & Growth Case Studies | Ramin Khaligh</title>
+
+  <!-- SEO (aligned with home) -->
+  <meta name="description" content="Articles, case studies, and practical frameworks from Ramin Khaligh on product management, UX, and growth." />
+  <meta name="keywords" content="Product Management, UX, Growth, Product Strategy, Leadership, Ramin Khaligh, Case Studies" />
+  <meta name="author" content="Ramin Khaligh" />
+  <meta name="robots" content="index,follow" />
+  <meta name="copyright" content="© 2026 Ramin Khaligh" />
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Canonical & Language (consistent with home) -->
+  <link rel="canonical" href="https://raminkhaligh.ir/blog/" />
+  <link rel="alternate" hreflang="en" href="https://raminkhaligh.ir/blog/" />
+  <link rel="alternate" hreflang="x-default" href="https://raminkhaligh.ir/blog/" />
+
+  <!-- Performance (consistent) -->
+  <link rel="preload" as="style" href="/assets/style.css" />
+  <link rel="preload" as="fetch" href="/blog/posts.json" crossorigin="anonymous" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="application-name" content="Ramin Khaligh Portfolio" />
+
+  <!-- Favicons (same set as home) -->
+  <link rel="apple-touch-icon" href="/assets/logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+  <link rel="icon" href="/assets/favicon-32x32.png" sizes="any" />
+
+  <!-- Social meta -->
+  <meta property="og:title" content="Blog: Product, UX & Growth Case Studies | Ramin Khaligh" />
+  <meta property="og:description" content="Explore insights, frameworks, and product case studies by Ramin Khaligh." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://raminkhaligh.ir/blog/" />
+  <meta property="og:image" content="https://raminkhaligh.ir/assets/og-cover.webp" />
+  <meta property="og:image:width" content="1155" />
+  <meta property="og:image:height" content="610" />
+  <meta property="og:image:type" content="image/webp" />  <meta property="og:site_name" content="Ramin Khaligh Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog: Product, UX & Growth Case Studies | Ramin Khaligh" />
+  <meta name="twitter:description" content="Insights and case studies on product management, UX, and growth." />
+  <meta name="twitter:image" content="https://raminkhaligh.ir/assets/og-cover.webp" />
+  <meta name="twitter:creator" content="@ramin_khaligh" />
+
+  <!-- Early theme apply (no-flash, same as home) -->
+  <script>
+  (function() {
+    try {
+      var saved = localStorage.getItem('theme');
+      var theme = saved === 'light' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+      meta.setAttribute('content', theme === 'dark' ? '#0b0d10' : '#ffffff');
+    } catch(e) {}
+  })();
+  </script>
+
+  <!-- Styles (shared) -->
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Structured data (aligned with home: Blog + Breadcrumb + WebPage + Website/Person references) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://raminkhaligh.ir/#website",
+        "url": "https://raminkhaligh.ir/",
+        "name": "Ramin Khaligh Portfolio",
+        "inLanguage": "en",
+        "publisher": {"@id": "https://raminkhaligh.ir/#organization"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://raminkhaligh.ir/#ramin",
+        "name": "Ramin Khaligh",
+        "url": "https://raminkhaligh.ir/",
+        "image": "https://raminkhaligh.ir/assets/profile.jpg",
+        "sameAs": [
+          "https://www.linkedin.com/in/ramin-khaligh",
+          "https://github.com/raminkhaligh",
+          "https://www.instagram.com/ramin.khaligh"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://raminkhaligh.ir/#organization",
+        "name": "Ramin Khaligh Consulting",
+        "url": "https://raminkhaligh.ir/",
+        "logo": "https://raminkhaligh.ir/assets/logo.png",
+        "founder": {"@id": "https://raminkhaligh.ir/#ramin"}
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://raminkhaligh.ir/blog/#blog",
+        "url": "https://raminkhaligh.ir/blog/",
+        "name": "Ramin Khaligh Blog",
+        "description": "Product, UX, and growth insights and case studies.",
+        "publisher": {"@id": "https://raminkhaligh.ir/#organization"},
+        "inLanguage": "en",
+        "author": {"@id": "https://raminkhaligh.ir/#ramin"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raminkhaligh.ir/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://raminkhaligh.ir/blog/"}
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://raminkhaligh.ir/blog/#webpage",
+        "url": "https://raminkhaligh.ir/blog/",
+        "name": "Blog & Case Studies",
+        "description": "Articles, frameworks, and real-world product/growth learnings by Ramin Khaligh.",
+        "isPartOf": {"@id": "https://raminkhaligh.ir/#website"},
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+
+<!-- blog-itemlist:start (auto-generated by generate_posts_json.py - do not edit) -->
+  <script type="application/ld+json" id="itemlist-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+{"@type": "ListItem", "position": 1, "url": "https://raminkhaligh.ir/blog/my-new-blog-post.html", "name": "My New Blog Post"},
+{"@type": "ListItem", "position": 2, "url": "https://raminkhaligh.ir/blog/bimebazar-vs-bimedotcom-vs-snappbime.html", "name": "نقد مدیریت محصول بیمه بازار، اسنپ بیمه و بیمه دات کام"},
+{"@type": "ListItem", "position": 3, "url": "https://raminkhaligh.ir/blog/when-tech-teams-stop-listening.html", "name": "When Tech Teams Stop Listening"},
+{"@type": "ListItem", "position": 4, "url": "https://raminkhaligh.ir/blog/constant-interruptions-cost.html", "name": "When Leaders Become the Bottleneck"},
+{"@type": "ListItem", "position": 5, "url": "https://raminkhaligh.ir/blog/bridging-product-marketing-gap.html", "name": "Bridging the Product & Marketing Gap"},
+{"@type": "ListItem", "position": 6, "url": "https://raminkhaligh.ir/blog/fintech-retention.html", "name": "How I Increased User Retention by 40%"},
+{"@type": "ListItem", "position": 7, "url": "https://raminkhaligh.ir/blog/when-the-ceo-is-a-dictator.html", "name": "When the CEO is a Dictator"}
+    ]
+  }
+  </script>
+<!-- blog-itemlist:end -->
+
+  <!-- Google Tag Manager (same container) -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KVRSRD3Q');
+  </script>
+</head>
+
+<body id="top">
+  <!-- GTM noscript -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVRSRD3Q"
+    height="0" width="0" class="gtm-noscript-frame"></iframe>
+  </noscript>
+
+  <!-- Skip link (a11y) -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ===== Navigation (synced with home) ===== -->
+  <header class="site-nav" data-lang="en" data-home="false">
+    <div class="nav-content">
+      <a class="brand" href="/" aria-label="Home">
+        <img src="/assets/logo.png" alt="Personal logo" width="28" height="28" decoding="async" />
+        <span>Ramin Khaligh</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/#services" class="nav-link">Services</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="services-submenu" aria-label="Show Services submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="services-submenu">
+              <li><a href="/services/product-ux-design.html">Product &amp; UX Design</a></li>
+              <li><a href="/services/product-strategy-gtm.html">Product Strategy &amp; GTM</a></li>
+              <li><a href="/services/growth-marketing.html">Growth &amp; Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-submenu">
+            <div class="nav-item__row">
+              <a href="/projects/" class="nav-link">Projects</a>
+              <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="projects-submenu" aria-label="Show Projects submenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <ul class="submenu" id="projects-submenu">
+              <li><a href="/projects/gamified-seo-growth.html">Gamified SEO Growth</a></li>
+              <li><a href="/projects/crypto-onboarding-wizard.html">Crypto Onboarding Wizard</a></li>
+              <li><a href="/projects/marketing-automation.html">Lifecycle Automation</a></li>
+              <li><a href="/projects/hms-ecosystem-rescue.html">HMS Ecosystem Rescue</a></li>
+              <li><a href="/projects/huawei-market-expansion.html">GTM & Portfolio Expansion</a></li>
+              <li><a href="/projects/telecom-oss-modernization.html">OSS Modernization</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/blog/" class="nav-link" aria-current="page">Blog</a></li>
+          <li class="nav-item"><a href="/#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-utility">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode" title="Switch to light mode">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+            </svg>
+          </button>
+          <a class="btn lang-switch" href="/fa/" aria-label="Persian version">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+            </svg>
+            <span>فارسی</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn primary" href="/assets/ramin-khaligh-resume.pdf" download aria-label="Download résumé">Résumé</a>
+        <button type="button" class="hamburger" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main id="main" class="container" role="main">
+    <!-- Visual breadcrumbs (to mirror JSON-LD) -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page">Blog</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <section id="blog-header">
+      <h1 class="heading-hero">Articles & Case Studies</h1>
+      <p>
+        Practical frameworks, field notes, and results from shipping real products and growth programs.
+      </p>
+
+      <!-- Controls: search + sort (progressive enhancement) -->
+      <div class="card blog-controls">
+        <form id="controls" class="blog-controls__form">
+          <label for="q" class="visually-hidden">Search</label>
+          <input id="q" name="q" type="search" class="form-field form-field--sm blog-search" placeholder="Search posts…" autocomplete="off" />
+          <label for="sort" class="visually-hidden">Sort</label>
+          <select id="sort" name="sort" class="form-field form-field--sm">
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+            <option value="az">Title A → Z</option>
+            <option value="za">Title Z → A</option>
+          </select>
+          <button type="button" id="clearFilters" class="btn">Clear</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- List -->
+    <section id="blog-list" class="container" aria-labelledby="blog-list-title">
+      <h2 id="blog-list-title" class="visually-hidden">Post list</h2>
+      <div id="blog-grid" class="svc__grid blog-grid">
+
+<!-- blog-cards:start (auto-generated by generate_posts_json.py - do not edit) -->
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/blog/my-new-blog-post.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="my-post.webp" alt="My New Blog Post" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">My New Blog Post</h3>
+              <p class="blog-card__excerpt">This is the summary of my new blog post</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="/blog/my-new-blog-post.html" class="btn">Read More →</a>
+            <small class="blog-card__date">Oct 25, 2026</small>
+          </div>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/blog/bimebazar-vs-bimedotcom-vs-snappbime.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/better-call-ramin-khaligh.webp" alt="نقد مدیریت محصول بیمه بازار، اسنپ بیمه و بیمه دات کام" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">نقد مدیریت محصول بیمه بازار، اسنپ بیمه و بیمه دات کام</h3>
+              <p class="blog-card__excerpt">چگونه ضعف مدیریت محصول و مارکتینگ اتومیشن در پلتفرم‌های بیمه دات کام، بیمه بازار و اسنپ بیمه باعث ریزش کاربر می‌شود؟ درس‌هایی برای مدیر محصول و مدیر مارکتینگ جهت بهبود تجربه کاربری.</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="/blog/bimebazar-vs-bimedotcom-vs-snappbime.html" class="btn">Read More →</a>
+            <small class="blog-card__date">Aug 10, 2026</small>
+          </div>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/blog/when-tech-teams-stop-listening.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/when-tech-teams-stop-listening.webp" alt="When Tech Teams Stop Listening" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">When Tech Teams Stop Listening</h3>
+              <p class="blog-card__excerpt">How ego, poor accountability, and weak culture erode collaboration between product, tech, and marketing, and how to rebuild trust.</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="/blog/when-tech-teams-stop-listening.html" class="btn">Read More →</a>
+            <small class="blog-card__date">Oct 19, 2025</small>
+          </div>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/blog/constant-interruptions-cost.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/when-leaders-become-bottleneck.webp" alt="When Leaders Become the Bottleneck" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">When Leaders Become the Bottleneck</h3>
+              <p class="blog-card__excerpt">How constant interruptions destroy focus, create technical debt, and demotivate teams, and what leaders should do differently.</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="/blog/constant-interruptions-cost.html" class="btn">Read More →</a>
+            <small class="blog-card__date">Oct 18, 2025</small>
+          </div>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/blog/bridging-product-marketing-gap.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/blog-bridge-gap.webp" alt="Bridging the Product &amp; Marketing Gap" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">Bridging the Product &amp; Marketing Gap</h3>
+              <p class="blog-card__excerpt">How product managers can align product and marketing goals to reduce friction, improve CAC and conversion, and foster collaboration between teams.</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="/blog/bridging-product-marketing-gap.html" class="btn">Read More →</a>
+            <small class="blog-card__date">Oct 13, 2025</small>
+          </div>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/blog/fintech-retention.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/blog-fintech-retention.webp" alt="How I Increased User Retention by 40%" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">How I Increased User Retention by 40%</h3>
+              <p class="blog-card__excerpt">A case study on how I improved fintech user retention by 40% through UX optimization, lifecycle automation, and data-led growth.</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="/blog/fintech-retention.html" class="btn">Read More →</a>
+            <small class="blog-card__date">Oct 13, 2025</small>
+          </div>
+        </article>
+
+        <article class="card blog-card">
+          <a class="blog-card__link" href="/blog/when-the-ceo-is-a-dictator.html">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="/assets/blog-ceo-dictator.webp" alt="When the CEO is a Dictator" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">When the CEO is a Dictator</h3>
+              <p class="blog-card__excerpt">How micromanagement and top-down control from a non-technical CEO cripple innovation, delay launches, and destroy ownership culture.</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="/blog/when-the-ceo-is-a-dictator.html" class="btn">Read More →</a>
+            <small class="blog-card__date">Oct 13, 2025</small>
+          </div>
+        </article>
+<!-- blog-cards:end -->
+
+      </div>
+
+      <!-- Pagination -->
+      <nav id="pager" aria-label="Pagination" class="blog-pager">
+        <button class="btn" id="prevPage" disabled>← Newer</button>
+        <span id="pageIndicator" class="blog-pager__status"></span>
+        <button class="btn" id="nextPage" disabled>Older →</button>
+      </nav>
+    </section>
+
+    <div class="back-link-row">
+      <a href="/" class="btn">← Back to Home</a>
+    </div>
+  </main>
+
+  <!-- ===== Footer (synced) ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-socials">
+      <a href="mailto:raaminpro@gmail.com" class="icon-btn" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0L12 13.5 2.25 6.75" />
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/ramin-khaligh" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="var(--accent)" width="18" height="18" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-6a6 6 0 0 1 6-6zM2 9h4v12H2zM4 5a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/ramin.khaligh" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+    </div>
+    <p class="footer-bottom">
+      © 2026 Ramin Khaligh · All Rights Reserved
+      <a href="#top" class="icon-btn icon-btn--sm" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--accent)" width="16" height="16" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </a>
+    </p>
+  </footer>
+
+  <!-- Theme runtime (shared) -->
+  <script src="/assets/theme.js" defer></script>
+  <script src="/assets/nav.js" defer></script>
+
+  <!-- Blog Loader (filters + pagination + JSON-LD ItemList injection) -->
+  <script defer>
+  (function() {
+    const POSTS_URL = '/blog/posts.json';
+    const grid = document.getElementById('blog-grid');
+    const q = document.getElementById('q');
+    const sortSel = document.getElementById('sort');
+    const clearBtn = document.getElementById('clearFilters');
+
+    // pager
+    const pager = document.getElementById('pager');
+    const prevBtn = document.getElementById('prevPage');
+    const nextBtn = document.getElementById('nextPage');
+    const pageIndicator = document.getElementById('pageIndicator');
+
+    const PAGE_SIZE = 9;
+    let allPosts = [];
+    let filtered = [];
+    let page = 1;
+
+    function normalize(p) {
+      if (!p) return '#';
+      if (/^https?:\/\//i.test(p)) return p;
+      p = p.replace(/^([.\/]|(\.\.\/)+)/g, '');
+      if (!p.startsWith('/')) p = '/' + p;
+      return p;
+    }
+
+    function escapeHtml(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function renderList(list) {
+      grid.innerHTML = '';
+      if (!list.length) {
+        const msg = document.createElement('p');
+        msg.textContent = 'No articles found.';
+        msg.className = 'empty-state';
+        grid.appendChild(msg);
+        pager.classList.remove('is-visible');
+        return;
+      }
+
+      const start = (page - 1) * PAGE_SIZE;
+      const slice = list.slice(start, start + PAGE_SIZE);
+
+      slice.forEach(post => {
+        const href = normalize(post.url);
+        const img = post.image ? normalize(post.image) : '/assets/og-cover.webp';
+        const dateStr = post.date ? new Date(post.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : '';
+        const article = document.createElement('article');
+        article.className = 'card blog-card';
+        article.innerHTML = `
+          <a class="blog-card__link" href="${href}">
+            <div class="blog-card__media">
+              <img class="blog-card__img" src="${img}" alt="${escapeHtml(post.title)}" loading="lazy" decoding="async" width="1200" height="675" />
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">${escapeHtml(post.title)}</h3>
+              <p class="blog-card__excerpt">${escapeHtml(post.summary || '')}</p>
+            </div>
+          </a>
+          <div class="blog-card__footer">
+            <a href="${href}" class="btn">Read More →</a>
+            <small class="blog-card__date">${dateStr}</small>
+          </div>`;
+        grid.appendChild(article);
+      });
+
+      // pager
+      const totalPages = Math.ceil(list.length / PAGE_SIZE);
+      if (totalPages > 1) {
+        pager.classList.add('is-visible');
+        prevBtn.disabled = page <= 1;
+        nextBtn.disabled = page >= totalPages;
+        pageIndicator.textContent = `Page ${page} of ${totalPages}`;
+      } else {
+        pager.classList.remove('is-visible');
+      }
+    }
+
+    function applyFilters() {
+      const term = (q.value || '').trim().toLowerCase();
+      const s = sortSel.value;
+      filtered = allPosts.filter(p => {
+        if (!term) return true;
+        const hay = [
+          p.title || '',
+          p.summary || '',
+          (p.tags || []).join(' '),
+          (p.category || '')
+        ].join(' ').toLowerCase();
+        return hay.includes(term);
+      });
+
+      // sorting
+      filtered.sort((a,b) => {
+        if (s === 'new') return new Date(b.date) - new Date(a.date);
+        if (s === 'old') return new Date(a.date) - new Date(b.date);
+        if (s === 'az') return String(a.title).localeCompare(String(b.title));
+        if (s === 'za') return String(b.title).localeCompare(String(a.title));
+        return 0;
+      });
+
+      page = 1;
+      renderList(filtered);
+      injectItemListJSONLD(filtered); // keep SEO in sync with current sort/filter (first page)
+    }
+
+    // Inject ItemList JSON-LD for the current first page (SEO)
+    function injectItemListJSONLD(list) {
+      try {
+        const old = document.getElementById('itemlist-jsonld');
+        if (old) old.remove();
+        const start = 0;
+        const slice = list.slice(start, start + PAGE_SIZE);
+        if (!slice.length) return;
+        const data = {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": slice.map((p, idx) => ({
+            "@type": "ListItem",
+            "position": idx + 1,
+            "url": normalize(p.url),
+            "name": p.title || undefined
+          }))
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.id = 'itemlist-jsonld';
+        script.textContent = JSON.stringify(data);
+        document.head.appendChild(script);
+      } catch(e) {}
+    }
+
+    // events
+    q && q.addEventListener('input', () => applyFilters());
+    sortSel && sortSel.addEventListener('change', () => applyFilters());
+    clearBtn && clearBtn.addEventListener('click', () => {
+      q.value = '';
+      sortSel.value = 'new';
+      applyFilters();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (page > 1) { page--; renderList(filtered); }
+    });
+    nextBtn.addEventListener('click', () => {
+      const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+      if (page < totalPages) { page++; renderList(filtered); }
+    });
+
+    // fetch posts
+    fetch(POSTS_URL)
+      .then(res => res.json())
+      .then(posts => {
+        if (!Array.isArray(posts)) throw new Error('Invalid posts.json');
+        posts.sort((a,b) => new Date(b.date) - new Date(a.date)); // default newest first
+        allPosts = posts;
+        filtered = posts.slice();
+        renderList(filtered);
+        injectItemListJSONLD(filtered);
+      })
+      .catch(() => {
+        const msg=document.createElement('p');
+        msg.textContent='Unable to load posts right now. Please try again later.';
+        msg.className='empty-state';
+        grid.appendChild(msg);
+      });
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="wizTitle">
+  <title id="wizTitle">Crypto onboarding wizard routing a new user to their matching product</title>
+  <defs>
+    <linearGradient id="wizBg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b0d10"/>
+      <stop offset="1" stop-color="#1a1025"/>
+    </linearGradient>
+    <radialGradient id="wizGlow" cx="0.28" cy="0.32" r="0.65">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wizAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#wizBg)"/>
+  <rect width="800" height="450" fill="url(#wizGlow)"/>
+
+  <!-- faint grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 90H800M0 180H800M0 270H800M0 360H800"/>
+    <path d="M133 0V450M266 0V450M400 0V450M533 0V450M666 0V450"/>
+  </g>
+
+  <!-- bottom-sheet wizard card -->
+  <g transform="translate(60,70)">
+    <rect x="0" y="0" width="290" height="310" rx="24" fill="#14141a" stroke="#2a2a33"/>
+    <rect x="0" y="0" width="290" height="66" rx="24" fill="#1c1c24"/>
+    <rect x="0" y="42" width="290" height="24" fill="#1c1c24"/>
+    <circle cx="145" cy="33" r="18" fill="url(#wizAccent)"/>
+    <path d="M136 33l6 6 12-13" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- step dots -->
+    <circle cx="105" cy="90" r="6" fill="#8b5cf6"/>
+    <circle cx="145" cy="90" r="6" fill="#8b5cf6"/>
+    <circle cx="185" cy="90" r="6" fill="#3a3a45"/>
+
+    <!-- question lines -->
+    <rect x="30" y="122" width="230" height="10" rx="5" fill="#3a3a45"/>
+    <rect x="30" y="142" width="170" height="10" rx="5" fill="#2a2a33"/>
+
+    <!-- answer chips -->
+    <rect x="30" y="176" width="230" height="38" rx="19" fill="#1c1c24" stroke="#8b5cf6" stroke-opacity="0.6"/>
+    <text x="145" y="200" text-anchor="middle" fill="#e9e4ff" font-family="Arial, sans-serif" font-size="14">Hold long-term</text>
+    <rect x="30" y="224" width="230" height="38" rx="19" fill="#1c1c24" stroke="#3a3a45"/>
+    <text x="145" y="248" text-anchor="middle" fill="#8a8a96" font-family="Arial, sans-serif" font-size="14">Day trade</text>
+    <rect x="30" y="272" width="230" height="38" rx="19" fill="#1c1c24" stroke="#3a3a45"/>
+    <text x="145" y="296" text-anchor="middle" fill="#8a8a96" font-family="Arial, sans-serif" font-size="14">Transfer money</text>
+  </g>
+
+  <!-- routing paths from wizard to product tiles -->
+  <g fill="none" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.55" stroke-dasharray="5 6">
+    <path d="M350 195 C 460 195, 470 120, 560 110"/>
+    <path d="M350 213 C 460 213, 480 235, 560 235"/>
+    <path d="M350 231 C 460 231, 480 340, 560 355"/>
+  </g>
+  <circle cx="350" cy="213" r="5" fill="#8b5cf6"/>
+
+  <!-- destination product tiles -->
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(560,72)">
+      <rect width="180" height="76" rx="14" fill="#14141a" stroke="#2a2a33"/>
+      <circle cx="34" cy="38" r="16" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+      <path d="M27 38h14M34 31v14" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+      <text x="60" y="34" fill="#e9e4ff" font-size="13" font-weight="600">Copy Trading</text>
+      <text x="60" y="52" fill="#7a7a86" font-size="11">&amp; OTC</text>
+    </g>
+    <g transform="translate(560,197)">
+      <rect width="180" height="76" rx="14" fill="#14141a" stroke="#2a2a33"/>
+      <path d="M22 46l10-18 8 10 10-16 8 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(4,-4)"/>
+      <text x="60" y="34" fill="#e9e4ff" font-size="13" font-weight="600">Spot &amp; Margin</text>
+      <text x="60" y="52" fill="#7a7a86" font-size="11">full charting</text>
+    </g>
+    <g transform="translate(560,322)">
+      <rect width="180" height="76" rx="14" fill="#14141a" stroke="#2a2a33"/>
+      <rect x="20" y="26" width="24" height="24" rx="5" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+      <path d="M20 34h24" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="60" y="34" fill="#e9e4ff" font-size="13" font-weight="600">Wallet</text>
+      <text x="60" y="52" fill="#7a7a86" font-size="11">Withdraw</text>
+    </g>
+  </g>
+</svg>
