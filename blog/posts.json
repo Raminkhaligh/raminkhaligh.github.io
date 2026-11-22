@@ -27,6 +27,15 @@
     "featured": false
   },
   {
+    "title": "When the CEO is a Dictator",
+    "summary": "How micromanagement and top-down control from a non-technical CEO cripple innovation, delay launches, and destroy ownership culture.",
+    "date": "2025-10-13",
+    "lastmod": "2025-10-19",
+    "url": "blog/when-the-ceo-is-a-dictator.html",
+    "image": "/assets/blog-ceo-dictator.webp",
+    "featured": false
+  },
+  {
     "title": "How I Increased User Retention by 40%",
     "summary": "A case study on how I improved fintech user retention by 40% through UX optimization, lifecycle automation, and data-led growth.",
     "date": "2025-10-13",
@@ -42,15 +51,6 @@
     "lastmod": "2025-10-19",
     "url": "blog/bridging-product-marketing-gap.html",
     "image": "/assets/blog-bridge-gap.webp",
-    "featured": false
-  },
-  {
-    "title": "When the CEO is a Dictator",
-    "summary": "How micromanagement and top-down control from a non-technical CEO cripple innovation, delay launches, and destroy ownership culture.",
-    "date": "2025-10-13",
-    "lastmod": "2025-10-19",
-    "url": "blog/when-the-ceo-is-a-dictator.html",
-    "image": "/assets/blog-ceo-dictator.webp",
     "featured": false
   }
 ]
